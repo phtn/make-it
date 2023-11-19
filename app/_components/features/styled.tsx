@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import tw from 'tailwind-styled-components'
-import { FeatureItemProps, FeatureHeaderProps } from './types'
+import { FeatureItemProps } from './types'
 
 const Container = tw.div`
   h-fit w-screen flex flex-col overflow-hidden
-	py-16
+	mb-44
 `
 
 const GridContainer = tw.div`
@@ -26,7 +26,7 @@ const FeatureItemContent = tw.div`
 const FeatureIconContainer = tw.div`
   flex items-center justify-center 
 	h-12 w-12 md:h-20 md:w-20  
-  bg-primary-foreground rounded-full
+  bg-[#54c8e8] rounded-full
   shadow-xl shadow-[#54c8e8]/20
 `
 
@@ -35,11 +35,11 @@ const FeatureDetail = tw.div`
 `
 
 const FeatureTitleContainer = tw.div`
-  h-fit  pb-4
+  h-fit pb-4
 `
 
 const FeatureTitle = tw.h2`
-  font-bold tracking-wider text-[1.5rem] text-foreground leading-[1.5rem]
+  font-extrabold font-sans tracking text-[1.5rem] text-slate-800 dark:text-[54c8e8] leading-[1.5rem]
 `
 
 const FeatureDescriptionContainer = tw.div`

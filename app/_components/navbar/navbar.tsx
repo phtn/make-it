@@ -11,6 +11,8 @@ import Image from 'next/image'
 import { ToggleProps } from './types'
 import Registration from '../registration/registration'
 
+import { HomeMenu } from './home-nav/home-nav'
+
 const Navbar = () => {
 	const { checked, toggleMode } = useToggleMode()
 
@@ -21,15 +23,8 @@ const Navbar = () => {
 
 	return (
 		<NavContainer>
-			<motion.div
-				className='z-50'
-				initial={{ scale: 0 }}
-				animate={{ scale: 1 }}
-				transition={{ duration: 0.5, delay: 1.1 }}>
-				<Logo />
-			</motion.div>
+			<HomeMenu />
 			<div className='flex items-center justify-center'>
-				<Register />
 				<Mode
 					checked={checked}
 					toggleMode={toggleMode}
@@ -41,26 +36,12 @@ const Navbar = () => {
 
 const Mode = ({ checked, toggleMode }: ToggleProps) => {
 	return (
-		<motion.div
-			initial={{ scale: 0 }}
-			animate={{ scale: 1 }}
-			transition={{ duration: 0.5, delay: 1.3 }}>
-			<ToggleMode
-				checked={checked}
-				toggleMode={toggleMode}
-			/>
-		</motion.div>
+		<ToggleMode
+			checked={checked}
+			toggleMode={toggleMode}
+		/>
 	)
 }
-
-const Register = () => (
-	<motion.div
-		initial={{ scale: 0 }}
-		animate={{ scale: 1 }}
-		transition={{ duration: 0.5, delay: 1.3 }}>
-		<Registration />
-	</motion.div>
-)
 
 const DarkLogo = () => (
 	<Image

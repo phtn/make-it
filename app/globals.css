@@ -6,20 +6,26 @@
 	display: none;
 }
 
-.mono {
-	color: #2a338d;
-}
-/* hsl(234, 100%, 98%) */
-/* hsl(234, 100%, 31%) */
-/* Pantone 130 C #F5A800 */
-/* foreground 2A338D hsl(235, 54%, 36%) */
-/* primary #38BDF8 hsl(198, 93%, 60%) */
-/* secondary #FFCB2B hsl(45, 100%, 58%) */
+/* 
+#D8E2E1 
+#EEFC8E
+#FF5501
+#6ef0ad
+hsl(149, 81%, 69%)
+#41B1C3
+#b386fd
+#008374
+#fd5c63
+#1e293b
+hsl(217, 33%, 17%)
+hsl(217, 33%, 17%)
+rgb(30, 41, 59);
+*/
 
 @layer base {
 	:root {
 		--background: 0 0% 100%;
-		--foreground: 234 100% 31%;
+		--foreground: 217 33% 17%;
 
 		--card: 0 0% 100%;
 		--card-foreground: 222.2 84% 4.9%;
@@ -27,11 +33,11 @@
 		--popover: 0 0% 100%;
 		--popover-foreground: 222.2 84% 4.9%;
 
-		--primary: 222.2 84% 4.9%;
-		--primary-foreground: 198 93% 60%;
+		--primary: 217 33% 1%;
+		--primary-foreground: 149 81% 69%;
 
-		--secondary: 210 40% 96.1%;
-		--secondary-foreground: 45 100% 58%;
+		--secondary: 149 81% 69%;
+		--secondary-foreground: 217 33% 17%;
 
 		--muted: 210 40% 96.1%;
 		--muted-foreground: 215.4 16.3% 46.9%;
@@ -48,7 +54,6 @@
 
 		--radius: 0.5rem;
 	}
-	/* hsl(234, 100%, 31%) */
 
 	.dark {
 		--background: 222.2 84% 4.9%;
@@ -61,7 +66,7 @@
 		--popover-foreground: 210 40% 98%;
 
 		--primary: 234 100% 31%;
-		--primary-foreground: 198 93% 60%;
+		--primary-foreground: 149 81% 69%;
 
 		--secondary: 217.2 32.6% 17.5%;
 		--secondary-foreground: 45 100% 58%;

@@ -24,7 +24,7 @@ const TitleContainer = tw.div`
 `
 
 const HeaderTitle = tw.h2`
-	text-[1.5rem] sm:text-[2.5rem] font-bold leading-[24px] sm:leading-10
+	text-[1.5rem] sm:text-[2.5rem] font-bold font-sans leading-[24px] sm:leading-10
 `
 
 const HeaderSeparator = tw.div`
@@ -59,7 +59,7 @@ const SubtextContainer = tw.div`
 `
 
 const SubtextContent = tw.span`
-	border-l-4 border-secondary-foreground px-2 py-1 text-xs sm:text-sm text-primary-foreground font-semibold tracking-wide
+	border-l-4 border-secondary-foreground px-2 py-1 text-xs sm:text-sm text-[#54c8e8] font-semibold tracking-wide
 `
 
 type HeaderProps = {

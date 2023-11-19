@@ -22,22 +22,20 @@ const Footer = () => {
 
 const Primary = () => (
 	<PrimaryContent>
-		<Image
+		{/* <Image
 			alt=''
 			src={'/logo/Outsourcee_Logo_white.webp'}
 			height={400}
 			width={400}
 			className='w-56'
-		/>
+		/> */}
 		<PrimaryDetails>
 			<p className='leading-[10px] text-xs text-white'>Developed by</p>
 			<p className='leading-[10px] text-sm text-white font-bold'>
-				Comptrolla Technologies, Inc.{' '}
+				Make It In Australia PH
 			</p>
 			<div className='w-44 '>
-				<p className='text-xs text-white font-medium'>
-					Ste 203 Tomasca Bldg. Cubao, Quezon City, 1169
-				</p>
+				<p className='text-xs text-white font-medium'>Address</p>
 			</div>
 		</PrimaryDetails>
 	</PrimaryContent>
@@ -47,19 +45,22 @@ const Secondary = () => (
 	<SecondaryContent>
 		<div className='h-[72] flex flex-col'>
 			<LinkItem href={'/'}>
-				<LinkText>How it works?</LinkText>
+				<LinkText>Benefits of a Mentor</LinkText>
 			</LinkItem>
 			<LinkItem href={'/'}>
-				<LinkText>Register as Outsourcee</LinkText>
+				<LinkText>Meet a Mentor</LinkText>
 			</LinkItem>
 			<LinkItem href={'/'}>
-				<LinkText>Outsourcee Requirements</LinkText>
+				<LinkText>Join a Class</LinkText>
+			</LinkItem>
+			<LinkItem href={'/'}>
+				<LinkText>Contact Us</LinkText>
+			</LinkItem>
+			<LinkItem href={'/'}>
+				<LinkText>Be a Mentee for Free</LinkText>
 			</LinkItem>
 			<LinkItem href={'/'}>
 				<LinkText>Privacy Policy</LinkText>
-			</LinkItem>
-			<LinkItem href={'/'}>
-				<LinkText>Terms of Use</LinkText>
 			</LinkItem>
 		</div>
 	</SecondaryContent>

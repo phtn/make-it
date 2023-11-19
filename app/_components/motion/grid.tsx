@@ -18,9 +18,9 @@ type GridItemProps = {
 }
 
 const gridClass = `
-	bg-gradient-to-b from-background to-primary-foreground 
-	grid grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 
-	gap-[0.5px] h-screen overflow-hidden
+	bg-gradient-to-b from-background to-slate-500 
+	grid grid-cols-6 md:grid-cols-8 lg:grid-cols-24 xl:grid-cols-24 
+	gap-[0px] h-screen overflow-hidden
 	`
 export function Grid() {
 	const delayPerPixel = 0.0008
@@ -38,7 +38,7 @@ export function Grid() {
 			initial='hidden'
 			animate={controls}
 			variants={{}}>
-			{Array.from({ length: 100 }).map((_, i) => (
+			{Array.from({ length: 4000 }).map((_, i) => (
 				<GridItem
 					key={i}
 					i={i}
@@ -84,7 +84,7 @@ function GridItem({
 
 	return (
 		<Box
-			className='col-span-1 h-[64px] sm:h-[100px] md:h-[96px] lg:h-[105px] xl:h-[120px] bg-background rounded-[2px] transition-all duration-1000'
+			className='col-span-1 h-[64px] sm:h-[100px] md:h-[96px] lg:h-[42px] xl:h-[56px] bg-background rounded-[3px] transition-all duration-1000'
 			ref={ref}
 			variants={itemVariants}
 			custom={delayRef}

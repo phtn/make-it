@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 import './globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
 import Navbar from './_components/navbar'
-
-const outfit = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Outsourcee App',
@@ -19,8 +18,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang='en'>
-			<body className={outfit.className}>
+		<html
+			lang='en'
+			className={`${GeistMono.variable} ${GeistSans.variable}`}>
+			<body>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='system'

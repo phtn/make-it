@@ -5,8 +5,8 @@ import { Header, HeaderGap } from '../header'
 const Collage = () => (
 	<div className='mb-24'>
 		<Header
-			tag='explore'
-			title='Top Services'
+			tag='select'
+			title='Become A Member'
 		/>
 		<HeaderGap />
 		<div className='md:grid md:grid-cols-2'>
@@ -41,12 +41,13 @@ type CarouselProps = {
 }
 
 const services: CarouselProps[] = [
-	{ image: '/services/nail-spa-v1.webp', caption: 'Nail Spa' },
-	{ image: '/services/bookkeeping-v2.webp', caption: 'Bookkeeping' },
+	{ image: '/services/nail-spa-v1.webp', caption: 'Free' },
+	{ image: '/services/bookkeeping-v2.webp', caption: 'Sapphire' },
+	{ image: '/services', caption: 'Gold' },
 ]
 
 const Secondary = () => (
-	<div className='bg-slate-500/50 sm:w-[500px] h-fit sm:rounded-3xl overflow-hidden'>
+	<div className='bg-slate-500/50 sm:w-[500px] h-fit sm:rounded-xl overflow-hidden'>
 		<Carousel
 			className='md:w-fit'
 			keyboard={true}
@@ -55,7 +56,7 @@ const Secondary = () => (
 			{services.map((item) => (
 				<Carousel.Item
 					key={item.caption}
-					className='flex items-center justify-center'>
+					className=''>
 					<CarouselItem
 						image={item.image}
 						caption={item.caption}
@@ -68,20 +69,14 @@ const Secondary = () => (
 
 const CarouselItem = ({ image, caption }: CarouselProps) => (
 	<>
-		<Image
-			alt=''
-			src={image}
-			height={500}
-			width={500}
-			className='h-[300px] sm:h-[400px]'
-		/>
+		<div className='h-[300px] sm:h-[400px] w-[500px]' />
 		<Caption caption={caption} />
 	</>
 )
 
 const Caption = ({ caption }: { caption: string }) => (
 	<Carousel.Caption>
-		<h3 className='bg-black/50 p-3 rounded-xl text-white font-extrabold text-sm '>
+		<h3 className='bg-black/50 p-3 rounded-xl text-white font-extrabold font-sans'>
 			{caption}
 		</h3>
 	</Carousel.Caption>

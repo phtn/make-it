@@ -1,14 +1,9 @@
-type HeadlineData = {
-	id: number
-	name: string
-	headline: string
-}
+import { HeadlineData } from './types'
+
 const headlines: HeadlineData[] = [
-	{ id: 1, name: '', headline: 'Simplify your workload.' },
-	{ id: 2, name: '', headline: 'Delegate with confidence.' },
-	{ id: 3, name: '', headline: 'Efficiency at your fingertips.' },
-	{ id: 4, name: '', headline: 'Scale your business with us.' },
-	{ id: 5, name: '', headline: 'Focus on what matters most.' },
+	{ id: 1, name: '', headline: 'Club' },
+	{ id: 2, name: '', headline: 'Hope Builder' },
+	{ id: 3, name: '', headline: 'Social Enterprise' },
 ]
 
 export { headlines }

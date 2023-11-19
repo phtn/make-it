@@ -16,7 +16,7 @@ import * as z from 'zod'
 import { useCallback, useEffect, useState } from 'react'
 import { map } from '@/app/_utils/helpers'
 import { FormProps } from './types'
-import { Loader2 } from 'lucide-react'
+import { AtSign, Loader2, LogIn, Phone, User } from 'lucide-react'
 import { SelectLocation } from './select-location'
 import { POST_RegisterUser } from '@/app/_api/post'
 
@@ -29,9 +29,6 @@ const formSchema = z.object({
 	}),
 	phone: z.string().min(10, {
 		message: 'Invalid Phone Number',
-	}),
-	location: z.string().min(4, {
-		message: 'Select your location.',
 	}),
 })
 
@@ -62,48 +59,27 @@ export function RegistrationForm() {
 			name: '',
 			email: '',
 			phone: '',
-			location: '',
 		},
 	})
 
-	const onSubmit = (values: z.infer<typeof formSchema>) => {
-		setLoading(true)
-
-		localStorage.setItem('registration', values.email)
-		console.log(values)
-		POST_RegisterUser(values).then(() => {
-			setLoading(false)
-			setRegisteredEmail(true)
-		})
-	}
-
-	const HeaderOptions = useCallback(() => {
-		const options = map(<FormLoading />, <FormActive />)
-		return <>{options.get(loading)}</>
-	}, [loading])
-
-	const RegistrationOptions = useCallback(() => {
-		const email = localStorage.getItem('registration')
-		const options = map(
-			<RegisteredEmail email={email as string} />,
-			<FormComponent
-				form={form}
-				onSubmit={onSubmit}
-			/>
-		)
-		return <>{options.get(registeredEmail && !loading)}</>
-	}, [loading, form, registeredEmail])
-
-	const FormOptions = useCallback(() => {
-		const options = map(<FormLoader />, <RegistrationOptions />)
-		return <>{options.get(loading)}</>
-	}, [loading, form])
+	const onSubmit = (values: z.infer<typeof formSchema>) => {}
 
 	return (
-		<div className='flex justify-center mb-10 h-[550px]'>
-			<div className='border-1 border-primary-foreground bg-primary-foreground/5 p-3 rounded w-full sm:w-96'>
-				<HeaderOptions />
-				<FormOptions />
+		<div className='flex justify-center mb-10'>
+			<div className='pt-[20px] px-2 rounded w-fit'>
+				<div className='rounded bg-[#6ef0ad] h-10 p-3 mb-2 flex items-center justify-center'>
+					<span className='text-slate-700 font-sans font-extrabold'>
+						Join us today!
+					</span>
+					{/* <LogIn className='h-4 w-4 text-white ml-3' /> */}
+				</div>
+				<div className='font-sans text-[12px] font-medium mb-3 flex justify-center'>
+					Your journey begins here.
+				</div>
+				<FormComponent
+					form={form}
+					onSubmit={onSubmit}
+				/>
 			</div>
 		</div>
 	)
@@ -113,16 +89,19 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 	<Form {...form}>
 		<form
 			onSubmit={form.handleSubmit(onSubmit)}
-			className='space-y-8'>
+			className='space-y-3'>
 			<FormField
 				control={form.control}
 				name='name'
 				render={({ field }) => (
 					<FormItem>
-						<FormLabel className='text-xs'>Complete Name</FormLabel>
+						<FormLabel className='text-[10px] flex items-center font-sans tracking-wide'>
+							<User className='h-[10px] w-[10px] mr-2' />
+							<span>Complete Name</span>
+						</FormLabel>
 						<FormControl>
 							<Input
-								placeholder='Type your complete legal name.'
+								placeholder='Your name here.'
 								{...field}
 							/>
 						</FormControl>
@@ -135,9 +114,13 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 				name='email'
 				render={({ field }) => (
 					<FormItem>
-						<FormLabel className='text-xs'>Email Address</FormLabel>
+						<FormLabel className='text-[10px] flex items-center font-sans tracking-wide'>
+							<AtSign className='h-[10px] w-[10px] mr-2' />
+							<span>Email Address</span>
+						</FormLabel>
 						<FormControl>
 							<Input
+								type='email'
 								placeholder='Email'
 								{...field}
 							/>
@@ -151,10 +134,14 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 				name='phone'
 				render={({ field }) => (
 					<FormItem>
-						<FormLabel className='text-xs'>Phone Number</FormLabel>
+						<FormLabel className='text-[10px] flex items-center font-sans tracking-wide'>
+							<Phone className='h-[10px] w-[10px] mr-2' />
+							<span>Phone Number</span>
+						</FormLabel>
 						<FormControl>
 							<Input
-								placeholder='Phone Number'
+								type='number'
+								placeholder='Phone'
 								{...field}
 							/>
 						</FormControl>
@@ -162,18 +149,11 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 					</FormItem>
 				)}
 			/>
-			<FormField
-				control={form.control}
-				name='location'
-				render={({ field }) => (
-					<SelectLocation onValueChange={field.onChange} />
-				)}
-			/>
-
 			<Button
+				className='w-full font-sans font-extrabold text-[#6ef0ad] bg-slate-800'
 				type='submit'
 				variant={'outline'}>
-				Submit
+				Sign Up
 			</Button>
 		</form>
 	</Form>

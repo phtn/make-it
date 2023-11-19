@@ -5,7 +5,6 @@ interface RegistrationValues {
 	name: string
 	email: string
 	phone: string
-	location: string
 }
 
 type OnSubmit = {

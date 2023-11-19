@@ -2,7 +2,7 @@ import Link from 'next/link'
 import tw from 'tailwind-styled-components'
 
 const GridContainer = tw.div`
-  h-[700px] md:h-[450px] bg-secondary-foreground md:grid md:grid-cols-3 p-6 
+  h-[700px] md:h-[450px] bg-slate-800 md:grid md:grid-cols-3 p-6 
 `
 
 const PrimaryContent = tw.div`

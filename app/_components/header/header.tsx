@@ -11,11 +11,11 @@ const HeaderContent = tw.div`
 const HeaderTagContainer = tw.div`
   bg-primary-foreground h-8 w-[150px] px-3 pt-2
   flex items-center justify-center rounded-[2px]
-  shadow-xl shadow-[#54c8e8]/30
+  shadow-xl shadow-primary-foreground/30
 `
 
 const HeaderTag = tw.h2`
-  text-white font-extrabold text-[0.64rem] 
+  text-slate-800 font-extrabold text-[0.64rem] 
   uppercase tracking-[2.5px] py-1
 `
 
@@ -28,10 +28,10 @@ const HeaderTitle = tw.h2`
 `
 
 const HeaderSeparator = tw.div`
-  w-[140px] border-b-4 rounded-full border-secondary-foreground/70
+  w-[140px] border-b-4 rounded-full border-[#54c8e8]/70
 `
 
-type HeaderProps = {
+export type HeaderProps = {
 	tag: string
 	title: string
 }

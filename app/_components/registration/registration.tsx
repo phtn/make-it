@@ -27,16 +27,9 @@ const Registration = () => (
 					/>
 					<HeaderGap />
 				</SheetTitle>
-				{/* <SheetDescription className='py-8 sm:w-96 self-center'>
-					An Outsourcee is a skilled individual that provides quality service to
-					their clients. If you want to connect to broad range of clients, this
-					s the place for you!
-				</SheetDescription> */}
 			</SheetHeader>
 			<div className='md:grid md:grid-cols-2'>
 				<RegistrationForm />
-				<div
-					className={`bg-[url('/images/worker.webp')] hidden md:flex bg-cover`}></div>
 			</div>
 		</SheetContent>
 	</Sheet>

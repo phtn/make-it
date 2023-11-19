@@ -1,5 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { ProfileContentProps, TabContentProps, TabTriggerProps } from './types'
+import {
+	HighlightProps,
+	ProfileContentProps,
+	TabContentProps,
+	TabTriggerProps,
+} from './types'
 import { HighlightHeader } from './header'
 import {
 	Container,
@@ -12,12 +17,9 @@ import {
 } from './styled'
 import { Header } from '../header'
 
-const Highlight = () => (
+const Highlight = ({ header }: HighlightProps) => (
 	<>
-		<Header
-			tag='popular'
-			title='Top Outsourcees'
-		/>
+		<Header {...header} />
 		<Container>
 			<Primary />
 			<Secondary />
@@ -29,7 +31,7 @@ const Primary = () => (
 	<PrimaryContent>
 		<DesktopAvatar
 			alt=''
-			src={'/lifestyle/life-v1.jpg'}
+			src={'/lifestyle/life-v5.jpg'}
 			height={500}
 			width={500}
 		/>
@@ -46,7 +48,7 @@ const Secondary = () => (
 					title='Samantha'
 					rating={(5).toFixed(1).toString()}
 					reviews={78}
-					subtext='Nail Specialist'
+					subtext='Computer Engineer'
 				/>
 			</Content>
 			<Details />

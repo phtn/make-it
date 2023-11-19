@@ -1,4 +1,9 @@
 import { ReactElement } from 'react'
+import { HeaderProps } from '../header/header'
+
+type HighlightProps = {
+	header: HeaderProps
+}
 
 type TabTriggerProps = {
 	id: number
@@ -16,4 +21,9 @@ type ProfileContentProps = {
 	summary: string
 }
 
-export type { ProfileContentProps, TabContentProps, TabTriggerProps }
+export type {
+	HighlightProps,
+	ProfileContentProps,
+	TabContentProps,
+	TabTriggerProps,
+}
