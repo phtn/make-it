@@ -11,6 +11,7 @@ import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Users2 } from 'lucide-react'
+import Footer from '../_components/footer'
 
 const header = { tag: 'dive', title: 'The Company' }
 const clubContent = {
@@ -33,6 +34,8 @@ const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Club' },
 	{ id: 2, name: '', headline: 'Hope Builder' },
 	{ id: 3, name: '', headline: 'Social Enterprise' },
+	{ id: 4, name: '', headline: 'Architect of Change' },
+	{ id: 5, name: '', headline: 'Shaping the Future' },
 ]
 
 const heroProps = {
@@ -76,6 +79,7 @@ const AboutTheCompany = () => {
 					primaryButton={<JoinButton />}
 				/>
 				<Body />
+				<Footer />
 			</Content>
 		</Container>
 	)

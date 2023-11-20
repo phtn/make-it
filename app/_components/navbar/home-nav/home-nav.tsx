@@ -13,29 +13,16 @@ import {
 	NavigationMenuTrigger,
 	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
-import {
-	Castle,
-	FileQuestion,
-	HelpCircle,
-	HomeIcon,
-	LibraryBig,
-	MailCheck,
-	Newspaper,
-	Pyramid,
-	Star,
-} from 'lucide-react'
+import { HomeIcon } from 'lucide-react'
 import {
 	FAQsIcon,
 	NewletterIcon,
 	PrimarySet,
 	SecondarySet,
-	TertiaryIconContainer,
 	TertiaryLink,
-	TertiaryOuter,
 	TestimonialsIcon,
 } from './styled'
-import { TertiaryDetail, TertiaryProps } from './types'
-import Registration from '../../registration/registration'
+import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
 
 const links: TertiaryProps[] = [
@@ -72,13 +59,13 @@ export function HomeMenu() {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className='bg-slate-700'>
+					<NavigationMenuTrigger className='bg-transparent mt-3'>
 						<span className='font-extrabold text-[#54c8e8] text-lg'>MiiA</span>
 					</NavigationMenuTrigger>
 
 					<NavigationMenuContent className='bg-slate-200 dark:bg-slate-700'>
-						<div className='grid grid-cols-5 w-[600px]'>
-							<div className='grid grid-rows-2 col-span-3 border-r-[0.33px] border-slate-700'>
+						<div className='grid sm:grid-cols-5 grid-cols-2 sm:w-[600px] w-screen'>
+							<div className='grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.33px] border-slate-700'>
 								<div className='h-[180px] flex items-center justify-evenly'>
 									<PrimarySet />
 									<SecondarySet />
@@ -97,7 +84,7 @@ export function HomeMenu() {
 							</div>
 
 							<div className='col-span-2 row-span-5'>
-								<div className=' h-full '>
+								<div className=' h-full sm:ml-2 w-screen sm:w-fit '>
 									<RegistrationForm />
 								</div>
 							</div>

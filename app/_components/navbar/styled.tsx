@@ -6,8 +6,7 @@ const NavContainer = tw.div`
   w-full
   items-center 
   justify-between
-  px-6
-  pt-4
+  pr-6
   absolute
   top-0
   bg-gradient-to-b
@@ -15,12 +14,10 @@ const NavContainer = tw.div`
   to-transparent
   backdrop-blur-md
   z-50
-  border-b
 `
 
 const Brand = tw.section`
   flex
-  h-fit
   items-center
   justify-center
 `

@@ -66,7 +66,7 @@ export function RegistrationForm() {
 
 	return (
 		<div className='flex justify-center mb-10'>
-			<div className='pt-[20px] px-2 rounded w-fit'>
+			<div className='pt-[20px] sm:px-2 px-8 rounded w-full sm:w-fit'>
 				<div className='rounded bg-[#6ef0ad] h-10 p-3 mb-2 flex items-center justify-center'>
 					<span className='text-slate-700 font-sans font-extrabold'>
 						Join us today!
@@ -89,7 +89,7 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 	<Form {...form}>
 		<form
 			onSubmit={form.handleSubmit(onSubmit)}
-			className='space-y-3'>
+			className='sm:space-y-3 space-y-8'>
 			<FormField
 				control={form.control}
 				name='name'

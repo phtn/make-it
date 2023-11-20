@@ -3,23 +3,16 @@
 import useToggleMode from '@/app/_utils/hooks/useToggleMode'
 import { MoonStar, Sun, NavContainer } from './styled'
 import { Switch } from '@/components/ui/switch'
-import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { useCallback } from 'react'
 import { map } from '@/app/_utils/helpers'
 import Image from 'next/image'
 import { ToggleProps } from './types'
-import Registration from '../registration/registration'
 
 import { HomeMenu } from './home-nav/home-nav'
 
 const Navbar = () => {
 	const { checked, toggleMode } = useToggleMode()
-
-	const Logo = useCallback(() => {
-		const options = map(<DarkLogo />, <LightLogo />)
-		return <>{options.get(checked)}</>
-	}, [checked])
 
 	return (
 		<NavContainer>
