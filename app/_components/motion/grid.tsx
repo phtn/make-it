@@ -73,14 +73,14 @@ function GridItem({
 		if (i === originIndex) {
 			originOffset.current = offset.current
 		}
-	}, [delayPerPixel])
+	}, [delayPerPixel, i, originIndex, originOffset])
 
 	useEffect(() => {
 		const dx = Math.abs(offset.current.left - originOffset.current.left)
 		const dy = Math.abs(offset.current.top - originOffset.current.top)
 		const d = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2))
 		delayRef.current = d * delayPerPixel
-	}, [delayPerPixel])
+	}, [delayPerPixel, originOffset])
 
 	return (
 		<Box

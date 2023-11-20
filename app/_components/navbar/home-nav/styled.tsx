@@ -51,7 +51,7 @@ const PrimaryDetails = tw.div`
 const PrimaryContent = () => (
 	<PrimaryDetails>
 		<PrimaryTitle>About Our Company</PrimaryTitle>
-		<PrimarySubtext>What we're all about.</PrimarySubtext>
+		<PrimarySubtext>What we&apos;re all about.</PrimarySubtext>
 	</PrimaryDetails>
 )
 
