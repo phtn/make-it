@@ -1,13 +1,14 @@
 import tw from 'tailwind-styled-components'
-import { F, I, ItemProps } from './types'
+import { F, I, ItemProps, SelectProps } from './types'
 import { Check, CheckCircle, CheckCircle2, X, XCircle } from 'lucide-react'
 import { useCallback } from 'react'
 import { map } from '@/app/_utils/helpers'
 import { Button } from '@/components/ui/button'
+import { toast } from 'sonner'
 
 const Container = tw.div`
   h-fit w-screen flex flex-col overflow-hidden
-	mb-44
+	sm:mb-44 mb-24
 `
 
 const GridContainer = tw.div`
@@ -31,10 +32,14 @@ const WrapCenter = tw.div`
 
 const Content = tw.div<I>`
   ${(p) =>
-		p.$id === 100 ? 'w-[330px]' : p.$id === 200 ? 'w-[330px]' : 'w-[400px]'}
+		p.$id === 100
+			? 'w-[330px]'
+			: p.$id === 200
+			? 'w-[330px]'
+			: 'sm:w-[400px] w-[330px]'}
       bg-background rounded-lg overflow-hidden shadow-lg
       hover:scale-105 transition-all duration-500 group
-      dark:border
+      dark:border dark:shadow-[#54c8e8]
 `
 
 const ImageWrap = tw.div<I>`
@@ -89,7 +94,7 @@ const FeatureCenter = tw.div`
 `
 
 const FeatureText = tw.div`
-  text-sm text-foreground font-sans font-medium ml-3 
+  text-sm text-foreground dark:text-slate-400 font-sans font-medium ml-3 
 `
 
 const Included = ({ title, included }: F) => {
@@ -112,9 +117,10 @@ const SelectWrap = tw.div`
   h-24 flex items-center justify-center px-6
 `
 
-const Select = (props: ItemProps) => (
+const Select = (props: SelectProps) => (
 	<SelectWrap>
 		<Button
+			onClick={() => props.onPress(props.item)}
 			className='w-full'
 			size={'lg'}>
 			Select
@@ -161,13 +167,32 @@ const Featured = ({ features }: Pick<ItemProps, 'features'>) => (
 const Item = (props: ItemProps) => {
 	const { id, features, price, description, duration, title } = props
 	const header = { id, price, description, duration, title }
+	const onPressSelect = () => {
+		switch (title) {
+			case 'Free *':
+				return toast('Oooh Freebie baby!', {
+					description: 'Come get some.',
+				})
+			case 'Sapphire':
+				return toast('Be a pro!', {
+					description: `You're my bro!`,
+				})
+			case 'Gold':
+				return toast(`How's it going?`, {
+					description: `Wanna grab a coffee later?`,
+				})
+		}
+	}
 	return (
 		<ItemContainer $id={id}>
 			<Content $id={id}>
 				<ImageWrap $id={id}></ImageWrap>
 				<Header {...header} />
 				<Featured features={features} />
-				<Select {...props} />
+				<Select
+					item={props}
+					onPress={onPressSelect}
+				/>
 			</Content>
 		</ItemContainer>
 	)

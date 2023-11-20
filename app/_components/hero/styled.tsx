@@ -64,7 +64,7 @@ const HeadlineContent = ({ headline }: { headline: string }) => (
 )
 
 const SubtextContainer = tw.div`
-  flex items-center border-l-8 border-secondary-foreground py-2 px-4 ml-[-18px] h-[72px]
+  flex items-center border-l-8 border-[#54c8e8] py-2 px-4 ml-[-18px] h-[72px]
 `
 const SubtextContent = tw.h2`
   text-[0.75rem] sm:text-sm 

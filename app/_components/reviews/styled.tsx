@@ -9,7 +9,7 @@ const ReviewContent = tw.div`
 `
 
 const Item = tw.div`
-  bg-[#eff3fc] dark:bg-primary-foreground rounded-3xl 
+  bg-[#eff3fc] dark:bg-slate-500 rounded-3xl 
 `
 
 const Cell = tw.div`

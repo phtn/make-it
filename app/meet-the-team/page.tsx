@@ -33,7 +33,11 @@ const headlines: HeadlineData[] = [
 	{ id: 3, name: '', headline: 'Leadership' },
 ]
 
-const heroProps = { subtext: 'meet the team', headlines }
+const heroProps = {
+	subheader: 'meet the team',
+	description: `Meet the Team with Global Presence that Fuels Collaboration, and Guides you towards Success at Every Turn. Together, We'll unleash the Full Spectrum of your potential.`,
+	headlines,
+}
 
 const MeetTheTeam = () => (
 	<div className=''>

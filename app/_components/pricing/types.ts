@@ -24,4 +24,9 @@ interface I {
 	$id: number
 }
 
-export type { ItemProps, PricingProps, I, F }
+type SelectProps = {
+	item: ItemProps
+	onPress: (item: ItemProps) => void
+}
+
+export type { ItemProps, PricingProps, I, F, SelectProps }

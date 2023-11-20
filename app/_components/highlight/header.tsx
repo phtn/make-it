@@ -15,7 +15,7 @@ const TagContainer = tw.div`
 `
 
 const TagLabel = tw.h2`
-  text-white font-extrabold text-[0.64rem] 
+  text-slate-800 font-extrabold text-[0.64rem] 
   uppercase tracking-[2.5px]
 `
 
@@ -24,7 +24,8 @@ const TitleContainer = tw.div`
 `
 
 const HeaderTitle = tw.h2`
-	text-[1.5rem] sm:text-[2.5rem] font-bold font-sans leading-[24px] sm:leading-10
+	text-[1.5rem] sm:text-[2.5rem] font-bold font-sans 
+	leading-[24px] sm:leading-10 text-foreground
 `
 
 const HeaderSeparator = tw.div`

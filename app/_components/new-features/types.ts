@@ -12,6 +12,7 @@ type FeatureItemProps = {
 	id: number
 	title: string
 	src: string
+	link: string
 }
 
 export type { FeatureProps, FeatureHeaderProps, FeatureItemProps }

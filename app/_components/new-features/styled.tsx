@@ -4,7 +4,7 @@ import { FeatureItemProps } from './types'
 
 const Container = tw.div`
   h-fit w-screen flex flex-col overflow-hidden
-	mb-44
+	sm:mb-44 mb-24
 `
 
 const GridContainer = tw.div`
@@ -14,7 +14,7 @@ const GridContainer = tw.div`
 // Feature Item
 
 const FeatureItemContainer = tw.div`
-  flex flex-col items-center w-full h-[550px]
+  flex flex-col items-center w-full sm:h-[550px] h-[400px]
 `
 const WrapCenter = tw.div`
   flex items-center justify-center
@@ -33,7 +33,7 @@ const FeatureDetail = tw.div`
 `
 
 const FeatureTitle = tw.h2`
-  font-extrabold font-sans tracking text-[1.5rem] text-slate-800 dark:text-[54c8e8] leading-[1.5rem]
+  font-extrabold font-sans tracking text-[1.5rem] text-foreground dark:text-[54c8e8] leading-[1.5rem]
 `
 
 const Description = tw.div`

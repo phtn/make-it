@@ -8,6 +8,9 @@ import { HeadlineData } from '../_components/hero/types'
 import { AboutAsset } from '../_components/lottie'
 import { Grid } from '../_components/motion/grid'
 import { Container, Content } from './styled'
+import { toast } from 'sonner'
+import { Button } from '@/components/ui/button'
+import { Users2 } from 'lucide-react'
 
 const header = { tag: 'dive', title: 'The Company' }
 const clubContent = {
@@ -32,37 +35,73 @@ const headlines: HeadlineData[] = [
 	{ id: 3, name: '', headline: 'Social Enterprise' },
 ]
 
-const heroProps = { subtext: 'about the company', headlines }
+const heroProps = {
+	subheader: 'about the company',
+	description: `Join Us on this Exciting Journey, Where Together, We'll Discover Beautiful Possibilities and Leave a Lasting Impact on the World. Today, You and I, Can Make A difference.`,
+	headlines,
+}
+const JoinButton = () => {
+	const onPreseJoin = () => {
+		toast(`Hurray!`, {
+			description: `Welcome aboard!`,
+			action: {
+				label: 'Next',
+				onClick: () => toast('Uhmm, one sec.'),
+			},
+		})
+	}
+	return (
+		<Button
+			onClick={onPreseJoin}
+			className='mx-3'
+			size={'lg'}
+			variant={'secondary'}>
+			<Users2 className='text-background/70 h-4 w-4 mr-2' />
+			Join us!
+		</Button>
+	)
+}
+const AboutTheCompany = () => {
+	return (
+		<Container>
+			<Grid />
+			<Content>
+				<Hero
+					asset={<AboutAsset />}
+					primaryProps={heroProps}
+				/>
+				<Banner
+					title='Join us today!'
+					description={`We'll guide you every step of the way.`}
+					primaryButton={<JoinButton />}
+				/>
+				<Body />
+			</Content>
+		</Container>
+	)
+}
 
-const AboutTheCompany = () => (
-	<Container>
-		<Grid />
-		<Content>
-			<Hero
-				asset={<AboutAsset />}
-				primaryProps={heroProps}
-			/>
-			<Banner />
-			<Header
-				tag='learn'
-				title={`What we're all about`}
-			/>
-			<HeaderGap />
-			<PostScript
-				header={header}
-				content={clubContent}
-				src='/company/club-v1.webp'
-			/>
-			<PastScript
-				content={hopeContent}
-				src='/company/hope-v1.webp'
-			/>
-			<PostScript
-				content={socialContent}
-				src='/company/social-v1.webp'
-			/>
-		</Content>
-	</Container>
+const Body = () => (
+	<>
+		<Header
+			tag='learn'
+			title={`What we're all about`}
+		/>
+		<HeaderGap />
+		<PostScript
+			header={header}
+			content={clubContent}
+			src='/company/club-v1.webp'
+		/>
+		<PastScript
+			content={hopeContent}
+			src='/company/hope-v1.webp'
+		/>
+		<PostScript
+			content={socialContent}
+			src='/company/social-v1.webp'
+		/>
+	</>
 )
 
 export default AboutTheCompany

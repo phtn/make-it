@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Header, HeaderGap } from '../header'
 import { Container, Item, GridContainer } from './styled'
 import { FeatureItemProps, FeatureProps } from './types'
@@ -8,10 +9,12 @@ const NewFeatures = ({ header, features }: FeatureProps) => (
 		<HeaderGap />
 		<GridContainer>
 			{features.map((feature: FeatureItemProps) => (
-				<Item
+				<Link
+					className='no-underline'
 					key={feature.id}
-					{...feature}
-				/>
+					href={feature.link}>
+					<Item {...feature} />
+				</Link>
 			))}
 		</GridContainer>
 	</Container>

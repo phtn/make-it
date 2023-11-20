@@ -16,6 +16,9 @@ import {
 	Stack,
 } from './styled'
 import { Header } from '../header'
+import { Button } from '@/components/ui/button'
+import { ArrowUpRight } from 'lucide-react'
+import { toast } from 'sonner'
 
 const Highlight = ({ header }: HighlightProps) => (
 	<>
@@ -38,33 +41,51 @@ const Primary = () => (
 	</PrimaryContent>
 )
 
-const Secondary = () => (
-	<SecondaryContent>
-		<Stack>
-			<Content>
-				<MobileAvatar />
-				<HighlightHeader
-					tag='meet'
-					title='Samantha'
-					rating={(5).toFixed(1).toString()}
-					reviews={78}
-					subtext='Computer Engineer'
-				/>
-			</Content>
-			<Details />
-		</Stack>
-	</SecondaryContent>
-)
+const Secondary = () => {
+	const onPressBook = () => {
+		toast('Button works!', {
+			description: 'Would you like to proceed?',
+			action: {
+				label: 'Yes',
+				onClick: () => toast('Sweet!'),
+			},
+		})
+	}
+	return (
+		<SecondaryContent>
+			<Stack>
+				<Content>
+					<MobileAvatar />
+					<HighlightHeader
+						tag='meet'
+						title='Samantha'
+						rating={(5).toFixed(1).toString()}
+						reviews={78}
+						subtext='Computer Engineer'
+					/>
+				</Content>
+				<Details />
+
+				<Button
+					size={'lg'}
+					onClick={onPressBook}
+					className=''>
+					Book now <ArrowUpRight className='h-4 w-4 ml-2' />
+				</Button>
+			</Stack>
+		</SecondaryContent>
+	)
+}
 
 const ProfileContent = ({ summary }: ProfileContentProps) => <>{summary}</>
 
 const list = 'justify-start bg-transparent'
-const trigger = `px-6 border-b border-secondary-foreground`
-const content = `p-3 h-fit md:w-[450px]`
+const trigger = `px-6 border-b border-slate-300`
+const content = `p-3 h-[100px] md:w-[450px]`
 
 const triggers: TabTriggerProps[] = [
 	{ id: 0, value: 'profile', title: 'Profile' },
-	{ id: 1, value: 'services', title: 'Services' },
+	{ id: 1, value: 'achievements', title: 'Achievements' },
 	{ id: 2, value: 'certs', title: 'Certificates' },
 ]
 const contents: TabContentProps[] = [
@@ -75,8 +96,8 @@ const contents: TabContentProps[] = [
 	},
 	{
 		id: 1,
-		value: 'services',
-		content: <ProfileContent summary='Services Summary' />,
+		value: 'achievements',
+		content: <ProfileContent summary='Achievements Summary' />,
 	},
 	{
 		id: 2,

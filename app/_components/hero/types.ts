@@ -12,7 +12,8 @@ type HeroProps = {
 }
 
 type PrimaryProps = {
-	subtext: string
+	subheader: string
+	description: string
 	headlines: HeadlineData[]
 }
 

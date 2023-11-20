@@ -29,7 +29,7 @@ const Hero = ({ asset, primaryProps }: HeroProps) => (
 	</HeroContainer>
 )
 
-const Primary = ({ subtext, headlines }: PrimaryProps) => {
+const Primary = ({ subheader, description, headlines }: PrimaryProps) => {
 	const [index, setIndex] = useState(0)
 	const [count, setCount] = useState(0)
 
@@ -58,7 +58,7 @@ const Primary = ({ subtext, headlines }: PrimaryProps) => {
 						<Title>Make it in Australia</Title>
 					</Link>
 
-					<Subheader>{subtext}</Subheader>
+					<Subheader>{subheader}</Subheader>
 				</div>
 				<motion.div
 					key={index}
@@ -77,11 +77,7 @@ const Primary = ({ subtext, headlines }: PrimaryProps) => {
 					initial={{ opacity: 0, x: -20 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.8, delay: 1.8, ease: 'easeInOut' }}>
-					<Subtext
-						subtext='Experience the newest way to delegate. The ultimate app to shop
-							all kinds of services, provided by select skilled and verified
-							professionals.'
-					/>
+					<Subtext subtext={description} />
 				</motion.div>
 			</PrimaryContent>
 		</HeroPrimary>
