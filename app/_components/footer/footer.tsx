@@ -47,7 +47,7 @@ const Secondary = () => (
 			<LinkItem href={'/'}>
 				<LinkText>Benefits of a Mentor</LinkText>
 			</LinkItem>
-			<LinkItem href={'/'}>
+			<LinkItem href={'/meet-a-mentor'}>
 				<LinkText>Meet a Mentor</LinkText>
 			</LinkItem>
 			<LinkItem href={'/'}>

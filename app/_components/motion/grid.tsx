@@ -38,11 +38,11 @@ export function Grid() {
 			initial='hidden'
 			animate={controls}
 			variants={{}}>
-			{Array.from({ length: 4000 }).map((_, i) => (
+			{Array.from({ length: 1500 }).map((_, i) => (
 				<GridItem
 					key={i}
 					i={i}
-					originIndex={32}
+					originIndex={232}
 					delayPerPixel={delayPerPixel}
 					originOffset={originOffset}
 				/>

@@ -1,4 +1,3 @@
-import Image, { ImageProps } from 'next/image'
 import tw from 'tailwind-styled-components'
 
 const HeroContainer = tw.div`
@@ -27,13 +26,14 @@ const PrimaryContent = tw.div`
 const Title = tw.div`
   font-sans px-3 py-3 ml-3 font-bold text-[1.5rem] w-fit 
   text-primary-foreground bg-slate-800 leading-[1.5rem]
-  rounded
+  rounded shadow-xl shadow-foreground/30
 `
 const Subheader = tw.div`
   sm:text-[1.2rem] px-3 py-2
   justify-center text-slate-800 w-fit
   bg-primary-foreground rounded 
   font-sans font-medium
+  shadow-xl shadow-foreground/10
 `
 
 const HeadlineText = tw.h1`
@@ -41,12 +41,12 @@ const HeadlineText = tw.h1`
   sm:text-[2.5rem] lg:text-[3rem]  
   leading-[2rem] md:leading-[3rem]
   tracking font-bold font-sans
-  sm:py-3 
+  sm:py-1 
 `
 
 const HeadlineDot = tw.h1`
   text-[2rem] sm:text-[2.5rem] lg:text-[3.25rem]  
-  leading-[2rem] md:leading-[3.25rem]
+  leading-[2rem] sm:leading-[2.5rem] md:leading-[3.25rem]
   tracking font-bold font-sans
   text-[#54c8e8]
 `
@@ -64,7 +64,8 @@ const HeadlineContent = ({ headline }: { headline: string }) => (
 )
 
 const SubtextContainer = tw.div`
-  flex items-center border-l-8 border-[#54c8e8] px-4 ml-[-18px] h-[72px]
+  flex items-center border-l-8 border-[#54c8e8] 
+  px-4 ml-[-18px] h-[72px] sm:w-[450px]
 `
 const SubtextContent = tw.h2`
   text-[0.75rem] sm:text-sm 

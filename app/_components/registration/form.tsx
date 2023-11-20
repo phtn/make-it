@@ -140,7 +140,6 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 						</FormLabel>
 						<FormControl>
 							<Input
-								type='number'
 								placeholder='Phone'
 								{...field}
 							/>
@@ -150,9 +149,8 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 				)}
 			/>
 			<Button
-				className='w-full font-sans font-extrabold text-[#6ef0ad] bg-slate-800'
 				type='submit'
-				variant={'outline'}>
+				className='w-full'>
 				Sign Up
 			</Button>
 		</form>

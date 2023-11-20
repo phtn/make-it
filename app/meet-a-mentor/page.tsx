@@ -17,7 +17,11 @@ const headlines: HeadlineData[] = [
 	{ id: 3, name: '', headline: 'Learn' },
 ]
 
-const heroProps = { subheader: 'meet a mentor', description: '', headlines }
+const heroProps = {
+	subheader: 'meet a mentor',
+	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
+	headlines,
+}
 const hightlightHeader = { tag: 'Hire', title: 'Meet the Mentors' }
 
 const HireButton = () => {
@@ -35,7 +39,7 @@ const HireButton = () => {
 			onClick={onPressHire}
 			className='mx-3'
 			size={'lg'}
-			variant={'secondary'}>
+			variant={'tertiary'}>
 			<User2 className='text-foreground h-4 w-4 mr-2' />
 			Hire A Mentor
 		</Button>
