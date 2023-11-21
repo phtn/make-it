@@ -3,29 +3,13 @@ import { Header, HeaderGap } from '../_components/header'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
 import { MeetAsset } from '../_components/lottie'
+import NewFeatures from '../_components/new-features/new-features'
 import PostScript from '../_components/postscript'
 import PastScript from '../_components/postscript/pastscript'
+import { theTeam } from './team-data'
 
 const header = { tag: 'dive', title: 'The Company' }
-const clubContent = {
-	title: 'Rea Kristine',
-	description: 'Operations',
-}
-
-const hopeContent = {
-	title: 'Didoy',
-	description: `Strategy`,
-}
-
-const socialContent = {
-	title: 'Raquel',
-	description: `Sales & Marketing`,
-}
-
-const hazelContent = {
-	title: 'Hazel',
-	description: `Legal & Compliance`,
-}
+const featureHeader = { tag: 'Team', title: 'The Company' }
 
 const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Behind the scenes' },
@@ -45,26 +29,54 @@ const MeetTheTeam = () => (
 			asset={<MeetAsset />}
 			primaryProps={heroProps}
 		/>
+		{/* <MobileView /> */}
+		<DesktopView />
+	</div>
+)
+
+const MobileView = () => (
+	<div>
+		<NewFeatures
+			header={featureHeader}
+			features={theTeam}
+		/>
+	</div>
+)
+
+const DesktopView = () => (
+	<div>
 		<Header
 			tag='team'
-			title={`Meet the Team`}
+			title={`Your Planning Dream Team`}
 		/>
 		<HeaderGap />
 		<PostScript
 			header={header}
-			content={clubContent}
+			content={{
+				title: theTeam[0].firstName,
+				description: theTeam[0].description,
+			}}
 			src='/team/rea-v1.jpg'
 		/>
 		<PastScript
-			content={hopeContent}
+			content={{
+				title: theTeam[1].firstName,
+				description: theTeam[1].description,
+			}}
 			src='/lifestyle/life-v1.jpg'
 		/>
 		<PostScript
-			content={socialContent}
+			content={{
+				title: theTeam[2].firstName,
+				description: theTeam[2].description,
+			}}
 			src='/lifestyle/life-v2.jpg'
 		/>
 		<PastScript
-			content={hazelContent}
+			content={{
+				title: theTeam[3].firstName,
+				description: theTeam[3].description,
+			}}
 			src='/lifestyle/life-v3.jpg'
 		/>
 	</div>

@@ -154,10 +154,10 @@ const TertiaryContent = tw.div`
 	flex flex-col w-[272px] justify-center items-stretch
 `
 const TertiaryTitle = tw.div`
-	flex font-sans items-end font-bold text-[1rem] text-slate-800 h-[35px]
+	flex font-sans items-end font-bold text-[1rem] text-slate-800 dark:text-slate-300 group-hover:dark:text-slate-800 background h-[35px]
 `
 const TertiarySubtext = tw.div`
-	flex font-sans items-start text-[10px] text-slate-600 h-[25px]
+	flex font-sans items-start text-[10px] text-slate-600 dark:text-slate-400 h-[25px]
 `
 
 const TertiaryDetails = ({ title, subtext }: TertiaryDetail) => (

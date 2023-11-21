@@ -36,7 +36,8 @@ const Description = tw.h3`
 const Subtext = tw.p`
   text-slate-300 text-[16px]
 	font-normal font-sans mt-3 
-	sm:mt-[-16px] w-[400px] md:w-[600px] lg:w-[750px]
+	sm:mt-[-16px] w-[400px] md:w-[600px] 
+	lg:w-[750px]
 `
 
 const PrimaryButton = tw(Button)`

@@ -62,7 +62,7 @@ export function HomeMenu() {
 						<span className='font-extrabold text-[#54c8e8] text-lg'>MiiA</span>
 					</NavigationMenuTrigger>
 
-					<NavigationMenuContent className='bg-slate-200 dark:bg-slate-700'>
+					<NavigationMenuContent className='bg-slate-200 dark:bg-slate-700/5'>
 						<div className='grid sm:grid-cols-5 grid-cols-2 sm:w-[600px] w-screen'>
 							<div className='grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.33px] border-slate-700'>
 								<div className='h-[180px] flex items-center justify-evenly'>

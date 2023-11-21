@@ -1,6 +1,6 @@
-type FeatureProps = {
+type FeatureProps<T> = {
 	header: FeatureHeaderProps
-	features: FeatureItemProps[]
+	features: T[]
 }
 type FeatureHeaderProps = {
 	tag: string
