@@ -30,13 +30,9 @@ const Primary = () => (
 			className='w-56'
 		/> */}
 		<PrimaryDetails>
-			<p className='leading-[10px] text-xs text-white'>Developed by</p>
-			<p className='leading-[10px] text-sm text-white font-bold'>
+			<p className='text-sm text-white font-extrabold'>
 				Make It In Australia PH
 			</p>
-			<div className='w-44 '>
-				<p className='text-xs text-white font-medium'>Address</p>
-			</div>
 		</PrimaryDetails>
 	</PrimaryContent>
 )
@@ -44,19 +40,19 @@ const Primary = () => (
 const Secondary = () => (
 	<SecondaryContent>
 		<div className='h-[72] flex flex-col'>
-			<LinkItem href={'/'}>
+			<LinkItem href={'/benefits-of-a-mentee'}>
 				<LinkText>Benefits of a Mentor</LinkText>
 			</LinkItem>
 			<LinkItem href={'/meet-a-mentor'}>
 				<LinkText>Meet a Mentor</LinkText>
 			</LinkItem>
-			<LinkItem href={'/'}>
+			<LinkItem href={'/join-a-class'}>
 				<LinkText>Join a Class</LinkText>
 			</LinkItem>
-			<LinkItem href={'/'}>
+			<LinkItem href={'/contact-us'}>
 				<LinkText>Contact Us</LinkText>
 			</LinkItem>
-			<LinkItem href={'/'}>
+			<LinkItem href={'/benefits-of-a-mentee'}>
 				<LinkText>Be a Mentee for Free</LinkText>
 			</LinkItem>
 			<LinkItem href={'/'}>

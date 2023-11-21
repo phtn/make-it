@@ -14,7 +14,7 @@ const GridContainer = tw.div`
 // Feature Item
 
 const FeatureItemContainer = tw.div`
-  flex flex-col items-center w-full sm:h-[550px] h-[400px]
+  flex flex-col items-center w-full sm:h-[550px] h-fit
 `
 const WrapCenter = tw.div`
   flex items-center justify-center

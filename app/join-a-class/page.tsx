@@ -42,7 +42,7 @@ const JoinAClass = () => {
 		})
 	}
 	const primaryAction = {
-		label: 'Hire a mentor',
+		label: 'Sign up',
 		onClick: onClickPrimary,
 	}
 	const secondaryAction = {
@@ -59,7 +59,7 @@ const JoinAClass = () => {
 					primaryProps={heroProps}
 				/>
 				<Banner
-					title='Hire a mentor today!'
+					title='Join a class today!'
 					description={`Your journey begins here.`}
 					primaryAction={primaryAction}
 					secondaryAction={secondaryAction}

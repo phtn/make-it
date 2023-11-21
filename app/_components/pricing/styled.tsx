@@ -71,17 +71,17 @@ const PriceWrap = tw.div`
 const Title = tw.span<I>`
   ${(p) =>
 		p.$id === 100
-			? `text-foreground`
+			? `text-background`
 			: p.$id === 200
 			? `text-sky-500`
 			: `text-yellow-500`}
 
-  font-medium font-sans tracking-wide 
+  font-extrabold font-sans tracking-wide 
   text-[1.25rem]
 `
 
 const Price = tw.span`
-  font-extrabold font-mono tracking-wide 
+  font-mono tracking-wide 
   text-[1.75rem] text-background 
 `
 
