@@ -6,11 +6,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from 'sonner'
 import Navbar from './_components/navbar'
-import Footer from './_components/footer'
 
 export const metadata: Metadata = {
-	title: 'Outsourcee App',
-	description: 'Simplify your workload.',
+	title: 'Make It In Australia PH',
+	description: 'Club, Hope Builder, Social Enterprise.',
 }
 
 export default function RootLayout({
