@@ -2,12 +2,13 @@
 import Banner from '../_components/banner'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { AboutAsset } from '../_components/lottie'
+import { AboutAsset, MeetAsset } from '../_components/lottie'
 import { Grid } from '../_components/motion/grid'
 import { Container, Content } from './styled'
 import Highlight from '../_components/highlight'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
+import Reviews from '../_components/reviews'
 
 const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Collaborate' },
@@ -16,13 +17,13 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'meet a mentor',
+	subheader: 'Testimonials',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }
 const hightlightHeader = { tag: 'Hire', title: 'Meet the Mentors' }
 
-const MeetAMentor = () => {
+const Testimonials = () => {
 	const onClickPrimary = () => {
 		toast(`You're hiring a mentor!`, {
 			description: `That's cool! Would you like to proceed?`,
@@ -55,7 +56,7 @@ const MeetAMentor = () => {
 			<Grid />
 			<Content>
 				<Hero
-					asset={<AboutAsset />}
+					asset={<MeetAsset />}
 					primaryProps={heroProps}
 				/>
 				<Banner
@@ -64,11 +65,11 @@ const MeetAMentor = () => {
 					primaryAction={primaryAction}
 					secondaryAction={secondaryAction}
 				/>
-				<Highlight header={hightlightHeader} />
+				<Reviews />
 				<Footer />
 			</Content>
 		</Container>
 	)
 }
 
-export default MeetAMentor
+export default Testimonials

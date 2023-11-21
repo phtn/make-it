@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import {
-	FooterContent,
-	FooterItem,
 	HeadlineContent,
 	HeroContainer,
 	HeroContent,
@@ -17,9 +15,9 @@ import { motion } from 'framer-motion'
 import { ReactElement, useCallback, useEffect, useState } from 'react'
 import { getNextElement } from '@/app/_utils/helpers'
 import { easeInOut } from 'popmotion'
-import { HeroProps, PrimaryProps } from './types'
+import { PrimaryProtos, ProtosProps } from './types'
 
-const Hero = ({ asset, primaryProps }: HeroProps) => (
+const Protos = ({ asset, primaryProps }: ProtosProps) => (
 	<HeroContainer>
 		<HeroContent>
 			<Primary {...primaryProps} />
@@ -28,7 +26,12 @@ const Hero = ({ asset, primaryProps }: HeroProps) => (
 	</HeroContainer>
 )
 
-const Primary = ({ subheader, description, headlines }: PrimaryProps) => {
+const Primary = ({
+	subheader,
+	description,
+	headlines,
+	title,
+}: PrimaryProtos) => {
 	const [index, setIndex] = useState(0)
 	const [count, setCount] = useState(0)
 
@@ -54,7 +57,7 @@ const Primary = ({ subheader, description, headlines }: PrimaryProps) => {
 					<Link
 						href={'/'}
 						className='no-underline'>
-						<Title>Make it in Australia</Title>
+						<Title>{title}</Title>
 					</Link>
 
 					<Subheader>{subheader}</Subheader>
@@ -87,19 +90,4 @@ const Secondary = ({ asset }: { asset: ReactElement }) => (
 	<HeroSecondary>{asset}</HeroSecondary>
 )
 
-const Footer = () => (
-	<motion.div
-		initial={{ opacity: 0 }}
-		animate={{ opacity: 1 }}
-		transition={{ duration: 0.8, delay: 1 }}>
-		<WaveOne>
-			<FooterContent>
-				<Link href={'/'}>
-					<FooterItem></FooterItem>
-				</Link>
-			</FooterContent>
-		</WaveOne>
-	</motion.div>
-)
-
-export default Hero
+export default Protos

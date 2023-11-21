@@ -16,13 +16,13 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'meet a mentor',
+	subheader: 'Benefits of a mentee',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }
 const hightlightHeader = { tag: 'Hire', title: 'Meet the Mentors' }
 
-const MeetAMentor = () => {
+const BenefitsOfAMentee = () => {
 	const onClickPrimary = () => {
 		toast(`You're hiring a mentor!`, {
 			description: `That's cool! Would you like to proceed?`,
@@ -71,4 +71,4 @@ const MeetAMentor = () => {
 	)
 }
 
-export default MeetAMentor
+export default BenefitsOfAMentee

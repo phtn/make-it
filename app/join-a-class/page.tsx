@@ -2,7 +2,7 @@
 import Banner from '../_components/banner'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { AboutAsset } from '../_components/lottie'
+import { AboutAsset, MeetAsset } from '../_components/lottie'
 import { Grid } from '../_components/motion/grid'
 import { Container, Content } from './styled'
 import Highlight from '../_components/highlight'
@@ -16,13 +16,13 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'meet a mentor',
+	subheader: 'Join A Class',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }
 const hightlightHeader = { tag: 'Hire', title: 'Meet the Mentors' }
 
-const MeetAMentor = () => {
+const JoinAClass = () => {
 	const onClickPrimary = () => {
 		toast(`You're hiring a mentor!`, {
 			description: `That's cool! Would you like to proceed?`,
@@ -55,7 +55,7 @@ const MeetAMentor = () => {
 			<Grid />
 			<Content>
 				<Hero
-					asset={<AboutAsset />}
+					asset={<MeetAsset />}
 					primaryProps={heroProps}
 				/>
 				<Banner
@@ -71,4 +71,4 @@ const MeetAMentor = () => {
 	)
 }
 
-export default MeetAMentor
+export default JoinAClass

@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { ToggleProps } from './types'
 
 import { HomeMenu } from './home-nav/home-nav'
+import Menu from '../menu'
 
 const Navbar = () => {
 	const { checked, toggleMode } = useToggleMode()
@@ -17,6 +18,7 @@ const Navbar = () => {
 	return (
 		<NavContainer>
 			<HomeMenu />
+			<Menu />
 			<div className='flex items-center justify-center'>
 				<Mode
 					checked={checked}

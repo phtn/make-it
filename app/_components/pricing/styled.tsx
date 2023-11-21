@@ -1,10 +1,11 @@
 import tw from 'tailwind-styled-components'
 import { F, I, ItemProps, SelectProps } from './types'
 import { Check, CheckCircle, CheckCircle2, X, XCircle } from 'lucide-react'
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { map } from '@/app/_utils/helpers'
 import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
+import { Checkout } from './checkout'
 
 const Container = tw.div`
   h-fit w-screen flex flex-col overflow-hidden
@@ -56,6 +57,7 @@ const ImageWrap = tw.div<I>`
 `
 const HeaderWrap = tw.div`
   flex px-6 py-2 items-center justify-between
+	bg-slate-800
 `
 
 const TitleWrap = tw.div`
@@ -69,10 +71,10 @@ const PriceWrap = tw.div`
 const Title = tw.span<I>`
   ${(p) =>
 		p.$id === 100
-			? `text-foreground dark:text-foreground`
+			? `text-foreground`
 			: p.$id === 200
-			? `text-foreground dark:text-sky-500`
-			: `text-foreground dark:text-yellow-500`}
+			? `text-sky-500`
+			: `text-yellow-500`}
 
   font-medium font-sans tracking-wide 
   text-[1.25rem]
@@ -80,13 +82,13 @@ const Title = tw.span<I>`
 
 const Price = tw.span`
   font-extrabold font-mono tracking-wide 
-  text-[1.75rem] text-foreground 
+  text-[1.75rem] text-background 
 `
 
 const Wrap = tw.div``
 const Description = tw.h3`
   uppercase font-light tracking-wide text-[11px]
-  text-foreground
+  text-background
 `
 const FeatureCenter = tw.div`
   flex items-center border-t-[0.33px]
@@ -167,21 +169,9 @@ const Featured = ({ features }: Pick<ItemProps, 'features'>) => (
 const Item = (props: ItemProps) => {
 	const { id, features, price, description, duration, title } = props
 	const header = { id, price, description, duration, title }
-	const onPressSelect = () => {
-		switch (title) {
-			case 'Free *':
-				return toast('Oooh Freebie baby!', {
-					description: 'Come get some.',
-				})
-			case 'Sapphire':
-				return toast('Be a pro!', {
-					description: `You're my bro!`,
-				})
-			case 'Gold':
-				return toast(`How's it going?`, {
-					description: `Wanna grab a coffee later?`,
-				})
-		}
+	const [selected, setSelected] = useState()
+	const onPressSelect = (item: ItemProps) => () => {
+		console.log(item)
 	}
 	return (
 		<ItemContainer $id={id}>
@@ -189,13 +179,13 @@ const Item = (props: ItemProps) => {
 				<ImageWrap $id={id}></ImageWrap>
 				<Header {...header} />
 				<Featured features={features} />
-				<Select
+				<Checkout
 					item={props}
-					onPress={onPressSelect}
+					onPress={onPressSelect(props)}
 				/>
 			</Content>
 		</ItemContainer>
 	)
 }
 
-export { Container, GridContainer, Item }
+export { Container, GridContainer, Item, Select }

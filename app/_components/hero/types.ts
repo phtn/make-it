@@ -11,10 +11,28 @@ type HeroProps = {
 	primaryProps: PrimaryProps
 }
 
+type ProtosProps = {
+	asset: ReactElement
+	primaryProps: PrimaryProtos
+}
+
 type PrimaryProps = {
 	subheader: string
 	description: string
 	headlines: HeadlineData[]
 }
 
-export type { HeadlineData, HeroProps, PrimaryProps }
+type PrimaryProtos = {
+	title: string
+	subheader: string
+	description: string
+	headlines: HeadlineData[]
+}
+
+export type {
+	HeadlineData,
+	HeroProps,
+	PrimaryProps,
+	PrimaryProtos,
+	ProtosProps,
+}

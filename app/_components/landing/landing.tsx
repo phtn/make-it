@@ -13,8 +13,6 @@ import Pricing from '../pricing/pricing'
 import { motion } from 'framer-motion'
 import Banner from '../banner'
 import { toast } from 'sonner'
-import { Button } from '@/components/ui/button'
-import { Users2 } from 'lucide-react'
 
 const metrics: MetricItemProps[] = [
 	{ value: '500+', label: 'mentors' },
@@ -37,26 +35,32 @@ const Landing = () => {
 		headlines,
 	}
 
-	const JoinButton = () => {
-		const onPressJoin = () => {
-			toast(`Everything Awesome...`, {
-				description: `Everything is awesome when you're part of a team! Everything is awesome...`,
-				action: {
-					label: 'Next',
-					onClick: () => toast(`When you're living out a dream!`),
-				},
-			})
-		}
-		return (
-			<Button
-				onClick={onPressJoin}
-				className='mx-3'
-				size={'lg'}
-				variant={'tertiary'}>
-				<Users2 className='text-foreground/70 h-4 w-4 mr-4' />
-				Join Us
-			</Button>
-		)
+	const onClickPrimary = () => {
+		toast(`Everything Awesome...`, {
+			description: `Everything is awesome when you're part of a team! Everything is awesome...`,
+			action: {
+				label: 'Next',
+				onClick: () => toast(`When you're living out a dream!`),
+			},
+		})
+	}
+	const onClickSecondary = () => {
+		toast(`Everything Awesome...`, {
+			description: `Everything is awesome when you're part of a team! Everything is awesome...`,
+			action: {
+				label: 'Next',
+				onClick: () => toast(`When you're living out a dream!`),
+			},
+		})
+	}
+
+	const primaryAction = {
+		label: 'Join Us',
+		onClick: onClickPrimary,
+	}
+	const secondaryAction = {
+		label: 'Login',
+		onClick: onClickSecondary,
 	}
 
 	return (
@@ -80,7 +84,8 @@ const Landing = () => {
 				<Banner
 					title='Gain access to a better future.'
 					description={`Together, we'll make it happen.`}
-					primaryButton={<JoinButton />}
+					primaryAction={primaryAction}
+					secondaryAction={secondaryAction}
 				/>
 
 				<Highlight header={highlightHeader} />

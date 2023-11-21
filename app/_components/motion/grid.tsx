@@ -38,7 +38,7 @@ export function Grid() {
 			initial='hidden'
 			animate={controls}
 			variants={{}}>
-			{Array.from({ length: 1500 }).map((_, i) => (
+			{Array.from({ length: 500 }).map((_, i) => (
 				<GridItem
 					key={i}
 					i={i}

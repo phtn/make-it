@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
 import {
@@ -27,7 +26,7 @@ import { RegistrationForm } from '../../registration/form'
 
 const links: TertiaryProps[] = [
 	{
-		href: '/',
+		href: '/faqs',
 		details: {
 			title: 'FAQs',
 			subtext: 'Your questions answered.',
@@ -36,7 +35,7 @@ const links: TertiaryProps[] = [
 	},
 
 	{
-		href: '/',
+		href: '/testimonials',
 		details: {
 			title: 'Testimonials',
 			subtext: 'Read our testimonials.',
@@ -45,7 +44,7 @@ const links: TertiaryProps[] = [
 	},
 
 	{
-		href: '/',
+		href: '/newsletter',
 		details: {
 			title: 'Newsletter',
 			subtext: 'Get free updates!',

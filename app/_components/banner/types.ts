@@ -1,10 +1,20 @@
 import { ReactElement } from 'react'
 
+type Action = {
+	onClick: () => void
+	label: string
+}
+
 type BannerProps = {
 	title: string
 	description: string
-	primaryButton: ReactElement
-	secondaryButton?: ReactElement
+	primaryAction: Action
+	secondaryAction: Action
 }
 
-export type { BannerProps }
+type PrimaryCellProps = {
+	title: string
+	description: string
+}
+
+export type { Action, BannerProps, PrimaryCellProps }

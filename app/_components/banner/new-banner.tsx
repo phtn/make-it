@@ -1,17 +1,19 @@
 import {
 	Cell,
 	Container,
-	Primary,
+	NewCell,
+	NewContainer,
+	NewPrimary,
 	PrimaryAction,
 	SecondaryAction,
 } from './styled'
 import { BannerProps } from './types'
 
-const Banner = (props: BannerProps) => {
+const NewBanner = (props: BannerProps) => {
 	const { title, description, primaryAction, secondaryAction } = props
 	return (
-		<Container>
-			<Primary
+		<NewContainer>
+			<NewPrimary
 				title={title}
 				description={description}
 			/>
@@ -19,8 +21,8 @@ const Banner = (props: BannerProps) => {
 				<PrimaryAction {...primaryAction} />
 				<SecondaryAction {...secondaryAction} />
 			</Cell>
-		</Container>
+		</NewContainer>
 	)
 }
 
-export default Banner
+export default NewBanner

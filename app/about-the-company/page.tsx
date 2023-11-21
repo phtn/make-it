@@ -43,28 +43,34 @@ const heroProps = {
 	description: `Join Us on this Exciting Journey, Where Together, We'll Discover Beautiful Possibilities and Leave a Lasting Impact on the World. Today, You and I, Can Make A difference.`,
 	headlines,
 }
-const JoinButton = () => {
-	const onPreseJoin = () => {
-		toast(`Hurray!`, {
-			description: `Welcome aboard!`,
+
+const AboutTheCompany = () => {
+	const onClickPrimary = () => {
+		toast(`You're hiring a mentor!`, {
+			description: `That's cool! Would you like to proceed?`,
 			action: {
-				label: 'Next',
-				onClick: () => toast('Uhmm, one sec.'),
+				label: 'Yes',
+				onClick: () => toast('Sure you do.'),
 			},
 		})
 	}
-	return (
-		<Button
-			onClick={onPreseJoin}
-			className='mx-3'
-			size={'lg'}
-			variant={'secondary'}>
-			<Users2 className='text-background/70 h-4 w-4 mr-2' />
-			Join us!
-		</Button>
-	)
-}
-const AboutTheCompany = () => {
+	const onClickSecondary = () => {
+		toast(`You're hiring a mentor!`, {
+			description: `That's cool! Would you like to proceed?`,
+			action: {
+				label: 'Yes',
+				onClick: () => toast('Sure you do.'),
+			},
+		})
+	}
+	const primaryAction = {
+		label: '',
+		onClick: onClickPrimary,
+	}
+	const secondaryAction = {
+		label: '',
+		onClick: onClickSecondary,
+	}
 	return (
 		<Container>
 			<Grid />
@@ -76,7 +82,8 @@ const AboutTheCompany = () => {
 				<Banner
 					title='Join us today!'
 					description={`We'll guide you every step of the way.`}
-					primaryButton={<JoinButton />}
+					primaryAction={primaryAction}
+					secondaryAction={secondaryAction}
 				/>
 				<Body />
 				<Footer />

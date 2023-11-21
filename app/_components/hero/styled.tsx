@@ -37,7 +37,7 @@ const Subheader = tw.div`
 `
 
 const HeadlineText = tw.h1`
-  text-[2rem] text-foreground 
+  text-[1.25rem] text-foreground 
   sm:text-[2.5rem] lg:text-[3rem]  
   leading-[2rem] md:leading-[3rem]
   tracking font-bold font-sans
