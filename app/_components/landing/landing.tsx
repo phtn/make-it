@@ -1,5 +1,4 @@
 import { LandingContainer, LandingContent } from './styled'
-import Hero from '../hero'
 import Highlight from '../highlight'
 import MetricsBanner from '../metrics-banner'
 import Reviews from '../reviews'
@@ -13,7 +12,6 @@ import Pricing from '../pricing/pricing'
 import { motion } from 'framer-motion'
 import Banner from '../banner'
 import { toast } from 'sonner'
-import Lottie from 'lottie-react'
 import ImageTree from '../image-tree'
 import Terran from '../hero/Terran'
 
@@ -83,7 +81,7 @@ const Landing = () => {
 				<MetricsBanner metrics={metrics} />
 				<NewFeatures
 					header={featureHeader}
-					features={features}
+					data={features}
 				/>
 
 				<Banner
