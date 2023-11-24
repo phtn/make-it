@@ -3,7 +3,7 @@ import Highlight from '../highlight'
 import MetricsBanner from '../metrics-banner'
 import Reviews from '../reviews'
 import Footer from '../footer'
-import { features } from '../new-features/features-data'
+import { how } from '../new-features/features-data'
 import { MetricItemProps } from '../metrics-banner/types'
 import { SydneyAsset } from '../lottie'
 import { HeadlineData } from '../hero/types'
@@ -81,7 +81,7 @@ const Landing = () => {
 				<MetricsBanner metrics={metrics} />
 				<NewFeatures
 					header={featureHeader}
-					data={features}
+					data={how}
 				/>
 
 				<Banner
