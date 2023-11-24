@@ -1,18 +1,29 @@
-type FeatureProps<T> = {
-	header: FeatureHeaderProps
-	features: T[]
-}
-type FeatureHeaderProps = {
-	tag: string
-	title: string
+import { ReactNode } from 'react'
+import { HeaderProps } from '../header/header'
+
+type FeatureProps = {
+	header: HeaderProps
+	data: Item[]
 }
 
-type FeatureItemProps = {
-	description: string
+type Props = {
+	data: Item[]
+	keyExtractor: (item: Item) => string
+	renderItem: (item: Item) => ReactNode
+}
+
+type LinkProps = {
 	id: number
-	title: string
-	src: string
-	link: string
+	href: string
+	props: Item
 }
 
-export type { FeatureProps, FeatureHeaderProps, FeatureItemProps }
+interface Item {
+	id: number
+	href: string
+	title: string
+	description: string
+	src: string
+}
+
+export type { Props, Item, FeatureProps, LinkProps }

@@ -17,7 +17,8 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'Testimonials',
+	title: 'Testimonials',
+	subheader: 'Read client feedbacks.',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }

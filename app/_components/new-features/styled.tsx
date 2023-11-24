@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import tw from 'tailwind-styled-components'
-import { FeatureItemProps } from './types'
+import { Item, LinkProps } from './types'
+import Link from 'next/link'
 
 const Container = tw.div`
   h-fit w-screen flex flex-col overflow-hidden
@@ -48,29 +49,37 @@ const Icon = tw(Image)`
   h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 
 `
 
-const Item = ({ title, description, src }: FeatureItemProps) => (
+const ListItem = (props: Item) => (
 	<FeatureItemContainer>
 		<FeatureDetail>
 			<WrapCenter>
 				<IconContainer>
 					<Icon
-						alt={title}
-						src={src}
+						alt={props.title}
+						src={props.src}
 						height={100}
 						width={100}
 					/>
 				</IconContainer>
 			</WrapCenter>
 			<WrapCenter>
-				<FeatureTitle>{title}</FeatureTitle>
+				<FeatureTitle>{props.title}</FeatureTitle>
 			</WrapCenter>
 			<WrapCenter>
 				<Description>
-					<DescriptionText>{description}</DescriptionText>
+					<DescriptionText>{props.description}</DescriptionText>
 				</Description>
 			</WrapCenter>
 		</FeatureDetail>
 	</FeatureItemContainer>
 )
 
-export { Container, GridContainer, Item }
+const List = ({ href, id, props }: LinkProps) => (
+	<Link
+		href={href}
+		key={id}>
+		<ListItem {...props} />
+	</Link>
+)
+
+export { Container, GridContainer, ListItem, List }

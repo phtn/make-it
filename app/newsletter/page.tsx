@@ -17,7 +17,8 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'Newsletter',
+	title: 'Newsletter',
+	subheader: 'Get weekly updates!',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }

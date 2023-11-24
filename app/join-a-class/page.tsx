@@ -16,7 +16,8 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'Join A Class',
+	title: 'Join A Class',
+	subheader: 'Browse all our classes.',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }

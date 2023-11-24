@@ -18,7 +18,8 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'meet the team',
+	title: 'Meet the Team',
+	subheader: 'The Dream Planners.',
 	description: `Meet the Team with Global Presence that Fuels Collaboration, and Guides you towards Success at Every Turn. Together, We'll unleash the Full Spectrum of your potential.`,
 	headlines,
 }
@@ -34,14 +35,7 @@ const MeetTheTeam = () => (
 	</div>
 )
 
-const MobileView = () => (
-	<div>
-		<NewFeatures
-			header={featureHeader}
-			features={theTeam}
-		/>
-	</div>
-)
+const MobileView = () => <div></div>
 
 const DesktopView = () => (
 	<div>

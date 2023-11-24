@@ -39,7 +39,8 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	subheader: 'about the company',
+	title: 'About the Company',
+	subheader: 'What do we do?',
 	description: `Join Us on this Exciting Journey, Where Together, We'll Discover Beautiful Possibilities and Leave a Lasting Impact on the World. Today, You and I, Can Make A difference.`,
 	headlines,
 }

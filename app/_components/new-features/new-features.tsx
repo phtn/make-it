@@ -1,23 +1,32 @@
 import Link from 'next/link'
 import { Header, HeaderGap } from '../header'
-import { Container, Item, GridContainer } from './styled'
-import { FeatureItemProps, FeatureProps } from './types'
+import { Container, ListItem, GridContainer, List } from './styled'
+import { FeatureProps, Item, Props } from './types'
 
-const NewFeatures = ({ header, features }: FeatureProps<FeatureItemProps>) => (
+const NewFeatures = ({ header, data }: FeatureProps) => (
 	<Container>
 		<Header {...header} />
 		<HeaderGap />
-		<GridContainer>
-			{features.map((feature: FeatureItemProps) => (
+		<GenericList
+			data={data}
+			keyExtractor={(item) => `${item}`}
+			renderItem={(item) => (
 				<Link
-					className='no-underline'
-					key={feature.id}
-					href={feature.link}>
-					<Item {...feature} />
+					href={item.href}
+					key={item.id}>
+					<ListItem {...item} />
 				</Link>
-			))}
-		</GridContainer>
+			)}
+		/>
 	</Container>
+)
+
+const GenericList = ({ data, keyExtractor, renderItem }: Props) => (
+	<GridContainer>
+		{data.map((item) => (
+			<div key={keyExtractor(item)}>{renderItem(item)}</div>
+		))}
+	</GridContainer>
 )
 
 export default NewFeatures
