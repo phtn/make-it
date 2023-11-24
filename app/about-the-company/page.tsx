@@ -1,15 +1,17 @@
 'use client'
-import Banner from '../_components/banner'
 import Hero from '../_components/hero'
-import PostScript from '../_components/postscript'
-import PastScript from '../_components/postscript/pastscript'
 import { Header, HeaderGap } from '../_components/header'
 import { HeadlineData } from '../_components/hero/types'
 import { AboutAsset } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
-import Footer from '../_components/footer'
-import GodRays from '../_components/godrays'
+import dynamic from 'next/dynamic'
+
+const GodRays = dynamic(() => import('../_components/godrays'))
+const Banner = dynamic(() => import('../_components/banner'))
+const PostScript = dynamic(() => import('../_components/postscript'))
+const PastScript = dynamic(() => import('../_components/postscript/pastscript'))
+const Footer = dynamic(() => import('../_components/footer'))
 
 const header = { tag: 'dive', title: 'The Company' }
 const clubContent = {

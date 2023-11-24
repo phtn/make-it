@@ -1,13 +1,15 @@
 'use client'
-import Banner from '../_components/banner'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
 import { AboutAsset } from '../_components/lottie'
 import { Container, Content } from './styled'
-import Highlight from '../_components/highlight'
 import { toast } from 'sonner'
-import Footer from '../_components/footer'
-import GodRays from '../_components/godrays/godrays'
+import dynamic from 'next/dynamic'
+
+const GodRays = dynamic(() => import('../_components/godrays'))
+const Banner = dynamic(() => import('../_components/banner'))
+const Highlight = dynamic(() => import('../_components/highlight'))
+const Footer = dynamic(() => import('../_components/footer'))
 
 const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Collaborate' },

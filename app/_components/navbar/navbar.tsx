@@ -1,18 +1,18 @@
 'use client'
 
 import useToggleMode from '@/app/_utils/hooks/useToggleMode'
-import { MoonStar, Sun, NavContainer, Brand } from './styled'
+import { MoonStar, Sun, NavContainer } from './styled'
 import { Switch } from '@/components/ui/switch'
 import { Button } from '@/components/ui/button'
 import { useCallback } from 'react'
 import { map } from '@/app/_utils/helpers'
-import Image from 'next/image'
 import { ToggleProps } from './types'
-
 import { HomeMenu } from './home-nav/home-nav'
-import Menu from '../menu'
 import { User2 } from 'lucide-react'
 import { toast } from 'sonner'
+import dynamic from 'next/dynamic'
+
+const Menu = dynamic(() => import('../menu'))
 
 const Navbar = () => {
 	const { checked, toggleMode } = useToggleMode()

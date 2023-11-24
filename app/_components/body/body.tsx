@@ -1,7 +1,9 @@
 'use client'
 import Godrays from '../godrays'
-import Landing from '../landing/landing'
 import { BodyContainer } from './styled'
+import dynamic from 'next/dynamic'
+
+const Landing = dynamic(() => import('../landing'))
 
 const Body = () => (
 	<BodyContainer>

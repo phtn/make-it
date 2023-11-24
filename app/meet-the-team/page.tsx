@@ -1,14 +1,16 @@
 'use client'
-import GodRays from '../_components/godrays/godrays'
 import { Header, HeaderGap } from '../_components/header'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
 import { MeetAsset } from '../_components/lottie'
-import NewFeatures from '../_components/new-features/new-features'
 import PostScript from '../_components/postscript'
 import PastScript from '../_components/postscript/pastscript'
 import { Container, Content } from './styled'
 import { theTeam } from './team-data'
+
+import dynamic from 'next/dynamic'
+
+const GodRays = dynamic(() => import('../_components/godrays'))
 
 const header = { tag: 'dive', title: 'The Company' }
 const featureHeader = { tag: 'Team', title: 'The Company' }
@@ -21,7 +23,7 @@ const headlines: HeadlineData[] = [
 
 const heroProps = {
 	title: 'Meet the Team',
-	subheader: 'The Dream Planners.',
+	subheader: 'The Planning Dream Team.',
 	description: `Meet the Team with Global Presence that Fuels Collaboration, and Guides you towards Success at Every Turn. Together, We'll unleash the Full Spectrum of your potential.`,
 	headlines,
 }

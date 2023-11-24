@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Header, HeaderGap } from '../header'
 import { Container, ListItem, GridContainer, List } from './styled'
-import { FeatureProps, Item, Props } from './types'
+import { FeatureProps, Props } from './types'
 
 const NewFeatures = ({ header, data }: FeatureProps) => (
 	<Container>
