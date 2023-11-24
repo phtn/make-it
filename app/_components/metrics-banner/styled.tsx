@@ -1,11 +1,13 @@
 import tw from 'tailwind-styled-components'
 
 const Container = tw.div`
-  grid grid-cols-2 lg:grid-cols-4 sm:mb-44 mb-24 bg-gradient-to-br from-slate-700 to-slate-900 
+  grid grid-cols-2 lg:grid-cols-4 lg:bg-[url('/bg/bg-v2.webp')] bg-cover sm:mb-44 mb-24  bg-gradient-to-br from-slate-700 to-slate-900 
 `
 
 const Cell = tw.div`
-  h-[150px] sm:h-[200px] md:h-[200px] flex items-center justify-center
+  h-[150px] sm:h-[200px] md:h-[250px] 
+  flex items-center justify-center
+  lg:bg-black/30
 `
 
 const Item = tw.div`

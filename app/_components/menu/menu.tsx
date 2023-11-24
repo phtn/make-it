@@ -1,8 +1,8 @@
-import { Container, MenuItem } from './styled'
-import { MenuItemProps } from './types'
+import { Container, Item } from './styled'
+import { MenuItem } from './types'
 
-const menuItems: MenuItemProps[] = [
-	{ href: '/benefits-of-a-mentee', title: 'Benefits of A Mentee' },
+const menuItems: MenuItem[] = [
+	{ href: '/be-a-mentee', title: 'Be A Mentee for Free!' },
 	{ href: '/meet-a-mentor', title: 'Meet A Mentor' },
 	{ href: '/join-a-class', title: 'Join A Class' },
 	{ href: '/contact-us', title: 'Contact Us' },
@@ -10,11 +10,12 @@ const menuItems: MenuItemProps[] = [
 
 const Menu = () => (
 	<Container>
-		{menuItems.map((item) => (
-			<MenuItem
+		{menuItems.map((item, index) => (
+			<Item
 				key={item.href}
 				href={item.href}
 				title={item.title}
+				index={index}
 			/>
 		))}
 	</Container>

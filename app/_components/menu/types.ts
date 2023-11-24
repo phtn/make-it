@@ -1,6 +1,14 @@
-type MenuItemProps = {
+interface MenuItem {
 	href: string
 	title: string
 }
 
-export type { MenuItemProps }
+type ItemProps = {
+	index: number
+} & MenuItem
+
+type ContainerProps = {
+	$index?: number
+}
+
+export type { MenuItem, ItemProps, ContainerProps }

@@ -6,7 +6,7 @@ const NavContainer = tw.div`
   w-full
   items-center 
   justify-between
-  pr-6
+  px-6
   absolute
   top-0
   bg-gradient-to-b
@@ -19,7 +19,8 @@ const NavContainer = tw.div`
 const Brand = tw.section`
   flex
   items-center
-  justify-center
+  justify-evenly
+  px-3
 `
 
 const BrandName = tw.h1`

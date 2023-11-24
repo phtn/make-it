@@ -6,7 +6,7 @@ import Reviews from '../reviews'
 import Footer from '../footer'
 import { features } from '../new-features/features-data'
 import { MetricItemProps } from '../metrics-banner/types'
-import { LandingAsset, SydneyAsset } from '../lottie'
+import { SydneyAsset } from '../lottie'
 import { HeadlineData } from '../hero/types'
 import NewFeatures from '../new-features/new-features'
 import Pricing from '../pricing/pricing'
@@ -14,6 +14,8 @@ import { motion } from 'framer-motion'
 import Banner from '../banner'
 import { toast } from 'sonner'
 import Lottie from 'lottie-react'
+import ImageTree from '../image-tree'
+import Terran from '../hero/Terran'
 
 const metrics: MetricItemProps[] = [
 	{ value: '500+', label: 'mentors' },
@@ -31,8 +33,10 @@ const Landing = () => {
 	const featureHeader = { tag: 'discover', title: 'How The Process Works' }
 	const highlightHeader = { tag: 'mentor', title: 'Top Mentors' }
 	const heroProps = {
-		subheader: 'is a',
-		description: `United by a Common Goal to Build a Better World. With a Team of Passionate Hope Builders, Visionaries, and Talents Willing To Architect Their Future. Your Journey Begins here.`,
+		title: 'Make It In Australia',
+		subheader: 'Join us today!',
+		// description: `United by a Common Goal to Build a Better World. With a Team of Passionate Hope Builders, Visionaries, and Talents Willing To Architect Their Future. Your Journey Begins here.`,
+		description: `This is the opportunity you've been waiting for! Be one of the successful students who found their place in Australia. Together, you can make it too!`,
 		headlines,
 	}
 
@@ -71,8 +75,8 @@ const Landing = () => {
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ duration: 0.7, delay: 1.6, ease: 'easeInOut' }}>
-					<Hero
-						asset={<LandingAsset />}
+					<Terran
+						asset={<ImageTree />}
 						primaryProps={heroProps}
 					/>
 				</motion.div>
@@ -102,7 +106,7 @@ const Landing = () => {
 const FooterAnimation = () => (
 	<div className='grid md:grid-cols-3'>
 		<SydneyAsset />
-		<div className='border col-span-2'>yo</div>
+		<div className=' col-span-2'></div>
 	</div>
 )
 

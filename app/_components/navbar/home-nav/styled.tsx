@@ -1,24 +1,38 @@
 import { NavigationMenuLink } from '@/components/ui/navigation-menu'
-import { HelpCircle, LibraryBig, Newspaper, Star, Users2 } from 'lucide-react'
+import {
+	ArrowUpRight,
+	HelpCircle,
+	LibraryBig,
+	Newspaper,
+	Star,
+	Users2,
+} from 'lucide-react'
 import tw from 'tailwind-styled-components'
 import { TertiaryDetail, TertiaryProps } from './types'
 
 const IconContainer = tw.div`
-  rounded-full bg-slate-100/5 flex self-start items-center justify-center h-[32px] w-[32px] 
+  rounded-full bg-slate-400/10 
+	flex items-center justify-center h-[32px] w-[32px] 
+	group-hover:h-[24px] group-hover:w-[24px] 
+	group-hover:border-slate-100 group-hover:border 
+	group-hover:bg-slate-400/30
+	transition-all duration-500
 `
 
 const PrimaryIcon = () => (
 	<IconContainer>
-		<LibraryBig className='text-slate-600 group-hover:text-slate-400 delay-300 transition-all duration-500 h-[16px] w-[16px]' />
+		<LibraryBig className='h-[16px] w-[16px] text-slate-800 group-hover:text-white group-hover:h-[14px] group-hover:w-[14px] transition-all duration-500 delay-200' />
 	</IconContainer>
 )
 
 const PrimaryIndex = tw.span`
-  font-mono font-thin text-slate-600 text-[2rem] leading-[2rem]
+  font-mono font-thin text-slate-500 text-[2rem] leading-[2rem]
+	group-hover:scale-0 transition-all duration-500
 `
 
 const PrimaryTopContainer = tw.div`
   flex justify-between items-center w-[140px]
+	
 `
 
 const PrimaryTop = () => (
@@ -29,19 +43,23 @@ const PrimaryTop = () => (
 )
 
 const PrimaryTitle = tw.span`
-	text-slate-200 text-[1rem] 
-	pl-2 border-l-4 border-slate-500/50 
-	group-hover:border-slate-300 group-hover:text-[0.85rem] 
-	transition-all duration-300 delay-200 
-	leading-[0.85rem] font-extrabold w-[100px]
+	text-card-foreground text-[1rem] 
+	group-hover:text-background group-hover:text-[0.95rem]
+	pl-2 border-l-4 border-orange-500 
+	group-hover:border-[#54c8e8]
+	relative top-[48px] group-hover:top-[-32px]
+	transition-all duration-500
+	leading-[0.90rem] group-hover:leading-[0.85rem]
+	font-extrabold font-sans w-[120px]
 `
 
 const PrimarySubtext = tw.div`
-	font-sans text-[10px] text-slate-800
-	scale-0 h-0 bg-slate-300 mt-2 flex 
-	items-center justify-center rounded w-full  
+	font-sans font-medium text-[11px] text-white
+	scale-0 h-0 bg-[#54c8e8] mt-10 flex 
+	flex-row items-center justify-center 
+	rounded-md w-full py-1
 	group-hover:text-slate-800 group-hover:scale-100 
-	group-hover:h-6 transition-all duration-300 delay-100 
+	group-hover:h-6 transition-all duration-300
 `
 
 const PrimaryDetails = tw.div`
@@ -51,16 +69,36 @@ const PrimaryDetails = tw.div`
 const PrimaryContent = () => (
 	<PrimaryDetails>
 		<PrimaryTitle>About Our Company</PrimaryTitle>
-		<PrimarySubtext>What we&apos;re all about.</PrimarySubtext>
+		<PrimarySubtext>
+			<span>What we&apos;re all about.</span>
+
+			<ArrowUpRight className='ml-1 h-[14px] w-[14px] text-[#54c8e8] group-hover:text-white group-hover:stroke-[2px] transition-all duration-300 delay-700' />
+		</PrimarySubtext>
 	</PrimaryDetails>
 )
 
 const PrimaryInner = tw.div`
 	flex flex-col items-stretch justify-between rounded-lg
+	relative top-[-140px] backdrop-blur-[10px] bg-white/40
+	h-[140px] group-hover:backdrop-blur-[0px] group-hover:bg-transparent
+	transition-all duration-700
 `
 
 const PrimaryOuter = tw.div`
-	flex w-[160px] h-[140px] bg-slate-800 p-2 rounded-lg overflow-hidden 
+	w-[160px] h-[140px] rounded-lg overflow-hidden 
+	bg-left bg-gradient-to-br from-slate-100 to-slate-200/20 
+`
+
+const Content = tw.div`
+	m-2
+`
+
+const PrimaryBackdrop = tw.div`
+	flex w-[160px] h-[140px]
+	bg-[url('/bg/sydney-v1.webp')] bg-cover
+	group-hover:bg-blend-soft-light bg-blend-lighten	
+	scale-150 group-hover:scale-100 
+	transition-transform duration-700
 `
 
 const PrimarySet = () => (
@@ -68,9 +106,12 @@ const PrimarySet = () => (
 		href='/about-the-company'
 		className='no-underline rounded-lg group shadow-md'>
 		<PrimaryOuter>
+			<PrimaryBackdrop />
 			<PrimaryInner>
-				<PrimaryTop />
-				<PrimaryContent />
+				<Content>
+					<PrimaryTop />
+					<PrimaryContent />
+				</Content>
 			</PrimaryInner>
 		</PrimaryOuter>
 	</NavigationMenuLink>
@@ -78,12 +119,13 @@ const PrimarySet = () => (
 
 const SecondaryIcon = () => (
 	<IconContainer>
-		<Users2 className='text-slate-800 group-hover:text-slate-100 delay-300 transition-all duration-500 h-[16px] w-[16px]' />
+		<Users2 className='h-[16px] w-[16px] text-slate-100 group-hover:text-slate-100 group-hover:h-[14px] group-hover:w-[14px] delay-100 transition-all duration-500 ' />
 	</IconContainer>
 )
 
 const SecondaryIndex = tw.span`
-  font-mono font-thin text-slate-800/20 text-[2rem] leading-[2rem]
+  font-mono font-thin text-slate-100 text-[2rem] leading-[2rem]
+	group-hover:scale-0 transition-all duration-500
 `
 
 const SecondaryTopContainer = tw.div`
@@ -98,19 +140,24 @@ const SecondaryTop = () => (
 )
 
 const SecondaryTitle = tw.span`
-	text-slate-800 text-[1rem] 
-	pl-2 border-l-4 border-slate-800/50 
-	group-hover:border-slate-300 group-hover:text-[0.85rem] 
-	transition-all duration-300 delay-100 
-	leading-[0.85rem] font-extrabold w-[100px]
+	pl-2 text-card text-[1rem] 
+	group-hover:text-white group-hover:text-[0.95rem]
+	group-hover:bg-slate-800/40
+	border-l-4 border-[#54c8e8] 
+	group-hover:border-pink-400
+	relative top-[48px] group-hover:top-[-32px]
+	transition-all duration-500
+	leading-[0.90rem] group-hover:leading-[0.85rem]
+	font-extrabold font-sans w-[90px]
 `
 
 const SecondarySubtext = tw.div`
-	font-sans text-[10px] text-slate-800
-	scale-0 h-0 bg-slate-800 mt-2 flex 
-	items-center justify-center rounded w-full  
-	group-hover:text-slate-200 group-hover:scale-100 
-	group-hover:h-6 transition-all duration-300 delay-100 
+	font-sans font-medium text-[11px] text-white
+	scale-0 h-0 bg-pink-400 mt-10 flex 
+	flex-row items-center justify-center 
+	rounded-md w-full py-1
+	group-hover:text-slate-800 group-hover:scale-100 
+	group-hover:h-6 transition-all duration-300
 `
 
 const SecondaryDetails = tw.div`
@@ -125,7 +172,23 @@ const SecondaryContent = () => (
 )
 
 const SecondaryOuter = tw.div`
-  flex w-[160px] h-[140px] bg-[#fd5c63] rounded-lg p-2 overflow-clip 
+  w-[160px] h-[140px] rounded-lg overflow-hidden 
+	bg-left bg-gradient-to-br from-slate-100 to-slate-200/20  
+`
+
+const SecondaryInner = tw.div`
+	flex flex-col items-stretch justify-between rounded-lg
+	relative top-[-140px] backdrop-blur-[16px] bg-sky-900/50
+	h-[140px] group-hover:backdrop-blur-[0px] group-hover:bg-transparent
+	transition-all duration-700
+`
+
+const SecondaryBackdrop = tw.div`
+	flex w-[160px] h-[140px]
+	bg-[url('/bg/team-v1.webp')] bg-cover
+	group-hover:bg-blend-soft-light bg-blend-darken	
+	scale-150 group-hover:scale-100 
+	transition-transform duration-700
 `
 
 const SecondarySet = () => (
@@ -133,18 +196,21 @@ const SecondarySet = () => (
 		href='/meet-the-team'
 		className='no-underline group rounded-lg shadow-lg'>
 		<SecondaryOuter>
-			<PrimaryInner>
-				<SecondaryTop />
-				<SecondaryContent />
-			</PrimaryInner>
+			<SecondaryBackdrop />
+			<SecondaryInner>
+				<Content>
+					<SecondaryTop />
+					<SecondaryContent />
+				</Content>
+			</SecondaryInner>
 		</SecondaryOuter>
 	</NavigationMenuLink>
 )
 
 const TertiaryOuter = tw.div`
-	h-[54px] mx-[14px] 
-	flex rounded overflow-hidden 
-	group-hover:bg-white
+	h-[56px] mx-[14px] flex overflow-hidden 
+	group-hover:rounded-lg 
+	group-hover:bg-white transition-all duration-300
 `
 
 const TertiaryIconContainer = tw.div`
@@ -157,7 +223,7 @@ const TertiaryTitle = tw.div`
 	flex font-sans items-end font-bold text-[1rem] text-slate-800 dark:text-slate-300 group-hover:dark:text-slate-800 background h-[35px]
 `
 const TertiarySubtext = tw.div`
-	flex font-sans items-start text-[10px] text-slate-600 dark:text-slate-400 h-[25px]
+	flex font-sans items-start text-[12px] text-slate-600 dark:text-slate-400 h-[25px]
 `
 
 const TertiaryDetails = ({ title, subtext }: TertiaryDetail) => (
@@ -169,19 +235,19 @@ const TertiaryDetails = ({ title, subtext }: TertiaryDetail) => (
 
 const FAQsIcon = () => (
 	<TertiaryIconContainer>
-		<HelpCircle className='text-slate-500 group-hover:text-green-500 transition-colors duration-500 h-5 w-5' />
+		<HelpCircle className='text-accent group-hover:text-green-500 transition-colors duration-500 h-6 w-6' />
 	</TertiaryIconContainer>
 )
 
 const TestimonialsIcon = () => (
 	<TertiaryIconContainer>
-		<Star className='text-slate-500 group-hover:text-orange-500 group-hover:stroke-2 transition-colors duration-500 h-5 w-5' />
+		<Star className='text-accent group-hover:text-orange-500 group-hover:stroke-2 transition-colors duration-500 h-6 w-6' />
 	</TertiaryIconContainer>
 )
 
 const NewletterIcon = () => (
 	<TertiaryIconContainer>
-		<Newspaper className='text-slate-500 group-hover:text-sky-500 transition-colors duration-500 h-5 w-5' />
+		<Newspaper className='text-accent group-hover:text-sky-500 transition-colors duration-500 h-5 w-5' />
 	</TertiaryIconContainer>
 )
 

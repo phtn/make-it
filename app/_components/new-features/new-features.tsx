@@ -3,7 +3,7 @@ import { Header, HeaderGap } from '../header'
 import { Container, Item, GridContainer } from './styled'
 import { FeatureItemProps, FeatureProps } from './types'
 
-const NewFeatures = ({ header, features }: FeatureProps) => (
+const NewFeatures = ({ header, features }: FeatureProps<FeatureItemProps>) => (
 	<Container>
 		<Header {...header} />
 		<HeaderGap />

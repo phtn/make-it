@@ -16,9 +16,10 @@ import * as z from 'zod'
 import { useCallback, useEffect, useState } from 'react'
 import { map } from '@/app/_utils/helpers'
 import { FormProps } from './types'
-import { AtSign, Loader2, LogIn, Phone, User } from 'lucide-react'
+import { ArrowUpRight, AtSign, Loader2, LogIn, Phone, User } from 'lucide-react'
 import { SelectLocation } from './select-location'
 import { POST_RegisterUser } from '@/app/_api/post'
+import { Header, Label } from './styled'
 
 const formSchema = z.object({
 	name: z.string().min(2, {
@@ -67,13 +68,8 @@ export function RegistrationForm() {
 	return (
 		<div className='flex justify-center mb-10'>
 			<div className='pt-[20px] sm:px-2 px-8 rounded w-full sm:w-fit'>
-				<div className='rounded bg-[#6ef0ad] h-10 p-3 mb-2 flex items-center justify-center'>
-					<span className='text-slate-700 font-sans font-extrabold'>
-						Join us today!
-					</span>
-					{/* <LogIn className='h-4 w-4 text-white ml-3' /> */}
-				</div>
-				<div className='font-sans text-[12px] font-medium mb-3 flex justify-center'>
+				<Header />
+				<div className='font-sans text-[12px] text-foreground font-medium decoration-pink-400 underline-offset-2 decoration-[4px] underline mb-4 mt-1 flex justify-center'>
 					Your journey begins here.
 				</div>
 				<FormComponent
@@ -89,16 +85,16 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 	<Form {...form}>
 		<form
 			onSubmit={form.handleSubmit(onSubmit)}
-			className='sm:space-y-3 space-y-8'>
+			className='sm:space-y-5 space-y-8'>
 			<FormField
 				control={form.control}
 				name='name'
 				render={({ field }) => (
 					<FormItem>
-						<FormLabel className='text-[10px] flex items-center font-sans tracking-wide'>
+						{/* <Label>
 							<User className='h-[10px] w-[10px] mr-2' />
 							<span>Complete Name</span>
-						</FormLabel>
+						</Label> */}
 						<FormControl>
 							<Input
 								placeholder='Your name here.'
@@ -114,10 +110,10 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 				name='email'
 				render={({ field }) => (
 					<FormItem>
-						<FormLabel className='text-[10px] flex items-center font-sans tracking-wide'>
+						{/* <Label>
 							<AtSign className='h-[10px] w-[10px] mr-2' />
 							<span>Email Address</span>
-						</FormLabel>
+						</Label> */}
 						<FormControl>
 							<Input
 								type='email'
@@ -134,10 +130,10 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 				name='phone'
 				render={({ field }) => (
 					<FormItem>
-						<FormLabel className='text-[10px] flex items-center font-sans tracking-wide'>
+						{/* <Label>
 							<Phone className='h-[10px] w-[10px] mr-2' />
 							<span>Phone Number</span>
-						</FormLabel>
+						</Label> */}
 						<FormControl>
 							<Input
 								placeholder='Phone'
@@ -149,9 +145,23 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 				)}
 			/>
 			<Button
+				size={'lg'}
 				type='submit'
-				className='w-full'>
-				Sign Up
+				variant='tertiary'
+				disabled={true}
+				className='w-full mt-3'>
+				<div className='flex items-center'>
+					<span>Sign up</span>
+					<ArrowUpRight className='h-4 w-4 ml-3' />
+				</div>
+			</Button>
+			<Button
+				disabled={true}
+				size={'lg'}
+				type='submit'
+				variant={'outline'}
+				className='flex w-full mt-3'>
+				<span>Sign in with Google</span>
 			</Button>
 		</form>
 	</Form>

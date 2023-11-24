@@ -9,19 +9,24 @@ import {
 	Subheader,
 	Subtext,
 	Title,
+	TerranPrimary,
+	TerranPrimaryContent,
+	TerranContent,
 } from './styled'
 import { motion } from 'framer-motion'
 import { ReactElement, useCallback, useEffect, useState } from 'react'
 import { getNextElement } from '@/app/_utils/helpers'
 import { easeInOut } from 'popmotion'
 import { HeaderProps, HeadlineProps, HeroProps, PrimaryProps } from './types'
+import { Button } from '@/components/ui/button'
+import { ArrowUpRight, LogIn } from 'lucide-react'
 
-const Hero = ({ asset, primaryProps }: HeroProps) => (
+const Terran = ({ asset, primaryProps }: HeroProps) => (
 	<Container>
-		<Content>
+		<TerranContent>
 			<Primary {...primaryProps} />
-			<Secondary asset={asset} />
-		</Content>
+			{asset}
+		</TerranContent>
 	</Container>
 )
 
@@ -55,16 +60,32 @@ const Primary = ({
 	)
 
 	return (
-		<HeroPrimary>
-			<PrimaryContent>
+		<TerranPrimary>
+			<TerranPrimaryContent>
 				<Header
 					title={title}
 					subheader={subheader}
 				/>
 				<Headline />
 				<Description description={description} />
-			</PrimaryContent>
-		</HeroPrimary>
+				<div className='flex py-3'>
+					<Button
+						variant='tertiary'
+						className='mr-6'>
+						<div className='flex items-center'>
+							<span>Sign Up</span>
+							<ArrowUpRight className='h-4 w-4 ml-3' />
+						</div>
+					</Button>
+					<Button variant='outline'>
+						<div className='flex items-center'>
+							<span>Login</span>
+							<LogIn className='h-4 w-4 ml-3' />
+						</div>
+					</Button>
+				</div>
+			</TerranPrimaryContent>
+		</TerranPrimary>
 	)
 }
 
@@ -108,4 +129,4 @@ const Secondary = ({ asset }: { asset: ReactElement }) => (
 	<HeroSecondary>{asset}</HeroSecondary>
 )
 
-export default Hero
+export default Terran

@@ -1,9 +1,19 @@
 import { ReactElement } from 'react'
 
-type HeadlineData = {
+interface HeadlineData {
 	id: number
 	name: string
 	headline: string
+}
+
+type HeadlineProps = {
+	index: number
+	headlines: HeadlineData[]
+}
+
+type HeaderProps = {
+	title: string
+	subheader: string
 }
 
 type HeroProps = {
@@ -17,6 +27,7 @@ type ProtosProps = {
 }
 
 type PrimaryProps = {
+	title: string
 	subheader: string
 	description: string
 	headlines: HeadlineData[]
@@ -31,6 +42,8 @@ type PrimaryProtos = {
 
 export type {
 	HeadlineData,
+	HeadlineProps,
+	HeaderProps,
 	HeroProps,
 	PrimaryProps,
 	PrimaryProtos,

@@ -1,7 +1,7 @@
 'use client'
 
 import useToggleMode from '@/app/_utils/hooks/useToggleMode'
-import { MoonStar, Sun, NavContainer } from './styled'
+import { MoonStar, Sun, NavContainer, Brand } from './styled'
 import { Switch } from '@/components/ui/switch'
 import { Button } from '@/components/ui/button'
 import { useCallback } from 'react'
@@ -11,13 +11,26 @@ import { ToggleProps } from './types'
 
 import { HomeMenu } from './home-nav/home-nav'
 import Menu from '../menu'
+import Link from 'next/link'
 
 const Navbar = () => {
 	const { checked, toggleMode } = useToggleMode()
 
 	return (
 		<NavContainer>
-			<HomeMenu />
+			<Brand>
+				<Link href={'/'}>
+					<Image
+						src={'/logo/logo-v1.svg'}
+						height={200}
+						width={200}
+						alt='logo'
+						className='h-7 w-auto'
+					/>
+				</Link>
+				<HomeMenu />
+			</Brand>
+
 			<Menu />
 			<div className='flex items-center justify-center'>
 				<Mode

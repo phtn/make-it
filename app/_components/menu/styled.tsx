@@ -1,23 +1,27 @@
 import Link from 'next/link'
 import tw from 'tailwind-styled-components'
-import { MenuItemProps } from './types'
+import { ContainerProps, ItemProps } from './types'
 
 const Container = tw.div`
   hidden lg:flex items-center justify-center
 `
-const Item = tw.div`
-  mx-2 text-sm font-sans font-medium 
-  text-foreground/50 px-3 py-1 rounded
+const ItemContainer = tw.div<ContainerProps>`
+  ${(p) =>
+		p.$index === 0
+			? `bg-accent text-background hover:text-primary-foreground font-bold`
+			: `text-foreground/70`}
+  mx-2 text-sm font-sans font-medium px-3 py-1 rounded 
+	dark:text-foreground dark:hover:text-primary-foreground
   hover:text-primary-foreground hover:bg-slate-800
-  transition-all duration-500
+  transition-all duration-500 
 
 `
-const MenuItem = ({ href, title }: MenuItemProps) => (
+const Item = ({ href, title, index }: ItemProps) => (
 	<Link
 		href={href}
 		className='no-underline'>
-		<Item>{title}</Item>
+		<ItemContainer $index={index}>{title}</ItemContainer>
 	</Link>
 )
 
-export { Container, MenuItem }
+export { Container, Item }

@@ -36,8 +36,8 @@ const Content = tw.div<I>`
 		p.$id === 100
 			? 'w-[330px]'
 			: p.$id === 200
-			? 'w-[330px]'
-			: 'sm:w-[400px] w-[330px]'}
+			  ? 'w-[330px]'
+			  : 'sm:w-[400px] w-[330px]'}
       bg-background rounded-lg overflow-hidden shadow-lg
       hover:scale-105 transition-all duration-500 group
       dark:border dark:shadow-[#54c8e8]
@@ -48,8 +48,8 @@ const ImageWrap = tw.div<I>`
 		p.$id === 100
 			? `bg-[url('/pricing/free-v7.svg')] h-[130px]`
 			: p.$id === 200
-			? `bg-[url('/pricing/sapphire-v2.svg')] h-[130px]`
-			: `bg-[url('/pricing/gold-v6.svg')] h-[180px]`}
+			  ? `bg-[url('/pricing/sapphire-v2.svg')] h-[130px]`
+			  : `bg-[url('/pricing/gold-v6.svg')] h-[180px]`}
 
   flex items-center justify-center
   bg-cover bg-bottom group-hover:bg-top 
@@ -57,7 +57,7 @@ const ImageWrap = tw.div<I>`
 `
 const HeaderWrap = tw.div`
   flex px-6 py-2 items-center justify-between
-	bg-slate-800
+	bg-foreground
 `
 
 const TitleWrap = tw.div`
@@ -73,8 +73,8 @@ const Title = tw.span<I>`
 		p.$id === 100
 			? `text-background`
 			: p.$id === 200
-			? `text-sky-500`
-			: `text-yellow-500`}
+			  ? `text-sky-600`
+			  : `text-yellow-600`}
 
   font-extrabold font-sans tracking-wide 
   text-[1.25rem]
@@ -88,7 +88,7 @@ const Price = tw.span`
 const Wrap = tw.div``
 const Description = tw.h3`
   uppercase font-light tracking-wide text-[11px]
-  text-background
+  text-slate-500
 `
 const FeatureCenter = tw.div`
   flex items-center border-t-[0.33px]

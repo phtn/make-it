@@ -11,7 +11,12 @@ const LandingAsset = () => <Lottie animationData={LandingLottie} />
 const MeetAsset = () => <Lottie animationData={PeopleV2Lottie} />
 const ListAsset = () => <Lottie animationData={ListLoader} />
 const SearchAsset = () => <Lottie animationData={Search} />
-const SydneyAsset = () => <Lottie animationData={Sydney} />
+const SydneyAsset = () => (
+	<Lottie
+		loop={false}
+		animationData={Sydney}
+	/>
+)
 
 export {
 	AboutAsset,

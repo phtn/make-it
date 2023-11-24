@@ -3,9 +3,9 @@ import tw from 'tailwind-styled-components'
 const LandingContainer = tw.div`
   flex-col
   w-full
-  bg-gradient-to-br
-  transition-colors
-  duration-1000
+  bg-gradient-to-b
+  from-background/50
+  from-5% via-background via-100%
   overflow-hidden
   absolute 
   top-0

@@ -10,7 +10,6 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-	navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 import { HomeIcon } from 'lucide-react'
 import {
@@ -23,6 +22,7 @@ import {
 } from './styled'
 import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
+import { SydneyAsset } from '../../lottie'
 
 const links: TertiaryProps[] = [
 	{
@@ -58,13 +58,15 @@ export function HomeMenu() {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className='bg-transparent mt-3'>
-						<span className='font-extrabold text-[#54c8e8] text-lg'>MiiA</span>
+					<NavigationMenuTrigger className='mt-4 bg-transparent'>
+						<h1 className='font-extrabold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]'>
+							Make it in Australia <span className='font-thin ml-1'>PH</span>
+						</h1>
 					</NavigationMenuTrigger>
 
-					<NavigationMenuContent className='bg-slate-200 dark:bg-slate-700/5'>
-						<div className='grid sm:grid-cols-5 grid-cols-2 sm:w-[600px] w-screen'>
-							<div className='grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.33px] border-slate-700'>
+					<NavigationMenuContent className='bg-popover dark:bg-slate-700'>
+						<div className='grid sm:grid-cols-5 grid-cols-2 sm:w-[616px] w-screen'>
+							<div className='grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.5px] border-[#c0c1c7] dark:border-slate-800'>
 								<div className='h-[180px] flex items-center justify-evenly'>
 									<PrimarySet />
 									<SecondarySet />
@@ -80,6 +82,7 @@ export function HomeMenu() {
 										/>
 									))}
 								</div>
+								<SydneyAsset />
 							</div>
 
 							<div className='col-span-2 row-span-5'>
