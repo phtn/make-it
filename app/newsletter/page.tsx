@@ -2,13 +2,12 @@
 import Banner from '../_components/banner'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { AboutAsset, ListAsset, MeetAsset } from '../_components/lottie'
-import { Grid } from '../_components/motion/grid'
+import { ListAsset } from '../_components/lottie'
 import { Container, Content } from './styled'
-import Highlight from '../_components/highlight'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
 import Reviews from '../_components/reviews'
+import Godrays from '../_components/godrays'
 
 const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Collaborate' },
@@ -54,7 +53,7 @@ const Newsletter = () => {
 
 	return (
 		<Container>
-			<Grid />
+			<Godrays />
 			<Content>
 				<Hero
 					asset={<ListAsset />}

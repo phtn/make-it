@@ -59,14 +59,10 @@ export function HomeMenu() {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className='mt-4 bg-transparent border w-56'>
-						<Link
-							href={'/'}
-							className='no-underline'>
-							<h1 className='font-extrabold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]'>
-								Make it in Australia <span className='font-thin ml-1'>PH</span>
-							</h1>
-						</Link>
+					<NavigationMenuTrigger className='mt-4 bg-transparent w-38 md:w-56'>
+						<h1 className='font-extrabold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]'>
+							Make it in Australia <span className='font-thin ml-1'>PH</span>
+						</h1>
 					</NavigationMenuTrigger>
 
 					<NavigationMenuContent className='bg-popover dark:bg-slate-700'>

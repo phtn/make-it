@@ -11,32 +11,34 @@ import { ToggleProps } from './types'
 
 import { HomeMenu } from './home-nav/home-nav'
 import Menu from '../menu'
-import Link from 'next/link'
+import { User2 } from 'lucide-react'
+import { toast } from 'sonner'
 
 const Navbar = () => {
 	const { checked, toggleMode } = useToggleMode()
 
+	const login = () => {
+		toast('Working on it', {
+			description: 'Give me a day.',
+		})
+	}
+
 	return (
 		<NavContainer>
-			{/* <Brand>
-				<Link href={'/'}>
-					<Image
-						src={'/logo/logo-v1.svg'}
-						height={200}
-						width={200}
-						alt='logo'
-						className='h-7 w-auto'
-					/>
-				</Link>
-			</Brand> */}
 			<HomeMenu />
 
 			<Menu />
-			<div className='flex items-center justify-center w-56'>
+			<div className='flex items-center justify-evenly w-32 md:w-56'>
 				<Mode
 					checked={checked}
 					toggleMode={toggleMode}
 				/>
+				<Button
+					onClick={login}
+					variant={'ghost'}
+					size='icon'>
+					<User2 className='h-4 w-4' />
+				</Button>
 			</div>
 		</NavContainer>
 	)
@@ -50,30 +52,6 @@ const Mode = ({ checked, toggleMode }: ToggleProps) => {
 		/>
 	)
 }
-
-const DarkLogo = () => (
-	<Image
-		placeholder='blur'
-		blurDataURL='/logo/Outsourcee_Logo_white.webp'
-		alt='logo'
-		src='/logo/Outsourcee_Logo_white.png'
-		height={400}
-		width={400}
-		className='md:h-16 h-12 w-auto '
-	/>
-)
-
-const LightLogo = () => (
-	<Image
-		placeholder='blur'
-		blurDataURL='/logo/Outsourcee_Logo_black.webp'
-		alt='logo'
-		src='/logo/Outsourcee_Logo.png'
-		height={400}
-		width={400}
-		className='md:h-16 h-12 w-auto '
-	/>
-)
 
 const ToggleMode = ({ checked, toggleMode }: ToggleProps) => {
 	const IconOptions = useCallback(() => {

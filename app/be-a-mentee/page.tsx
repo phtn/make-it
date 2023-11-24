@@ -2,8 +2,7 @@
 import Banner from '../_components/banner'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { AboutAsset } from '../_components/lottie'
-import { Grid } from '../_components/motion/grid'
+import { MenteeAsset } from '../_components/lottie'
 import { Container, Content } from './styled'
 import Highlight from '../_components/highlight'
 import { toast } from 'sonner'
@@ -57,7 +56,7 @@ const BeAMentee = () => {
 			<GodRays />
 			<Content>
 				<Hero
-					asset={<AboutAsset />}
+					asset={<MenteeAsset />}
 					primaryProps={heroProps}
 				/>
 				<Banner
