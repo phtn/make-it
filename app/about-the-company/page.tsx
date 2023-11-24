@@ -12,6 +12,7 @@ import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Users2 } from 'lucide-react'
 import Footer from '../_components/footer'
+import GodRays from '../_components/godrays'
 
 const header = { tag: 'dive', title: 'The Company' }
 const clubContent = {
@@ -74,7 +75,7 @@ const AboutTheCompany = () => {
 	}
 	return (
 		<Container>
-			<Grid />
+			<GodRays />
 			<Content>
 				<Hero
 					asset={<AboutAsset />}

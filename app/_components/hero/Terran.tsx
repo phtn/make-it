@@ -125,8 +125,4 @@ const Description = ({ description }: { description: string }) => (
 	</motion.div>
 )
 
-const Secondary = ({ asset }: { asset: ReactElement }) => (
-	<HeroSecondary>{asset}</HeroSecondary>
-)
-
 export default Terran

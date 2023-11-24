@@ -12,6 +12,7 @@ const Content = tw.div`
   grid
   md:grid-cols-2
   grid-cols-1
+  px-3
 `
 
 const TerranContent = tw.div`
@@ -25,7 +26,7 @@ const TerranContent = tw.div`
 `
 
 const TerranPrimary = tw.div`
-  flex items-center justify-center sm:pb-16 
+  flex items-center justify-center sm:pb-16
   pt-24 sm:pt-14 h-[550px] sm:h-[600px] md:h-[700px] lg:h-screen
 `
 
@@ -85,7 +86,7 @@ const HeadlineContent = ({ headline }: { headline: string }) => (
 
 const SubtextContainer = tw.div`
   flex items-center border-l-8 border-[#54c8e8] 
-  px-4 ml-[-18px] h-[72px] w-96 sm:w-[450px] md:h-[96px]
+  px-4 ml-[-18px] h-[72px] w-80 md:w-96 sm:w-[450px] md:h-[96px]
 `
 const SubtextContent = tw.h2`
   text-[0.75rem] sm:text-sm 

@@ -12,6 +12,7 @@ import NewFeatures from '../_components/new-features/new-features'
 import NewBanner from '../_components/banner/new-banner'
 import Blocks from '../_components/blocks'
 import { blocks } from './blocks-data'
+import GodRays from '../_components/godrays'
 
 const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Discover' },
@@ -57,7 +58,7 @@ const FAQs = () => {
 
 	return (
 		<Container>
-			<Grid />
+			<GodRays />
 			<Content>
 				<Protos
 					asset={<SearchAsset />}

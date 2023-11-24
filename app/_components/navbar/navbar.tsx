@@ -18,7 +18,7 @@ const Navbar = () => {
 
 	return (
 		<NavContainer>
-			<Brand>
+			{/* <Brand>
 				<Link href={'/'}>
 					<Image
 						src={'/logo/logo-v1.svg'}
@@ -28,11 +28,11 @@ const Navbar = () => {
 						className='h-7 w-auto'
 					/>
 				</Link>
-				<HomeMenu />
-			</Brand>
+			</Brand> */}
+			<HomeMenu />
 
 			<Menu />
-			<div className='flex items-center justify-center'>
+			<div className='flex items-center justify-center w-56'>
 				<Mode
 					checked={checked}
 					toggleMode={toggleMode}

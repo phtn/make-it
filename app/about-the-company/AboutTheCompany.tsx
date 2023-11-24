@@ -1,30 +1,13 @@
 'use client'
 import Banner from '../_components/banner'
 import Hero from '../_components/hero'
-import { HeadlineData } from '../_components/hero/types'
-import { AboutAsset, MeetAsset } from '../_components/lottie'
-import { Grid } from '../_components/motion/grid'
+import { AboutAsset } from '../_components/lottie'
 import { Container, Content } from './styled'
-import Highlight from '../_components/highlight'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
-import GodRays from '../_components/godrays/godrays'
+import { heroProps, Body } from './page'
 
-const headlines: HeadlineData[] = [
-	{ id: 1, name: '', headline: 'Collaborate' },
-	{ id: 2, name: '', headline: 'Explore' },
-	{ id: 3, name: '', headline: 'Learn' },
-]
-
-const heroProps = {
-	title: 'Join A Class',
-	subheader: 'Browse all our classes.',
-	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
-	headlines,
-}
-const hightlightHeader = { tag: 'Hire', title: 'Meet the Mentors' }
-
-const JoinAClass = () => {
+export const AboutTheCompany = () => {
 	const onClickPrimary = () => {
 		toast(`You're hiring a mentor!`, {
 			description: `That's cool! Would you like to proceed?`,
@@ -44,33 +27,30 @@ const JoinAClass = () => {
 		})
 	}
 	const primaryAction = {
-		label: 'Sign up',
+		label: '',
 		onClick: onClickPrimary,
 	}
 	const secondaryAction = {
-		label: 'Login',
+		label: '',
 		onClick: onClickSecondary,
 	}
-
 	return (
 		<Container>
 			<GodRays />
 			<Content>
 				<Hero
-					asset={<MeetAsset />}
+					asset={<AboutAsset />}
 					primaryProps={heroProps}
 				/>
 				<Banner
-					title='Join a class today!'
-					description={`Your journey begins here.`}
+					title='Join us today!'
+					description={`We'll guide you every step of the way.`}
 					primaryAction={primaryAction}
 					secondaryAction={secondaryAction}
 				/>
-				<Highlight header={hightlightHeader} />
+				<Body />
 				<Footer />
 			</Content>
 		</Container>
 	)
 }
-
-export default JoinAClass

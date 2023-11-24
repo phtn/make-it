@@ -12,6 +12,7 @@ const NewFeatures = ({ header, data }: FeatureProps) => (
 			keyExtractor={(item) => `${item}`}
 			renderItem={(item) => (
 				<Link
+					className='no-underline'
 					href={item.href}
 					key={item.id}>
 					<ListItem {...item} />

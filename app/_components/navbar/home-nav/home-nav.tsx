@@ -23,6 +23,7 @@ import {
 import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
 import { SydneyAsset } from '../../lottie'
+import Link from 'next/link'
 
 const links: TertiaryProps[] = [
 	{
@@ -58,10 +59,14 @@ export function HomeMenu() {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className='mt-4 bg-transparent'>
-						<h1 className='font-extrabold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]'>
-							Make it in Australia <span className='font-thin ml-1'>PH</span>
-						</h1>
+					<NavigationMenuTrigger className='mt-4 bg-transparent border w-56'>
+						<Link
+							href={'/'}
+							className='no-underline'>
+							<h1 className='font-extrabold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]'>
+								Make it in Australia <span className='font-thin ml-1'>PH</span>
+							</h1>
+						</Link>
 					</NavigationMenuTrigger>
 
 					<NavigationMenuContent className='bg-popover dark:bg-slate-700'>

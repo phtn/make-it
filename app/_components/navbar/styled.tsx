@@ -6,7 +6,6 @@ const NavContainer = tw.div`
   w-full
   items-center 
   justify-between
-  px-6
   absolute
   top-0
   bg-gradient-to-b

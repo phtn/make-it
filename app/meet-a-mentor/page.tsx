@@ -8,6 +8,7 @@ import { Container, Content } from './styled'
 import Highlight from '../_components/highlight'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
+import GodRays from '../_components/godrays'
 
 const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Collaborate' },
@@ -53,7 +54,7 @@ const MeetAMentor = () => {
 
 	return (
 		<Container>
-			<Grid />
+			<GodRays />
 			<Content>
 				<Hero
 					asset={<AboutAsset />}

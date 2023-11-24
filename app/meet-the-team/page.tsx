@@ -1,4 +1,5 @@
 'use client'
+import GodRays from '../_components/godrays/godrays'
 import { Header, HeaderGap } from '../_components/header'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
@@ -6,6 +7,7 @@ import { MeetAsset } from '../_components/lottie'
 import NewFeatures from '../_components/new-features/new-features'
 import PostScript from '../_components/postscript'
 import PastScript from '../_components/postscript/pastscript'
+import { Container, Content } from './styled'
 import { theTeam } from './team-data'
 
 const header = { tag: 'dive', title: 'The Company' }
@@ -25,14 +27,17 @@ const heroProps = {
 }
 
 const MeetTheTeam = () => (
-	<div className=''>
-		<Hero
-			asset={<MeetAsset />}
-			primaryProps={heroProps}
-		/>
-		{/* <MobileView /> */}
-		<DesktopView />
-	</div>
+	<Container>
+		<GodRays />
+		<Content>
+			<Hero
+				asset={<MeetAsset />}
+				primaryProps={heroProps}
+			/>
+			{/* <MobileView /> */}
+			<DesktopView />
+		</Content>
+	</Container>
 )
 
 const MobileView = () => <div></div>
