@@ -2,10 +2,6 @@ import Link from 'next/link'
 import {
 	HeadlineContent,
 	Container,
-	Content,
-	HeroPrimary,
-	HeroSecondary,
-	PrimaryContent,
 	Subheader,
 	Subtext,
 	Title,
@@ -14,7 +10,7 @@ import {
 	TerranContent,
 } from './styled'
 import { motion } from 'framer-motion'
-import { ReactElement, useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { getNextElement } from '@/app/_utils/helpers'
 import { easeInOut } from 'popmotion'
 import { HeaderProps, HeadlineProps, HeroProps, PrimaryProps } from './types'

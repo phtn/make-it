@@ -14,16 +14,18 @@ import {
 import { HomeIcon } from 'lucide-react'
 import {
 	FAQsIcon,
+	GridContent,
+	NavigationInnerContent,
 	NewletterIcon,
-	PrimarySet,
-	SecondarySet,
 	TertiaryLink,
+	TertiaryWrapper,
 	TestimonialsIcon,
+	TopSection,
+	Trigger,
 } from './styled'
 import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
 import { SydneyAsset } from '../../lottie'
-import Link from 'next/link'
 
 const links: TertiaryProps[] = [
 	{
@@ -59,45 +61,48 @@ export function HomeMenu() {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className='mt-4 bg-transparent w-38 md:w-56'>
-						<h1 className='font-extrabold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]'>
+					<NavigationMenuTrigger className='mt-4 bg-transparent w-38 sm:w-56'>
+						<Trigger>
 							Make it in Australia <span className='font-thin ml-1'>PH</span>
-						</h1>
+						</Trigger>
 					</NavigationMenuTrigger>
 
 					<NavigationMenuContent className='bg-popover dark:bg-slate-700'>
-						<div className='grid sm:grid-cols-5 grid-cols-2 sm:w-[616px] w-screen'>
-							<div className='grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.5px] border-[#c0c1c7] dark:border-slate-800'>
-								<div className='h-[180px] flex items-center justify-evenly'>
-									<PrimarySet />
-									<SecondarySet />
-								</div>
-
-								<div className='h-[180px] pb-[12px] grid grid-rows-3 '>
-									{links.map((item, index) => (
-										<TertiaryLink
-											key={index}
-											href={item.href}
-											icon={item.icon}
-											details={item.details}
-										/>
-									))}
-								</div>
+						<NavigationInnerContent>
+							<GridContent>
+								<TopSection />
+								<TertiaryList />
 								<SydneyAsset />
-							</div>
-
-							<div className='col-span-2 row-span-5'>
-								<div className=' h-full sm:ml-2 w-screen sm:w-fit '>
-									<RegistrationForm />
-								</div>
-							</div>
-						</div>
+							</GridContent>
+							<RegistrationModule />
+						</NavigationInnerContent>
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 			</NavigationMenuList>
 		</NavigationMenu>
 	)
 }
+
+const RegistrationModule = () => (
+	<div className='col-span-2 row-span-5'>
+		<div className=' h-full sm:ml-2 w-screen sm:w-fit '>
+			<RegistrationForm />
+		</div>
+	</div>
+)
+
+const TertiaryList = () => (
+	<TertiaryWrapper>
+		{links.map((item, index) => (
+			<TertiaryLink
+				key={index}
+				href={item.href}
+				icon={item.icon}
+				details={item.details}
+			/>
+		))}
+	</TertiaryWrapper>
+)
 
 const ListItem = React.forwardRef<
 	React.ElementRef<'a'>,

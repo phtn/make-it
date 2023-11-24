@@ -1,19 +1,13 @@
 import { LandingContainer, LandingContent } from './styled'
-import Highlight from '../highlight'
-import MetricsBanner from '../metrics-banner'
-import Reviews from '../reviews'
-import Footer from '../footer'
 import { how } from '../new-features/features-data'
 import { MetricItemProps } from '../metrics-banner/types'
 import { SydneyAsset } from '../lottie'
 import { HeadlineData } from '../hero/types'
-import NewFeatures from '../new-features/new-features'
-import Pricing from '../pricing/pricing'
 import { motion } from 'framer-motion'
-import Banner from '../banner'
 import { toast } from 'sonner'
 import ImageTree from '../image-tree'
 import Terran from '../hero/Terran'
+import dynamic from 'next/dynamic'
 
 const metrics: MetricItemProps[] = [
 	{ value: '500+', label: 'mentors' },
@@ -26,6 +20,14 @@ const headlines: HeadlineData[] = [
 	{ id: 2, name: '', headline: 'Hope Builder' },
 	{ id: 3, name: '', headline: 'Social Enterprise' },
 ]
+
+const MetricsBanner = dynamic(() => import('../metrics-banner'))
+const Banner = dynamic(() => import('../banner'))
+const Pricing = dynamic(() => import('../pricing'))
+const Highlight = dynamic(() => import('../highlight'))
+const Reviews = dynamic(() => import('../reviews'))
+const NewFeatures = dynamic(() => import('../new-features'))
+const Footer = dynamic(() => import('../footer'))
 
 const Landing = () => {
 	const featureHeader = { tag: 'discover', title: 'How The Process Works' }

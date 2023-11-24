@@ -207,6 +207,17 @@ const SecondarySet = () => (
 	</NavigationMenuLink>
 )
 
+const TopWrapper = tw.div`
+	h-[180px] flex items-center justify-evenly
+`
+
+const TopSection = () => (
+	<TopWrapper>
+		<PrimarySet />
+		<SecondarySet />
+	</TopWrapper>
+)
+
 const TertiaryOuter = tw.div`
 	h-[56px] mx-[14px] flex overflow-hidden 
 	group-hover:rounded-lg 
@@ -262,13 +273,32 @@ const TertiaryLink = ({ href, icon, details }: TertiaryProps) => (
 	</NavigationMenuLink>
 )
 
+const TertiaryWrapper = tw.div`
+	h-[180px] pb-[12px] grid grid-rows-3
+`
+
+const GridContent = tw.div`
+	grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.5px] border-[#c0c1c7] dark:border-slate-800
+`
+const NavigationInnerContent = tw.div`
+	grid sm:grid-cols-5 grid-cols-2 sm:w-[616px] w-screen
+`
+const Trigger = tw.h1`
+	sm:font-extrabold font-bold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]
+`
+
 export {
+	FAQsIcon,
+	GridContent,
+	NavigationInnerContent,
+	NewletterIcon,
 	PrimarySet,
 	SecondarySet,
+	TertiaryIconContainer,
 	TertiaryLink,
 	TertiaryOuter,
-	TertiaryIconContainer,
-	FAQsIcon,
+	TertiaryWrapper,
 	TestimonialsIcon,
-	NewletterIcon,
+	TopSection,
+	Trigger,
 }
