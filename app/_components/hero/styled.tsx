@@ -27,7 +27,8 @@ const TerranContent = tw.div`
 
 const TerranPrimary = tw.div`
   flex items-center justify-center sm:pb-16
-  pt-24 sm:pt-14 h-[550px] sm:h-[600px] md:h-[700px] lg:h-screen
+  pt-24 sm:pt-14 h-[550px] sm:h-[600px] md:h-[700px] 
+  lg:h-screen
 `
 
 const TerranPrimaryContent = tw.div`
@@ -46,7 +47,7 @@ const PrimaryContent = tw.div`
 
 const Title = tw.div`
   font-sans px-3 py-3 ml-3 font-bold text-[1.5rem] w-fit 
-  text-primary-foreground bg-slate-800 leading-[1.5rem]
+  text-primary-foreground bg-[url('/bg/meteor-v2.svg')] bg-cover leading-[1.5rem]
   rounded shadow-xl shadow-foreground/30
 `
 const Subheader = tw.div`

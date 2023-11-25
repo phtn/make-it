@@ -13,6 +13,7 @@ const NavContainer = tw.div`
   to-transparent
   backdrop-blur-md
   z-50
+  h-[64px]
 `
 
 const Brand = tw.section`

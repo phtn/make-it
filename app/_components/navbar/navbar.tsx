@@ -2,7 +2,6 @@
 
 import useToggleMode from '@/app/_utils/hooks/useToggleMode'
 import { MoonStar, Sun, NavContainer } from './styled'
-import { Switch } from '@/components/ui/switch'
 import { Button } from '@/components/ui/button'
 import { useCallback } from 'react'
 import { map } from '@/app/_utils/helpers'
@@ -67,17 +66,6 @@ const ToggleMode = ({ checked, toggleMode }: ToggleProps) => {
 			onClick={toggleMode}>
 			<IconOptions />
 		</Button>
-	)
-}
-
-const SwitchMode = () => {
-	const { checked, toggleMode } = useToggleMode()
-
-	return (
-		<Switch
-			checked={checked}
-			onCheckedChange={toggleMode}
-		/>
 	)
 }
 

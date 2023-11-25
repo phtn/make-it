@@ -25,7 +25,7 @@ import {
 } from './styled'
 import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
-import { SydneyAsset } from '../../lottie'
+import { LottFile, Sydney, SydneyAsset } from '../../lottie'
 
 const links: TertiaryProps[] = [
 	{
@@ -61,18 +61,23 @@ export function HomeMenu() {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className='mt-4 bg-transparent w-38 sm:w-56'>
+					<NavigationMenuTrigger className='mt-4 bg-transparent w-fit sm:w-56'>
 						<Trigger>
 							Make it in Australia <span className='font-thin ml-1'>PH</span>
 						</Trigger>
 					</NavigationMenuTrigger>
 
-					<NavigationMenuContent className='bg-popover dark:bg-slate-700'>
+					<NavigationMenuContent
+						className={`bg-[url('/bg/space-noise-v3.svg')] bg-cover dark:bg-slate-700`}>
 						<NavigationInnerContent>
 							<GridContent>
 								<TopSection />
 								<TertiaryList />
-								<SydneyAsset />
+								<LottFile
+									animationData={Sydney}
+									loop={false}
+									style={{}}
+								/>
 							</GridContent>
 							<RegistrationModule />
 						</NavigationInnerContent>

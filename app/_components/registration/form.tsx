@@ -69,9 +69,6 @@ export function RegistrationForm() {
 		<div className='flex justify-center mb-10'>
 			<div className='pt-[20px] sm:px-2 px-8 rounded w-full sm:w-fit'>
 				<Header />
-				<div className='font-sans text-[12px] text-foreground font-medium decoration-pink-400 underline-offset-2 decoration-[4px] underline mb-4 mt-1 flex justify-center'>
-					Your journey begins here.
-				</div>
 				<FormComponent
 					form={form}
 					onSubmit={onSubmit}

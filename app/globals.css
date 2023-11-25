@@ -10,6 +10,8 @@
 SpaceGray
 #C5C6CB
 hsl(230, 5%, 78%)
+#868892
+
 #D8E2E1 
 hsl(174, 15%, 87%)
 #54c8e8
@@ -31,14 +33,17 @@ rgb(30, 41, 59);
 #3F4059
 #221E38
 #B7F172
-
+#06083D
+hsl(238, 82%, 13%)
+#A1CDC6
+#EE6B67
 
 */
 
 @layer base {
 	:root {
 		--background: 0 0% 100%;
-		--foreground: 217 33% 17%;
+		--foreground: 238 82% 13%;
 
 		--card: 174 15% 87%;
 		--card-foreground: 217 33% 17%;
@@ -46,11 +51,11 @@ rgb(30, 41, 59);
 		--popover: 230 5% 87%;
 		--popover-foreground: 222.2 84% 4.9%;
 
-		--primary: 217 33% 1%;
-		--primary-foreground: 149 81% 69%;
+		--primary: 149 81% 69%;
+		--primary-foreground: 149 81% 68%;
 
-		--secondary: 149 81% 69%;
-		--secondary-foreground: 217 33% 17%;
+		--secondary: 193 76% 50%;
+		--secondary-foreground: 238 82% 13%;
 
 		--muted: 210 40% 96.1%;
 		--muted-foreground: 215.4 16.3% 46.9%;
@@ -69,7 +74,7 @@ rgb(30, 41, 59);
 	}
 
 	.dark {
-		--background: 222.2 84% 4.9%;
+		--background: 238 82% 13%;
 		--foreground: 234, 100%, 95%;
 
 		--card: 174 15% 87%;
