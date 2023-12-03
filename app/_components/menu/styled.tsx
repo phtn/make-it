@@ -26,10 +26,10 @@ const Item = ({ href, title, index }: ItemProps) => (
 
 const LogoImage = tw.div`
 	bg-[url('/logo/logo-v1.svg')] bg-center bg-no-repeat 
-	h-[36px] z-20
+	h-[36px] w-[36px] z-20
 `
 const LogoHomelink = tw(Link)`
-	no-underline ml-10 mr-[-16px] 	
+	no-underline ml-10	
 `
 const Logo = () => (
 	<LogoHomelink href={'/'}>

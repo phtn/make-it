@@ -320,7 +320,7 @@ const Sub = tw.h1`
 	decoration-background/50 decoration-2 underline-offset-2 underline
 `
 const MenuTrigger = tw(NavigationMenuTrigger)`
-	mt-4 bg-transparent mr-3
+	bg-transparent mr-3
 `
 const Trigger = () => {
 	const pathName = usePathname()
