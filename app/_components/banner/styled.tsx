@@ -30,7 +30,7 @@ const Title = tw.h1`
 
 const Description = tw.h3`
   text-slate-300 text-[1rem] sm:text-[1.25rem] 
-	font-semibold font-sans mt-[-3px] sm:mt-[-16px]
+	font-semibold font-sans mt-[-3px] sm:mt-[-8px]
 `
 
 const Subtext = tw.p`

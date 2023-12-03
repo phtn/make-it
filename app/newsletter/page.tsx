@@ -2,7 +2,7 @@
 import Banner from '../_components/banner'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { ListAsset } from '../_components/lottie'
+import { ListLoader, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
@@ -56,7 +56,7 @@ const Newsletter = () => {
 			{/* <Godrays /> */}
 			<Content>
 				<Hero
-					asset={<ListAsset />}
+					asset={<LottFile animationData={ListLoader} />}
 					primaryProps={heroProps}
 				/>
 				<Banner

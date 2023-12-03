@@ -2,7 +2,7 @@
 import Hero from '../_components/hero'
 import { Header, HeaderGap } from '../_components/header'
 import { HeadlineData } from '../_components/hero/types'
-import { AboutAsset } from '../_components/lottie'
+import { About, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import dynamic from 'next/dynamic'
@@ -77,7 +77,7 @@ const AboutTheCompany = () => {
 			{/* <GodRays /> */}
 			<Content>
 				<Hero
-					asset={<AboutAsset />}
+					asset={<LottFile animationData={About} />}
 					primaryProps={heroProps}
 				/>
 				<Banner

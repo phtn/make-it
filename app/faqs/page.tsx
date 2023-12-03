@@ -1,6 +1,6 @@
 'use client'
 import { HeadlineData } from '../_components/hero/types'
-import { SearchAsset } from '../_components/lottie'
+import { Search, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
@@ -57,7 +57,7 @@ const FAQs = () => {
 			{/* <GodRays /> */}
 			<Content>
 				<Protos
-					asset={<SearchAsset />}
+					asset={<LottFile animationData={Search} />}
 					primaryProps={protosProps}
 				/>
 				<NewBanner

@@ -8,18 +8,21 @@ const Container = tw.div`
 	sm:py-44 py-24
   bg-gradient-to-bl
   from-[#FEF7E4]
+  dark:from-[#c5a47b]
   to-[#AEB4EA]
+	dark:to-[#4c517d]
 
 `
 
 const GridContainer = tw.div`
-  flex flex-col sm:grid sm:grid-cols-2 md:h-fit md:grid md:grid-cols-2 lg:grid-cols-3 px-6 md:px-10 lg:px-24
+  flex flex-col sm:grid sm:grid-cols-2 md:h-fit 
+	md:grid md:grid-cols-2 lg:grid-cols-3 px-6 md:px-10 lg:px-24
 `
 
 // Feature Item
 
 const FeatureItemContainer = tw.div`
-  flex flex-col items-center w-full sm:h-[550px] h-fit
+  flex flex-col items-center w-full h-fit
 `
 const WrapCenter = tw.div`
   flex items-center justify-center
@@ -38,14 +41,15 @@ const FeatureDetail = tw.div`
 `
 
 const FeatureTitle = tw.h2`
-  font-extrabold font-sans tracking text-[1.5rem] text-foreground dark:text-[54c8e8] leading-[1.5rem]
+  font-extrabold font-sans tracking leading-[1.5rem]
+	text-foreground text-[1.5rem] md:text-[2rem] dark:text-[54c8e8] 
 `
 
 const Description = tw.div`
   px-6
 `
 const DescriptionText = tw.h3`
-  text-[1rem] text-muted-foreground tracking-wide
+  text-[1rem] text-slate-600 dark:text-[#dbbf9c] tracking-wide
   text-center font-normal
 `
 

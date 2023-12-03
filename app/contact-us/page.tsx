@@ -3,7 +3,7 @@ import { Container, Content } from './styled'
 
 const ContactUs = () => (
 	<Container>
-		{/* <GodRays /> */}
+		<GodRays />
 		<Content>
 			<div className='h-screen flex items-center justify-center '>
 				<div className='border px-4 py-2 rounded'>

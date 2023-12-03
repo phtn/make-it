@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components'
 
 const Container = tw.div`
-  mb-24
+  py-24 md:py-44
 `
 
 const ReviewContent = tw.div`

@@ -1,7 +1,7 @@
 import { LandingContainer, LandingContent } from './styled'
 import { how } from '../new-features/features-data'
 import { MetricItemProps } from '../metrics-banner/types'
-import { SydneyAsset } from '../lottie'
+import { LottFile, Sydney } from '../lottie'
 import { HeadlineData } from '../hero/types'
 import { motion } from 'framer-motion'
 import { toast } from 'sonner'
@@ -117,7 +117,11 @@ const Landing = () => {
 
 const FooterAnimation = () => (
 	<div className='grid md:grid-cols-3'>
-		<SydneyAsset />
+		<LottFile
+			animationData={Sydney}
+			loop={false}
+			style={{}}
+		/>
 		<div className=' col-span-2'></div>
 	</div>
 )
