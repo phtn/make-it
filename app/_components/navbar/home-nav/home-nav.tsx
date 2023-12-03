@@ -5,17 +5,15 @@ import * as React from 'react'
 import { cn } from '@/lib/utils'
 import {
 	NavigationMenu,
-	NavigationMenuContent,
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
-	NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import { HomeIcon } from 'lucide-react'
 import {
 	FAQsIcon,
 	GridContent,
-	NavigationInnerContent,
+	HomeMenuContent,
 	NewletterIcon,
 	TertiaryLink,
 	TertiaryWrapper,
@@ -25,7 +23,7 @@ import {
 } from './styled'
 import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
-import { LottFile, Sydney, SydneyAsset } from '../../lottie'
+import { LottFile, Sydney } from '../../lottie'
 
 const links: TertiaryProps[] = [
 	{
@@ -61,27 +59,20 @@ export function HomeMenu() {
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger className='mt-4 bg-transparent w-fit sm:w-56'>
-						<Trigger>
-							Make it in Australia <span className='font-thin ml-1'>PH</span>
-						</Trigger>
-					</NavigationMenuTrigger>
+					<Trigger />
 
-					<NavigationMenuContent
-						className={`bg-[url('/bg/space-noise-v3.svg')] bg-cover dark:bg-slate-700`}>
-						<NavigationInnerContent>
-							<GridContent>
-								<TopSection />
-								<TertiaryList />
-								<LottFile
-									animationData={Sydney}
-									loop={false}
-									style={{}}
-								/>
-							</GridContent>
-							<RegistrationModule />
-						</NavigationInnerContent>
-					</NavigationMenuContent>
+					<HomeMenuContent>
+						<GridContent>
+							<TopSection />
+							<TertiaryList />
+							<LottFile
+								animationData={Sydney}
+								loop={false}
+								style={{}}
+							/>
+						</GridContent>
+						<RegistrationModule />
+					</HomeMenuContent>
 				</NavigationMenuItem>
 			</NavigationMenuList>
 		</NavigationMenu>
@@ -119,7 +110,7 @@ const ListItem = React.forwardRef<
 				<a
 					ref={ref}
 					className={cn(
-						'select-none rounded-2xl px-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
+						'select-none rounded-2xl px-1 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
 						className
 					)}
 					{...props}>

@@ -30,7 +30,7 @@ const heroProps = {
 
 const MeetTheTeam = () => (
 	<Container>
-		<GodRays />
+		{/* <GodRays /> */}
 		<Content>
 			<Hero
 				asset={<MeetAsset />}

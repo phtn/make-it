@@ -53,7 +53,7 @@ const Testimonials = () => {
 
 	return (
 		<Container>
-			<GodRays />
+			{/* <GodRays /> */}
 			<Content>
 				<Hero
 					asset={<MeetAsset />}

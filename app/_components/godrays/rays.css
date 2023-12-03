@@ -30,11 +30,11 @@
 	);
 	--rainbow: repeating-linear-gradient(
 		120deg,
-		#ee6b67 10%,
-		#54c8e8 15%,
-		#5eead4 20%,
-		#5eead4 25%,
-		#54c8e8 30%
+		hsl(43, 80%, 67%) 10%,
+		#ffffff,
+		#fef7e4 20%,
+		#f6f3c5 25%,
+		#fcc598 30%
 	);
 	background-image: var(--stripes), var(--rainbow);
 	background-size: 300%, 200%;

@@ -53,7 +53,7 @@ const Newsletter = () => {
 
 	return (
 		<Container>
-			<Godrays />
+			{/* <Godrays /> */}
 			<Content>
 				<Hero
 					asset={<ListAsset />}

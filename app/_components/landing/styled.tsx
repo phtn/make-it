@@ -3,9 +3,7 @@ import tw from 'tailwind-styled-components'
 const LandingContainer = tw.div`
   flex-col
   w-full
-  bg-gradient-to-b
-  from-background/50
-  from-5% via-background via-100%
+  bg-[url('/bg/sydney-wall.webp')] bg-cover
   overflow-hidden
   absolute 
   top-0
@@ -13,9 +11,9 @@ const LandingContainer = tw.div`
 `
 
 const LandingContent = tw.div`
-  bg-gradient-to-b
+  bg-gradient-to-br
   from-transparent
-  to-background
+  to-background/70
   overflow-y-scroll
   overflow-x-hidden
   h-screen

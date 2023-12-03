@@ -4,11 +4,11 @@ import { Button } from '@/components/ui/button'
 import { ArrowUpRight, LogIn } from 'lucide-react'
 
 const Container = tw.div`
-  grid grid-cols-1 lg:grid-cols-2 sm:mb-44 mb-24 bg-gradient-to-br from-slate-700 to-slate-900 
+  grid grid-cols-1 lg:grid-cols-2 bg-gradient-to-br from-slate-700 to-slate-900 
 `
 
 const NewContainer = tw.div`
-  grid grid-cols-1 lg:grid-cols-4 sm:mb-44 mb-24 bg-gradient-to-br from-slate-700 to-slate-900 
+  grid grid-cols-1 lg:grid-cols-4 bg-gradient-to-br from-slate-700 to-slate-900 
 `
 
 const Cell = tw.div`

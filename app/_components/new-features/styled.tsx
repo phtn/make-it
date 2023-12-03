@@ -5,7 +5,11 @@ import Link from 'next/link'
 
 const Container = tw.div`
   h-fit w-screen flex flex-col overflow-hidden
-	sm:mb-44 mb-24
+	sm:py-44 py-24
+  bg-gradient-to-bl
+  from-[#FEF7E4]
+  to-[#AEB4EA]
+
 `
 
 const GridContainer = tw.div`

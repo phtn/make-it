@@ -1,4 +1,8 @@
-import { NavigationMenuLink } from '@/components/ui/navigation-menu'
+import {
+	NavigationMenuContent,
+	NavigationMenuLink,
+	NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu'
 import {
 	ArrowUpRight,
 	HelpCircle,
@@ -9,6 +13,9 @@ import {
 } from 'lucide-react'
 import tw from 'tailwind-styled-components'
 import { TertiaryDetail, TertiaryProps } from './types'
+import { Children } from '@/app/types'
+import { usePathname } from 'next/navigation'
+import { cn } from '@/lib/utils'
 
 const IconContainer = tw.div`
   rounded-full bg-slate-200/10 
@@ -287,17 +294,59 @@ const TertiaryWrapper = tw.div`
 const GridContent = tw.div`
 	grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.5px] border-[#c0c1c7] dark:border-slate-800
 `
-const NavigationInnerContent = tw.div`
+const InnerContent = tw.div`
 	grid sm:grid-cols-5 grid-cols-2 sm:w-[616px] w-screen
 `
-const Trigger = tw.h1`
-	sm:font-extrabold font-bold font-sans text-slate-800 dark:text-slate-300 text-[1rem] leading-[1rem]
+
+const Home = `
+	sm:font-extrabold font-bold font-sans 
+	tracking-tighter leading-[1rem] 
+	text-transparent text-[1rem] md:text-[1.5rem] 
+	bg-clip-text bg-gradient-to-br from-primary-foreground via-accent to-99% to-background
 `
+
+const NotHome = `
+	sm:font-extrabold font-bold font-sans 
+	tracking-tighter leading-[1rem] 
+	text-transparent text-[1rem] md:text-[1.5rem] 
+	bg-clip-text bg-gradient-to-br from-primary-foreground to-background
+`
+
+const Sub = tw.h1`
+	h-[22px] w-[22px] ml-2 rounded-full
+	text-xs text-transparent md:text-sm
+	font-medium font-sans pt-[1px]
+	bg-clip-text bg-gradient-to-br from-accent to-background
+	decoration-background/50 decoration-2 underline-offset-2 underline
+`
+const MenuTrigger = tw(NavigationMenuTrigger)`
+	mt-4 bg-transparent mr-3
+`
+const Trigger = () => {
+	const pathName = usePathname()
+	return (
+		<MenuTrigger>
+			<h1 className={cn(pathName !== '/' ? NotHome : Home)}>
+				Make it in Australia
+			</h1>
+			<Sub>PH</Sub>
+		</MenuTrigger>
+	)
+}
+
+const MenuContent = tw(NavigationMenuContent)`
+	bg-[url('/bg/space-noise-v4.svg')] bg-cover dark:bg-slate-700
+`
+const HomeMenuContent = ({ children }: Children) => (
+	<MenuContent>
+		<InnerContent>{children}</InnerContent>
+	</MenuContent>
+)
 
 export {
 	FAQsIcon,
 	GridContent,
-	NavigationInnerContent,
+	HomeMenuContent,
 	NewletterIcon,
 	PrimarySet,
 	SecondarySet,

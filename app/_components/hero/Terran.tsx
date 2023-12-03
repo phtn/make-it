@@ -8,6 +8,9 @@ import {
 	TerranPrimary,
 	TerranPrimaryContent,
 	TerranContent,
+	TitleXL,
+	SubheaderXL,
+	TitleClip,
 } from './styled'
 import { motion } from 'framer-motion'
 import { useCallback, useEffect, useState } from 'react'
@@ -62,23 +65,23 @@ const Primary = ({
 					title={title}
 					subheader={subheader}
 				/>
-				<Headline />
-				<Description description={description} />
-				<div className='flex py-3'>
+				{/* <Headline /> */}
+				{/* <Description description={description} /> */}
+				<div className='flex items-center'>
 					<Button
 						variant='tertiary'
-						className='mr-6'>
+						className='ml-6 w-[150px]'>
 						<div className='flex items-center'>
 							<span>Sign Up</span>
 							<ArrowUpRight className='h-4 w-4 ml-3' />
 						</div>
 					</Button>
-					<Button variant='outline'>
+					{/* <Button variant='outline'>
 						<div className='flex items-center'>
 							<span>Login</span>
 							<LogIn className='h-4 w-4 ml-3' />
 						</div>
-					</Button>
+					</Button> */}
 				</div>
 			</TerranPrimaryContent>
 		</TerranPrimary>
@@ -90,9 +93,11 @@ const Header = ({ title, subheader }: HeaderProps) => (
 		<Link
 			href={'/'}
 			className='no-underline'>
-			<Title>{title}</Title>
+			<TitleXL>
+				<TitleClip>{title}</TitleClip>
+			</TitleXL>
 		</Link>
-		<Subheader>{subheader}</Subheader>
+		<SubheaderXL>{subheader}</SubheaderXL>
 	</div>
 )
 

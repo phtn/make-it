@@ -54,7 +54,7 @@ const FAQs = () => {
 
 	return (
 		<Container>
-			<GodRays />
+			{/* <GodRays /> */}
 			<Content>
 				<Protos
 					asset={<SearchAsset />}

@@ -8,10 +8,8 @@ const NavContainer = tw.div`
   justify-between
   absolute
   top-0
-  bg-gradient-to-b
-  from-background
-  to-transparent
-  backdrop-blur-md
+  bg-foreground/20
+  backdrop-blur-lg
   z-50
   h-[64px]
 `

@@ -55,7 +55,7 @@ const BeAMentee = () => {
 
 	return (
 		<Container>
-			<GodRays />
+			{/* <GodRays /> */}
 			<Content>
 				<Hero
 					asset={<MenteeAsset />}

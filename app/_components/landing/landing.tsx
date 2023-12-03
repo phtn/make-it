@@ -8,6 +8,7 @@ import { toast } from 'sonner'
 import ImageTree from '../image-tree'
 import Terran from '../hero/Terran'
 import dynamic from 'next/dynamic'
+import { whyChooseUsData } from './data'
 
 const metrics: MetricItemProps[] = [
 	{ value: '500+', label: 'mentors' },
@@ -30,13 +31,15 @@ const NewFeatures = dynamic(() => import('../new-features'))
 const Footer = dynamic(() => import('../footer'))
 
 const Landing = () => {
-	const featureHeader = { tag: 'discover', title: 'How The Process Works' }
+	const whyChooseUsHeader = { tag: 'discover', title: 'Why Choose Us?' }
+	const howItWorksHeader = { tag: 'discover', title: 'How The Process Works' }
 	const highlightHeader = { tag: 'mentor', title: 'Top Mentors' }
 	const heroProps = {
 		title: 'Make It In Australia',
-		subheader: 'Join us today!',
+		subheader: 'Hire a mentor today!',
 		// description: `United by a Common Goal to Build a Better World. With a Team of Passionate Hope Builders, Visionaries, and Talents Willing To Architect Their Future. Your Journey Begins here.`,
-		description: `This is the opportunity you've been waiting for! Be one of the successful students who found their place in Australia. Together, you can make it too!`,
+		// description: `This is the opportunity you've been waiting for! Be one of the successful students who found their place in Australia. Together, you can make it too!`,
+		description: '',
 		headlines,
 	}
 
@@ -80,11 +83,6 @@ const Landing = () => {
 						primaryProps={heroProps}
 					/>
 				</motion.div>
-				<MetricsBanner metrics={metrics} />
-				<NewFeatures
-					header={featureHeader}
-					data={how}
-				/>
 
 				<Banner
 					title='Gain access to a better future.'
@@ -92,9 +90,23 @@ const Landing = () => {
 					primaryAction={primaryAction}
 					secondaryAction={secondaryAction}
 				/>
+				<NewFeatures
+					header={whyChooseUsHeader}
+					data={whyChooseUsData}
+				/>
+				<Banner
+					title='Gain access to a better future.'
+					description={`Together, we'll make it happen.`}
+					primaryAction={primaryAction}
+					secondaryAction={secondaryAction}
+				/>
+				<NewFeatures
+					header={howItWorksHeader}
+					data={how}
+				/>
 
-				<Highlight header={highlightHeader} />
-				<Pricing />
+				{/* <Highlight header={highlightHeader} /> */}
+				{/* <Pricing /> */}
 				<Reviews />
 				<FooterAnimation />
 				<Footer />

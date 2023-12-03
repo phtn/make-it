@@ -55,7 +55,7 @@ const JoinAClass = () => {
 
 	return (
 		<Container>
-			<GodRays />
+			{/* <GodRays /> */}
 			<Content>
 				<Hero
 					asset={<MeetAsset />}

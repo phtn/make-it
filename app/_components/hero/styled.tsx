@@ -32,7 +32,7 @@ const TerranPrimary = tw.div`
 `
 
 const TerranPrimaryContent = tw.div`
-  flex flex-col justify-evenly h-[400px] md:h-[450px] lg:h-[400px] 
+  flex flex-col h-[400px] md:h-[450px] lg:h-[400px] 
   px-8 sm:pl-24 lg:pl-32 lg:pr-14 z-40
 `
 
@@ -50,11 +50,28 @@ const Title = tw.div`
   text-primary-foreground bg-[url('/bg/meteor-v2.svg')] bg-cover leading-[1.5rem]
   rounded shadow-xl shadow-foreground/30
 `
+const TitleXL = tw.div`
+  font-sans py-10 px-16 ml-3 font-extrabold w-fit 
+  text-white text-[1.5rem] md:text-[2rem] 
+  bg-[url('/bg/meteor-v2.svg')] bg-cover 
+  leading-[1.5rem] rounded shadow-xl shadow-foreground/30
+`
+const TitleClip = tw.div`
+  text-transparent bg-clip-text bg-gradient-to-tr from-accent to-background
+`
 const Subheader = tw.div`
-  sm:text-[1.2rem] px-3 py-2
+  sm:text-[1rem] px-3 py-2
   justify-center text-slate-800 w-fit
   bg-primary-foreground rounded 
-  font-sans font-medium
+  font-sans font-bold
+  shadow-xl shadow-foreground/10
+`
+const SubheaderXL = tw.div`
+  px-14 py-2 h-[55px]
+  text-[1rem] text-slate-800 md:text-[1.25rem] 
+  flex items-center justify-center w-fit
+  bg-accent rounded-md 
+  font-sans font-bold
   shadow-xl shadow-foreground/10
 `
 
@@ -145,9 +162,12 @@ export {
 	HeroSecondary,
 	PrimaryContent,
 	Subheader,
+	SubheaderXL,
 	Subtext,
 	TerranContent,
 	TerranPrimary,
 	TerranPrimaryContent,
 	Title,
+	TitleXL,
+	TitleClip,
 }
