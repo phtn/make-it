@@ -13,7 +13,7 @@
 
 .jumbo {
 	--stripes: repeating-linear-gradient(
-		120deg,
+		100deg,
 		#fff 0%,
 		#fff 7%,
 		transparent 10%,
@@ -21,7 +21,7 @@
 		#fff 16%
 	);
 	--stripesDark: repeating-linear-gradient(
-		120deg,
+		100deg,
 		#000 0%,
 		#000 7%,
 		transparent 10%,
@@ -29,12 +29,12 @@
 		#000 16%
 	);
 	--rainbow: repeating-linear-gradient(
-		120deg,
-		hsl(43, 80%, 67%) 10%,
-		#ffffff,
-		#fef7e4 20%,
-		#f6f3c5 25%,
-		#fcc598 30%
+		100deg,
+		hsl(43, 100%, 80%) 10%,
+		#aeb4ea,
+		#fcc598 20%,
+		#ffffff 25%,
+		#fef7e4 30%
 	);
 	background-image: var(--stripes), var(--rainbow);
 	background-size: 300%, 200%;
