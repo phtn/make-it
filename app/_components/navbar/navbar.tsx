@@ -24,6 +24,8 @@ const Navbar = () => {
 
 	return (
 		<NavContainer>
+
+		<HomeMenu />
 			<Menu />
 			<div className='flex items-center justify-evenly w-32 md:w-56'>
 				<Mode

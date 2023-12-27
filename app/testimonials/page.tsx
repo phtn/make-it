@@ -2,7 +2,6 @@
 import Banner from '../_components/banner'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { PeopleV2, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
@@ -21,7 +20,6 @@ const heroProps = {
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }
-const hightlightHeader = { tag: 'Hire', title: 'Meet the Mentors' }
 
 const Testimonials = () => {
 	const onClickPrimary = () => {
@@ -53,10 +51,10 @@ const Testimonials = () => {
 
 	return (
 		<Container>
-			{/* <GodRays /> */}
+			 <GodRays />
 			<Content>
 				<Hero
-					asset={<LottFile animationData={PeopleV2} />}
+					asset={<></>}
 					primaryProps={heroProps}
 				/>
 				<Banner
@@ -65,7 +63,6 @@ const Testimonials = () => {
 					primaryAction={primaryAction}
 					secondaryAction={secondaryAction}
 				/>
-				<Reviews />
 				<Footer />
 			</Content>
 		</Container>

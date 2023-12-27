@@ -47,7 +47,7 @@ export const reviewData: Review[] = [
 	{
 		id: 0,
 		author: 'Alyssa G.',
-		avatar: 'https://github.com/amandavilela.png',
+		avatar: 'https://github.com/sugoi-wada.png',
 		title: 'Very Useful!',
 		content: `Sobrang useful ng app na 'to! Mas napa bilis ma solve ang problema ko sa aircon namin. I'm so thankful relaxed na kami sa bahay.`,
 		stars: 5,
@@ -63,7 +63,7 @@ export const reviewData: Review[] = [
 	{
 		id: 2,
 		author: 'Conielyn B.',
-		avatar: 'https://github.com/amandavilela.png',
+		avatar: 'https://github.com/sugoi-wada.png',
 		title: 'Stars ka saken!',
 		content: `My nail specialist Hannah is a pro! I got my nail extension today!! I will absolutely recommend her to my friends..`,
 		stars: 5,

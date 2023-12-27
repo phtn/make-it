@@ -2,7 +2,6 @@
 import { Header, HeaderGap } from '../_components/header'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { PeopleV2, LottFile } from '../_components/lottie'
 import PostScript from '../_components/postscript'
 import PastScript from '../_components/postscript/pastscript'
 import { Container, Content } from './styled'
@@ -30,19 +29,17 @@ const heroProps = {
 
 const MeetTheTeam = () => (
 	<Container>
-		{/* <GodRays /> */}
+		 <GodRays />
 		<Content>
 			<Hero
-				asset={<LottFile animationData={PeopleV2} />}
+				asset={<></>}
 				primaryProps={heroProps}
 			/>
-			{/* <MobileView /> */}
 			<DesktopView />
 		</Content>
 	</Container>
 )
 
-const MobileView = () => <div></div>
 
 const DesktopView = () => (
 	<div>

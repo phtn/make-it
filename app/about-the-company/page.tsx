@@ -1,13 +1,11 @@
 'use client'
-import Hero from '../_components/hero'
+import Terran from '../_components/hero'
 import { Header, HeaderGap } from '../_components/header'
 import { HeadlineData } from '../_components/hero/types'
-import { About, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import dynamic from 'next/dynamic'
 
-const GodRays = dynamic(() => import('../_components/godrays'))
 const Banner = dynamic(() => import('../_components/banner'))
 const PostScript = dynamic(() => import('../_components/postscript'))
 const PastScript = dynamic(() => import('../_components/postscript/pastscript'))
@@ -74,10 +72,9 @@ const AboutTheCompany = () => {
 	}
 	return (
 		<Container>
-			{/* <GodRays /> */}
 			<Content>
-				<Hero
-					asset={<LottFile animationData={About} />}
+				<Terran
+					asset={<></>}
 					primaryProps={heroProps}
 				/>
 				<Banner

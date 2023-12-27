@@ -21,13 +21,14 @@ import { ArrowUpRight } from 'lucide-react'
 import { toast } from 'sonner'
 
 const Highlight = ({ header }: HighlightProps) => (
-	<>
+	<div className='my-44'>
 		<Header {...header} />
+
 		<Container>
 			<Primary />
 			<Secondary />
 		</Container>
-	</>
+	</div>
 )
 
 const Primary = () => (

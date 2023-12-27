@@ -1,7 +1,5 @@
 'use client'
-
-import * as React from 'react'
-
+import {ElementRef, forwardRef, ComponentPropsWithoutRef} from "react";
 import { cn } from '@/lib/utils'
 import {
 	NavigationMenu,
@@ -9,23 +7,32 @@ import {
 	NavigationMenuLink,
 	NavigationMenuList,
 } from '@/components/ui/navigation-menu'
-import { HomeIcon } from 'lucide-react'
 import {
-	FAQsIcon,
-	GridContent,
-	HomeMenuContent,
-	NewletterIcon,
-	TertiaryLink,
-	TertiaryWrapper,
-	TestimonialsIcon,
-	TopSection,
-	Trigger,
+  FAQsIcon,
+  GridContent,
+  HomeMenuContent,
+	HomepageIcon,
+  NewletterIcon,
+  TertiaryLink,
+  TertiaryWrapper,
+  TestimonialsIcon,
+  TopSection,
+  Trigger,
 } from './styled'
 import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
-import { LottFile, Sydney } from '../../lottie'
+import {HomeIcon} from "lucide-react";
 
 const links: TertiaryProps[] = [
+
+	{
+		href: '/',
+		details: {
+			title: 'Home',
+			subtext: 'Go to Homepage',
+		},
+		icon: <HomepageIcon />,
+	},
 	{
 		href: '/faqs',
 		details: {
@@ -65,11 +72,7 @@ export function HomeMenu() {
 						<GridContent>
 							<TopSection />
 							<TertiaryList />
-							<LottFile
-								animationData={Sydney}
-								loop={false}
-								style={{}}
-							/>
+
 						</GridContent>
 						<RegistrationModule />
 					</HomeMenuContent>
@@ -100,9 +103,9 @@ const TertiaryList = () => (
 	</TertiaryWrapper>
 )
 
-const ListItem = React.forwardRef<
-	React.ElementRef<'a'>,
-	React.ComponentPropsWithoutRef<'a'>
+const ListItem = forwardRef<
+	ElementRef<'a'>,
+	ComponentPropsWithoutRef<'a'>
 >(({ className, title, children, ...props }, ref) => {
 	return (
 		<li>

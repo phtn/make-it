@@ -1,10 +1,9 @@
 import tw from 'tailwind-styled-components'
 import { F, I, ItemProps, SelectProps } from './types'
-import { Check, CheckCircle, CheckCircle2, X, XCircle } from 'lucide-react'
-import { useCallback, useState } from 'react'
+import { Check, X } from 'lucide-react'
+import { useCallback } from 'react'
 import { map } from '@/app/_utils/helpers'
 import { Button } from '@/components/ui/button'
-import { toast } from 'sonner'
 import { Checkout } from './checkout'
 
 const Container = tw.div`
@@ -25,10 +24,6 @@ const ItemContainer = tw.div<I>`
   ${(p) =>
 		p.$id === 100 ? 'h-[650px]' : p.$id === 200 ? 'h-[650px]' : 'h-[700px] '}
   flex flex-col items-center w-full
-`
-const WrapCenter = tw.div`
-  flex items-center justify-center
-  py-3
 `
 
 const Content = tw.div<I>`
@@ -169,7 +164,6 @@ const Featured = ({ features }: Pick<ItemProps, 'features'>) => (
 const Item = (props: ItemProps) => {
 	const { id, features, price, description, duration, title } = props
 	const header = { id, price, description, duration, title }
-	const [selected, setSelected] = useState()
 	const onPressSelect = (item: ItemProps) => () => {
 		console.log(item)
 	}

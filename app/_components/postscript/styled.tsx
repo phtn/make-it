@@ -45,10 +45,6 @@ const Subtext = ({ description }: { description: string }) => (
 	</SubtextContainer>
 )
 
-const SecondaryContent = tw.div`
-  flex flex-col md:justify-center md:items-center 
-`
-
 const Col = tw.div`
   col-span-2 lg:pr-20 
   bg-gradient-to-t from-primary-foreground/10 to-10% to-transparent border-t-[0.33px]
@@ -62,17 +58,9 @@ const Row = tw.div`
   h-full hidden sm:flex items-center justify-around mx-10
 `
 
-const PhoneSmall = tw(Image)`
-  h-80 w-auto hover:scale-110 transition-transform duration-500
-`
-
-const PhoneBig = tw(Image)`
-  h-96 w-auto hover:scale-110 transition-transform duration-500
-`
 const Photo = tw(Image)`
   h-96 w-auto hover:scale-110 transition-transform duration-500 rounded-full
 `
-
 const LinksContainer = tw.div`
   w-full flex mb-16
 `
@@ -83,10 +71,7 @@ export {
 	Headline,
 	LinksContainer,
 	PrimaryContent,
-	PhoneBig,
-	PhoneSmall,
 	Row,
-	SecondaryContent,
 	Subtext,
 	Photo,
 	PastPrimaryContent,

@@ -1,17 +1,10 @@
-import DownloadLinks from '../download-links'
-import { Header, HeaderGap } from '../header'
 import {
-	Col,
 	GridContainer,
-	Headline,
 	LinksContainer,
 	PastColumn,
 	PastHeadline,
 	PastPrimaryContent,
-	PhoneBig,
-	PhoneSmall,
 	Photo,
-	PrimaryContent,
 	Row,
 	Subtext,
 } from './styled'

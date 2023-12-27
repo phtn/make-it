@@ -8,7 +8,6 @@ type FeatureProps = {
 
 type Props = {
 	data: Item[]
-	keyExtractor: (item: Item) => string
 	renderItem: (item: Item) => ReactNode
 }
 

@@ -1,6 +1,6 @@
 import { Header, HeaderGap } from '../header'
 import { Container, Item, GridContainer } from './styled'
-import { ItemProps, PricingProps } from './types'
+import { ItemProps } from './types'
 import { membership } from './pricing-data'
 
 const pricingHeader = { tag: 'select', title: 'Membership' }

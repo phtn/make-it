@@ -1,14 +1,12 @@
 import { LandingContainer, LandingContent } from './styled'
-import { how } from '../new-features/features-data'
 import { MetricItemProps } from '../metrics-banner/types'
-import { LottFile, Sydney } from '../lottie'
 import { HeadlineData } from '../hero/types'
 import { motion } from 'framer-motion'
 import { toast } from 'sonner'
 import ImageTree from '../image-tree'
 import Terran from '../hero/Terran'
 import dynamic from 'next/dynamic'
-import { whyChooseUsData } from './data'
+import { whyChooseUsData, howItWorks } from './data'
 
 const metrics: MetricItemProps[] = [
 	{ value: '500+', label: 'mentors' },
@@ -32,11 +30,11 @@ const Footer = dynamic(() => import('../footer'))
 
 const Landing = () => {
 	const whyChooseUsHeader = { tag: 'discover', title: 'Why Choose Us?' }
-	const howItWorksHeader = { tag: 'discover', title: 'How The Process Works' }
+	const howItWorksHeader = { tag: 'discover', title: 'How It Works' }
 	const highlightHeader = { tag: 'mentor', title: 'Top Mentors' }
 	const heroProps = {
 		title: 'Make It In Australia',
-		subheader: 'Hire a mentor today!',
+		subheader: 'Hire a mentor today',
 		// description: `United by a Common Goal to Build a Better World. With a Team of Passionate Hope Builders, Visionaries, and Talents Willing To Architect Their Future. Your Journey Begins here.`,
 		// description: `This is the opportunity you've been waiting for! Be one of the successful students who found their place in Australia. Together, you can make it too!`,
 		description: '',
@@ -72,58 +70,38 @@ const Landing = () => {
 	}
 
 	return (
-		<LandingContainer>
-			<LandingContent>
-				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 0.7, delay: 1.6, ease: 'easeInOut' }}>
-					<Terran
-						asset={<ImageTree />}
-						primaryProps={heroProps}
-					/>
-				</motion.div>
+    <LandingContainer>
+      <LandingContent>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7, delay: 1.6, ease: "easeInOut" }}
+        >
+          <Terran asset={<ImageTree />} primaryProps={heroProps} />
+        </motion.div>
 
-				<Banner
-					title='Gain access to a better future.'
-					description={`Together, we'll make it happen.`}
-					primaryAction={primaryAction}
-					secondaryAction={secondaryAction}
-				/>
-				<NewFeatures
-					header={whyChooseUsHeader}
-					data={whyChooseUsData}
-				/>
-				<Banner
-					title='Gain access to a better future.'
-					description={`Together, we'll make it happen.`}
-					primaryAction={primaryAction}
-					secondaryAction={secondaryAction}
-				/>
-				<NewFeatures
+        <Banner
+          title="Gain access to a better future."
+          description={`Together, we'll make it happen.`}
+          primaryAction={primaryAction}
+          secondaryAction={secondaryAction}
+        />
+        <NewFeatures header={whyChooseUsHeader} data={whyChooseUsData} />
+
+        <MetricsBanner metrics={metrics} />
+
+        <NewFeatures
 					header={howItWorksHeader}
-					data={how}
+					data={howItWorks}
 				/>
 
-				{/* <Highlight header={highlightHeader} /> */}
-				{/* <Pricing /> */}
-				<Reviews />
-				<FooterAnimation />
-				<Footer />
-			</LandingContent>
-		</LandingContainer>
-	)
+        {/* <Highlight header={highlightHeader} /> */}
+        {/* <Pricing /> */}
+        <Reviews />
+        <Footer />
+      </LandingContent>
+    </LandingContainer>
+  );
 }
-
-const FooterAnimation = () => (
-	<div className='grid md:grid-cols-3'>
-		<LottFile
-			animationData={Sydney}
-			loop={false}
-			style={{}}
-		/>
-		<div className=' col-span-2'></div>
-	</div>
-)
 
 export default Landing

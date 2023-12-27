@@ -2,7 +2,7 @@ import Image from 'next/image'
 import tw from 'tailwind-styled-components'
 
 const Container = tw.div`
-  sm:h-[750px] h-[600px] w-full flex flex-col md:grid md:grid-cols-2
+  h-[600px] w-full flex flex-col md:grid md:grid-cols-2
 `
 
 const PrimaryContent = tw.div`

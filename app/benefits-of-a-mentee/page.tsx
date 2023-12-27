@@ -1,10 +1,9 @@
 'use client'
-import Hero from '../_components/hero'
-import { HeadlineData } from '../_components/hero/types'
-import { About, LottFile } from '../_components/lottie'
-import { Container, Content } from './styled'
-import { toast } from 'sonner'
+import { HeadlineData } from '@/app/_components/hero/types'
+import { Container, Content } from '@/app/benefits-of-a-mentee/styled'
 import dynamic from 'next/dynamic'
+import Terran from '../_components/hero/Terran'
+import {onSuccess, onInfo} from '../_utils/helpers'
 
 const GodRays = dynamic(() => import('../_components/godrays'))
 const Banner = dynamic(() => import('../_components/banner'))
@@ -25,53 +24,38 @@ const heroProps = {
 }
 const hightlightHeader = { tag: 'Hire', title: 'Meet the Mentors' }
 
-const BenefitsOfAMentee = () => {
-	const onClickPrimary = () => {
-		toast(`You're hiring a mentor!`, {
-			description: `That's cool! Would you like to proceed?`,
-			action: {
-				label: 'Yes',
-				onClick: () => toast('Sure you do.'),
-			},
-		})
-	}
-	const onClickSecondary = () => {
-		toast(`You're hiring a mentor!`, {
-			description: `That's cool! Would you like to proceed?`,
-			action: {
-				label: 'Yes',
-				onClick: () => toast('Sure you do.'),
-			},
-		})
-	}
-	const primaryAction = {
-		label: 'Hire a mentor',
-		onClick: onClickPrimary,
-	}
-	const secondaryAction = {
-		label: 'Login',
-		onClick: onClickSecondary,
-	}
+const BenefitsOfAMentee = function () {
+  const onClickPrimary = () => {
+    onSuccess(`You're hiring a mentor!`);
+  };
+  const onClickSecondary = () => {
+    onInfo(`You're hiring a mentor!`);
+  };
+  const primaryAction = {
+    label: "Hire a mentor",
+    onClick: onClickPrimary,
+  };
+  const secondaryAction = {
+    label: "Login",
+    onClick: onClickSecondary,
+  };
 
-	return (
-		<Container>
-			<GodRays />
-			<Content>
-				<Hero
-					asset={<LottFile animationData={About} />}
-					primaryProps={heroProps}
-				/>
-				<Banner
-					title='Hire a mentor today!'
-					description={`Your journey begins here.`}
-					primaryAction={primaryAction}
-					secondaryAction={secondaryAction}
-				/>
-				<Highlight header={hightlightHeader} />
-				<Footer />
-			</Content>
-		</Container>
-	)
-}
+  return (
+    <Container>
+      <GodRays />
+      <Content>
+        <Terran asset={<></>} primaryProps={heroProps} />
+        <Banner
+          title="Hire a mentor today!"
+          description={`Your journey begins here.`}
+          primaryAction={primaryAction}
+          secondaryAction={secondaryAction}
+        />
+        <Highlight header={hightlightHeader} />
+        <Footer />
+      </Content>
+    </Container>
+  );
+};
 
-export default BenefitsOfAMentee
+export default BenefitsOfAMentee;

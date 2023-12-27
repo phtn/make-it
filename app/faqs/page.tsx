@@ -1,6 +1,5 @@
 'use client'
 import { HeadlineData } from '../_components/hero/types'
-import { Search, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import Footer from '../_components/footer'
@@ -8,7 +7,6 @@ import Protos from '../_components/hero/Protos'
 import NewBanner from '../_components/banner/new-banner'
 import Blocks from '../_components/blocks'
 import { blocks } from './blocks-data'
-import GodRays from '../_components/godrays'
 
 const headlines: HeadlineData[] = [
 	{ id: 1, name: '', headline: 'Discover' },
@@ -22,7 +20,6 @@ const protosProps = {
 	description: `Feel free to browse this page for answers. If you can't find what you're looking for, you can always reach out to us.`,
 	headlines,
 }
-const featureHeader = { tag: 'discover', title: `About MiiA PH` }
 
 const FAQs = () => {
 	const onClickPrimary = () => {
@@ -54,10 +51,9 @@ const FAQs = () => {
 
 	return (
 		<Container>
-			{/* <GodRays /> */}
 			<Content>
 				<Protos
-					asset={<LottFile animationData={Search} />}
+					asset={<></>}
 					primaryProps={protosProps}
 				/>
 				<NewBanner

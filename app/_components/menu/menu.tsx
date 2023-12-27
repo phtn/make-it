@@ -1,5 +1,5 @@
 import { HomeMenu } from '../navbar/home-nav/home-nav'
-import { Container, Item, Logo } from './styled'
+import { Container, Item } from './styled'
 import { MenuItem } from './types'
 
 const menuItems: MenuItem[] = [
@@ -12,8 +12,6 @@ const menuItems: MenuItem[] = [
 
 const Menu = () => (
 	<Container>
-		<Logo />
-		<HomeMenu />
 		{menuItems.map((item, index) => (
 			<Item
 				key={item.href}

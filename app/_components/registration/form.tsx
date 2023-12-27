@@ -8,18 +8,14 @@ import {
 	FormControl,
 	FormField,
 	FormItem,
-	FormLabel,
 	FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import * as z from 'zod'
-import { useCallback, useEffect, useState } from 'react'
-import { map } from '@/app/_utils/helpers'
+import {useEffect, useState } from 'react'
 import { FormProps } from './types'
-import { ArrowUpRight, AtSign, Loader2, LogIn, Phone, User } from 'lucide-react'
-import { SelectLocation } from './select-location'
-import { POST_RegisterUser } from '@/app/_api/post'
-import { Header, Label } from './styled'
+import { ArrowUpRight } from 'lucide-react'
+import { Header } from './styled'
 
 const formSchema = z.object({
 	name: z.string().min(2, {
@@ -49,9 +45,6 @@ export function RegistrationForm() {
 			setLoading(false)
 		}
 
-		return () => {
-			registered
-		}
 	}, [registeredEmail, loading])
 
 	const form = useForm<z.infer<typeof formSchema>>({
@@ -63,7 +56,9 @@ export function RegistrationForm() {
 		},
 	})
 
-	const onSubmit = (values: z.infer<typeof formSchema>) => {}
+	const onSubmit = (values: z.infer<typeof formSchema>) => {
+		console.log(values)
+	}
 
 	return (
 		<div className='flex justify-center mb-10'>
@@ -77,6 +72,11 @@ export function RegistrationForm() {
 		</div>
 	)
 }
+const RegisteredEmail = ({ email }: { email: string }) => (
+	<div className='h-32'>
+		<span>{email} already registered.</span>
+	</div>
+)
 
 const FormComponent = ({ form, onSubmit }: FormProps) => (
 	<Form {...form}>
@@ -164,26 +164,4 @@ const FormComponent = ({ form, onSubmit }: FormProps) => (
 	</Form>
 )
 
-const FormLoader = () => (
-	<div className='flex items-center justify-center'>
-		<Loader2 className='animate-spin text-secondary-foreground' />
-	</div>
-)
 
-const FormActive = () => (
-	<h2 className='text-sm bg-secondary-foreground/30 p-3 mb-10'>
-		Fill out this form to register.
-	</h2>
-)
-
-const FormLoading = () => (
-	<h2 className='text-sm bg-secondary-foreground/30 p-3 mb-10'>
-		Registering your account.
-	</h2>
-)
-
-const RegisteredEmail = ({ email }: { email: string }) => (
-	<div className='h-32'>
-		<span>{email} already registered.</span>
-	</div>
-)

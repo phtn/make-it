@@ -1,7 +1,6 @@
 'use client'
 import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { PeopleV2, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import dynamic from 'next/dynamic'
@@ -55,10 +54,10 @@ const JoinAClass = () => {
 
 	return (
 		<Container>
-			{/* <GodRays /> */}
+			<GodRays />
 			<Content>
 				<Hero
-					asset={<LottFile animationData={PeopleV2} />}
+					asset={<></>}
 					primaryProps={heroProps}
 				/>
 				<Banner

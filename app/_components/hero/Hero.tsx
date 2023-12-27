@@ -11,8 +11,7 @@ import {
 	Title,
 } from './styled'
 import { motion } from 'framer-motion'
-import { ReactElement, useCallback, useEffect, useState } from 'react'
-import { getNextElement } from '@/app/_utils/helpers'
+import { ReactElement, useCallback } from 'react'
 import { easeInOut } from 'popmotion'
 import { HeaderProps, HeadlineProps, HeroProps, PrimaryProps } from './types'
 
@@ -31,27 +30,14 @@ const Primary = ({
 	description,
 	headlines,
 }: PrimaryProps) => {
-	const [index, setIndex] = useState(0)
-	const [count, setCount] = useState(0)
-
-	useEffect(() => {
-		const timeout = setTimeout(() => {
-			getNextElement(headlines, index, setIndex)
-			setCount((prev) => prev + 1)
-		}, 7000)
-		return () => {
-			clearTimeout(timeout)
-		}
-	}, [index, count, headlines])
-
 	const Headline = useCallback(
 		() => (
 			<Headlines
-				index={index}
+				index={0}
 				headlines={headlines}
 			/>
 		),
-		[index, headlines]
+		[headlines]
 	)
 
 	return (

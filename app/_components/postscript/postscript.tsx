@@ -1,13 +1,8 @@
-import DownloadLinks from '../download-links'
-import { Header, HeaderGap } from '../header'
-import { HeaderProps } from '../header/header'
 import {
 	Col,
 	GridContainer,
 	Headline,
 	LinksContainer,
-	PhoneBig,
-	PhoneSmall,
 	Photo,
 	PrimaryContent,
 	Row,

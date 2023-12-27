@@ -1,10 +1,9 @@
 'use client'
-import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
-import { Mentee, LottFile } from '../_components/lottie'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import dynamic from 'next/dynamic'
+import Terran from '../_components/hero/Terran'
 
 const GodRays = dynamic(() => import('../_components/godrays'))
 const Banner = dynamic(() => import('../_components/banner'))
@@ -55,10 +54,10 @@ const BeAMentee = () => {
 
 	return (
 		<Container>
-			{/* <GodRays /> */}
+			<GodRays />
 			<Content>
-				<Hero
-					asset={<LottFile animationData={Mentee} />}
+				<Terran
+					asset={<></>}
 					primaryProps={heroProps}
 				/>
 				<Banner

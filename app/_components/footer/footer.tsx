@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import {
 	GridContainer,
 	LinkItem,
@@ -22,13 +21,6 @@ const Footer = () => {
 
 const Primary = () => (
 	<PrimaryContent>
-		{/* <Image
-			alt=''
-			src={'/logo/Outsourcee_Logo_white.webp'}
-			height={400}
-			width={400}
-			className='w-56'
-		/> */}
 		<PrimaryDetails>
 			<p className='text-sm text-white font-extrabold'>
 				Make It In Australia PH

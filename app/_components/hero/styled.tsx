@@ -47,17 +47,16 @@ const PrimaryContent = tw.div`
 
 const Title = tw.div`
   font-sans px-3 py-3 ml-3 font-bold text-[1.5rem] w-fit 
-  text-primary-foreground bg-[url('/bg/meteor-v2.svg')] bg-cover leading-[1.5rem]
+  text-transparent bg-clip-text bg-[url('/bg/meteor-v2.svg')] bg-cover leading-[1.5rem]
   rounded shadow-xl shadow-foreground/30
 `
 const TitleXL = tw.div`
-  font-sans py-10 px-16 ml-3 font-extrabold w-fit 
-  text-white text-[1.5rem] md:text-[2rem] 
-  bg-[url('/bg/meteor-v2.svg')] bg-cover 
-  leading-[1.5rem] rounded shadow-xl shadow-foreground/30
+  font-sans py-6 ml-3 font-extrabold w-fit
+  text-[1.5rem] md:text-[3rem] md:w-[300px]
+  leading-[3rem]
 `
 const TitleClip = tw.div`
-  text-transparent bg-clip-text bg-gradient-to-tr from-accent to-background
+  text-transparent bg-clip-text bg-[url('/bg/meteor-v3.svg')] bg-cover
 `
 const Subheader = tw.div`
   sm:text-[1rem] px-3 py-2
@@ -67,12 +66,11 @@ const Subheader = tw.div`
   shadow-xl shadow-foreground/10
 `
 const SubheaderXL = tw.div`
-  px-14 py-2 h-[55px]
-  text-[1rem] text-slate-800 md:text-[1.25rem] 
+  px-8 py-2 h-[55px] mb-4
+  text-[1rem] text-slate-800 md:text-[1.25rem]
   flex items-center justify-center w-fit
-  bg-accent rounded-md 
-  font-sans font-bold
-  shadow-xl shadow-foreground/10
+  bg-gradient-to-br from-accent to-white
+  rounded-md font-sans font-sans
 `
 
 const HeadlineText = tw.h1`
@@ -127,35 +125,9 @@ const HeroSecondary = tw.div`
   lg:pr-16
 `
 
-const WaveOne = tw.div`
-  z-50
-  w-screen 
-  h-full
-  xl:bg-contain
-  bg-contain
-  bg-no-repeat
-  bg-[url('/svg/outsourcee-waves-v2.svg')]
-  absolute
-  xl:top-[calc(100vh-270px)]
-  lg:top-[calc(100vh-200px)]
-  md:top-[calc(100vh-164px)]
-  top-[calc(100vh-80px)]
-  xl:mb-[-65px]
-`
-
-const FooterContent = tw.div`
-  relative flex items-end justify-end h-[270px] p-3 z-50
-`
-const FooterItem = tw.h3`
-  text-xs text-muted dark:text-foreground/20 font-medium
-  tracking-wide
-`
-
 export {
 	Container,
 	Content,
-	FooterContent,
-	FooterItem,
 	HeadlineContent,
 	HeadlineText,
 	HeroPrimary,

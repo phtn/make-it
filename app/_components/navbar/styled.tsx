@@ -8,23 +8,10 @@ const NavContainer = tw.div`
   justify-between
   absolute
   top-0
-  bg-foreground/20
+  bg-foreground/30
   backdrop-blur-lg
   z-50
   h-[64px]
-`
-
-const Brand = tw.section`
-  flex
-  items-center
-  justify-evenly
-  px-3
-`
-
-const BrandName = tw.h1`
-  font-extrabold
-  text-xl
-  md:text-3xl
 `
 
 const MoonStar = tw(MoonStarIcon)`
@@ -35,4 +22,4 @@ const Sun = tw(SunIcon)`
   h-4 w-4
 `
 
-export { Brand, BrandName, NavContainer, MoonStar, Sun }
+export { NavContainer, MoonStar, Sun }

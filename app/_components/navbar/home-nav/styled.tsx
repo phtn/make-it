@@ -4,12 +4,12 @@ import {
 	NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu'
 import {
-	ArrowUpRight,
-	HelpCircle,
-	LibraryBig,
-	Newspaper,
-	Star,
-	Users2,
+  ArrowUpRight,
+  HelpCircle, HomeIcon,
+  LibraryBig,
+  Newspaper,
+  Star,
+  Users2,
 } from 'lucide-react'
 import tw from 'tailwind-styled-components'
 import { TertiaryDetail, TertiaryProps } from './types'
@@ -231,19 +231,19 @@ const TopSection = () => (
 )
 
 const TertiaryOuter = tw.div`
-	h-[60px] flex overflow-hidden 
-	group-hover:rounded-lg 
+	h-[50px] flex overflow-hidden
+	group-hover:rounded-lg
 	group-hover:bg-white transition-all duration-300
 `
 
 const TertiaryIconContainer = tw.div`
-	w-[60px] flex items-center justify-center
+	w-[50px] flex items-center justify-center
 `
 const TertiaryContent = tw.div`
 	flex flex-col w-[240px] justify-center items-stretch
 `
 const TertiaryTitle = tw.div`
-	flex font-sans items-end font-bold text-[1rem] text-foreground dark:text-slate-300 group-hover:dark:text-slate-800 background h-[35px]
+	flex font-sans items-end font-bold text-[1rem] leading-[1rem] text-foreground dark:text-slate-300 group-hover:dark:text-slate-800 background h-[35px]
 `
 const TertiarySubtext = tw.div`
 	flex font-sans items-start text-[12px] text-slate-700 dark:text-slate-400 h-[25px]
@@ -256,21 +256,28 @@ const TertiaryDetails = ({ title, subtext }: TertiaryDetail) => (
 	</TertiaryContent>
 )
 
+
+const HomepageIcon = () => (
+	<TertiaryIconContainer>
+		<HomeIcon className='text-foreground/60 group-hover:text-green-500 transition-colors duration-500 h-4 w-4' />
+	</TertiaryIconContainer>
+)
+
 const FAQsIcon = () => (
 	<TertiaryIconContainer>
-		<HelpCircle className='text-foreground/60 group-hover:text-green-500 transition-colors duration-500 h-6 w-6' />
+		<HelpCircle className='text-foreground/60 group-hover:text-green-500 transition-colors duration-500 h-4 w-4' />
 	</TertiaryIconContainer>
 )
 
 const TestimonialsIcon = () => (
 	<TertiaryIconContainer>
-		<Star className='text-foreground/60 group-hover:text-orange-500 group-hover:stroke-2 transition-colors duration-500 h-6 w-6' />
+		<Star className='text-foreground/60 group-hover:text-orange-500 group-hover:stroke-2 transition-colors duration-500 h-4 w-4' />
 	</TertiaryIconContainer>
 )
 
 const NewletterIcon = () => (
 	<TertiaryIconContainer>
-		<Newspaper className='text-foreground/60 group-hover:text-sky-500 transition-colors duration-500 h-5 w-5' />
+		<Newspaper className='text-foreground/60 group-hover:text-sky-500 transition-colors duration-500 h-4 w-4' />
 	</TertiaryIconContainer>
 )
 
@@ -286,7 +293,7 @@ const TertiaryLink = ({ href, icon, details }: TertiaryProps) => (
 )
 
 const TertiaryWrapper = tw.div`
-	h-[180px] grid grid-rows-3
+	h-[200px] grid grid-rows-4
 	bg-slate-200 mx-[16px]
 	rounded-lg
 `
@@ -347,6 +354,7 @@ export {
 	FAQsIcon,
 	GridContent,
 	HomeMenuContent,
+	HomepageIcon,
 	NewletterIcon,
 	PrimarySet,
 	SecondarySet,

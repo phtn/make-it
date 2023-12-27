@@ -1,18 +1,18 @@
 import { Dispatch, SetStateAction } from 'react'
+import {toast} from 'sonner'
 
-function toggleState(setState: Dispatch<SetStateAction<boolean>>): void {
+export function toggleState(setState: Dispatch<SetStateAction<boolean>>): void {
 	setState((prevState) => !prevState)
 }
 
-function map(e1: any, e2: any): Map<boolean, any> {
-	const pairs = new Map([
+export function map(e1: any, e2: any): Map<boolean, any> {
+	return new Map([
 		[true, e1],
 		[false, e2],
 	])
-	return pairs
 }
 
-function getNextElement<T>(
+export function getNextElement<T>(
 	array: T[],
 	currentIndex: number,
 	setState: Dispatch<SetStateAction<number>>
@@ -22,4 +22,20 @@ function getNextElement<T>(
 	return nextIndex
 }
 
-export { map, toggleState, getNextElement }
+export const onError = (text: string) => {
+	toast.error(text)
+}
+
+export const onSuccess = (text: string) => {
+	toast.success(text)
+}
+
+export const onInfo = (text: string) => {
+	toast.info(text)
+}
+
+export const onWarn = (text: string) => {
+	toast.warning(text)
+}
+
+
