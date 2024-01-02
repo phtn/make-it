@@ -4,13 +4,12 @@ import {
 	TerranPrimary,
 	TerranPrimaryContent,
 	TerranContent,
-	TitleXL,
 	SubheaderXL,
-	TitleClip,
 } from './styled'
 import { HeaderProps, HeroProps, PrimaryProps } from './types'
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
+import { Title } from '../title/title'
 
 const Terran = ({ asset, primaryProps }: HeroProps) => (
 	<Container>
@@ -33,32 +32,37 @@ const Primary = ({
 					title={title}
 					subheader={subheader}
 				/>
-				<div className='flex items-center'>
-					<Button
-						variant='tertiary'
-						size='lg'
-						className='w-[238px]'>
-						<div className='flex items-center'>
-							<span>Sign Up</span>
-							<ArrowUpRight className='h-4 w-4 ml-3' />
-						</div>
-					</Button>
-				</div>
+				
 			</TerranPrimaryContent>
 		</TerranPrimary>
 	)
 }
 
-const Header = ({ title, subheader }: HeaderProps) => (
+const Action = () => (
+<div className='flex items-center'>
+					<Button
+						variant='secondary'
+						size='lg'
+						className='w-[250px]'>
+						<div className='flex items-center'>
+							<span>Sign Up</span>
+							<ArrowUpRight className='h-[24px] w-[24px] ml-3 mt-[2px]' />
+						</div>
+					</Button>
+				</div>
+)
+
+const Header = ({ subheader, title }: HeaderProps) => (
 	<div>
 		<Link
 			href={'/'}
 			className='no-underline'>
-			<TitleXL>
-				<TitleClip>{title}</TitleClip>
-			</TitleXL>
+			<Title dark title={title} />
 		</Link>
-		<SubheaderXL>{subheader}</SubheaderXL>
+    <div className='flex items-center justify-center'>
+		<SubheaderXL>{subheader} <Action /></SubheaderXL>
+    
+    </div>
 	</div>
 )
 

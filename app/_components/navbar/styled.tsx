@@ -9,6 +9,7 @@ const NavContainer = tw.div`
   absolute
   top-0
   bg-foreground/30
+  dark:bg-background/30
   backdrop-blur-lg
   z-50
   h-[64px]

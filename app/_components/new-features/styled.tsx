@@ -41,15 +41,18 @@ const FeatureDetail = tw.div`
 `
 
 const FeatureTitle = tw.h2`
-  font-extrabold font-sans tracking leading-[1.5rem]
-	text-foreground text-[1.5rem] md:text-[2rem] dark:text-[54c8e8] 
+  font-extrabold font-sans tracking-tight leading-[1.5rem]
+  text-transparent bg-clip-text bg-gradient-to-t 
+  from-slate-800 via-slate-700 to-accent
+  dark:from-accent dark:to-foreground
+	text-[1.5rem] md:text-[2rem]
 `
 
 const Description = tw.div`
   px-6
 `
 const DescriptionText = tw.h3`
-  text-[1rem] text-slate-600 dark:text-[#dbbf9c] tracking-wide
+  text-[1rem] text-slate-600 dark:text-[#54d8e8] tracking-wide
   text-center font-normal
 `
 

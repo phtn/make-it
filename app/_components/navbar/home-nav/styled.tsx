@@ -309,7 +309,7 @@ const Home = `
 	sm:font-extrabold font-bold font-sans 
 	tracking-tighter leading-[1rem] 
 	text-transparent text-[1rem] md:text-[1.5rem] 
-	bg-clip-text bg-gradient-to-br from-primary-foreground via-accent to-99% to-background
+	bg-clip-text bg-gradient-to-br from-primary-foreground via-accent to-background dark:to-indigo-50
 `
 
 const NotHome = `
@@ -320,14 +320,14 @@ const NotHome = `
 `
 
 const Sub = tw.h1`
-	h-[22px] w-[22px] ml-2 rounded-full
-	text-xs text-transparent md:text-sm
-	font-medium font-sans pt-[1px]
-	bg-clip-text bg-gradient-to-br from-accent to-background
-	decoration-background/50 decoration-2 underline-offset-2 underline
+	h-[20px] w-fit ml-2
+	text-xs text-transparent md:text-[18px]
+	font-thin font-sans mt-[8px]
+	bg-clip-text bg-gradient-to-br from-indigo-300 to-cyan-100
+	decoration-background/50
 `
 const MenuTrigger = tw(NavigationMenuTrigger)`
-	bg-transparent mr-3
+	bg-transparent
 `
 const Trigger = () => {
 	const pathName = usePathname()

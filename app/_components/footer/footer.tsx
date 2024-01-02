@@ -1,3 +1,4 @@
+import { Title } from '../title/title'
 import {
 	GridContainer,
 	LinkItem,
@@ -22,9 +23,7 @@ const Footer = () => {
 const Primary = () => (
 	<PrimaryContent>
 		<PrimaryDetails>
-			<p className='text-sm text-white font-extrabold'>
-				Make It In Australia PH
-			</p>
+			<Title title="Make It In Australia" />
 		</PrimaryDetails>
 	</PrimaryContent>
 )

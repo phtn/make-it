@@ -32,8 +32,8 @@ const TerranPrimary = tw.div`
 `
 
 const TerranPrimaryContent = tw.div`
-  flex flex-col h-[400px] md:h-[450px] lg:h-[400px] 
-  px-8 sm:pl-24 lg:pl-32 lg:pr-14 z-40
+  flex flex-col items-center  
+  px-8 z-40 h-[400px] md:h-[450px]
 `
 
 const HeroPrimary = tw.div`
@@ -51,26 +51,25 @@ const Title = tw.div`
   rounded shadow-xl shadow-foreground/30
 `
 const TitleXL = tw.div`
-  font-sans py-6 ml-3 font-extrabold w-fit
-  text-[1.5rem] md:text-[3rem] md:w-[300px]
-  leading-[3rem]
+  font-sans py-6 font-extrabold w-fit
+  text-[1.5rem] md:text-[4rem] md:w-[300px]
+  md:leading-[3.1rem] text-center tracking-tight
 `
 const TitleClip = tw.div`
-  text-transparent bg-clip-text bg-[url('/bg/meteor-v3.svg')] bg-cover
+  text-transparent bg-clip-text bg-[url('/bg/meteor-v2.svg')] bg-cover
 `
 const Subheader = tw.div`
   sm:text-[1rem] px-3 py-2
   justify-center text-slate-800 w-fit
   bg-primary-foreground rounded 
   font-sans font-bold
-  shadow-xl shadow-foreground/10
 `
 const SubheaderXL = tw.div`
-  px-8 py-2 h-[55px] mb-4
+  h-[125px] w-[300px] rounded-lg  
   text-[1rem] text-slate-800 md:text-[1.25rem]
-  flex items-center justify-center w-fit
-  bg-gradient-to-br from-accent to-white
-  rounded-md font-sans font-sans
+  flex flex-col items-center justify-evenly
+  bg-gradient-to-br from-accent/50 to-white
+  font-sans font-bold drop-shadow-md
 `
 
 const HeadlineText = tw.h1`

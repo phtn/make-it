@@ -13,7 +13,7 @@ const LandingContainer = tw.div`
 const LandingContent = tw.div`
   bg-gradient-to-br
   from-transparent
-  to-background/70
+  to-background/50
   overflow-y-scroll
   overflow-x-hidden
   h-screen
