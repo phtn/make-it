@@ -34,7 +34,7 @@ const Landing = () => {
 	const highlightHeader = { tag: 'mentor', title: 'Top Mentors' }
 	const heroProps = {
 		title: 'Make It In Australia',
-		subheader: 'Hire a mentor today',
+		subheader: 'Hire a Mentor Today!',
 		// description: `United by a Common Goal to Build a Better World. With a Team of Passionate Hope Builders, Visionaries, and Talents Willing To Architect Their Future. Your Journey Begins here.`,
 		// description: `This is the opportunity you've been waiting for! Be one of the successful students who found their place in Australia. Together, you can make it too!`,
 		description: '',

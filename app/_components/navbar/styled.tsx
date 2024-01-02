@@ -1,4 +1,4 @@
-import { MoonStarIcon, SunIcon } from 'lucide-react'
+import { MoonIcon, SunIcon } from 'lucide-react'
 import tw from 'tailwind-styled-components'
 
 const NavContainer = tw.div`
@@ -9,18 +9,19 @@ const NavContainer = tw.div`
   absolute
   top-0
   bg-foreground/30
-  dark:bg-background/30
+  dark:bg-background/40
   backdrop-blur-lg
   z-50
   h-[64px]
+  md:px-6
 `
 
-const MoonStar = tw(MoonStarIcon)`
-  h-4 w-4
+const Moon = tw(MoonIcon)`
+  h-5 w-5
 `
 
 const Sun = tw(SunIcon)`
-  h-4 w-4
+  h-5 w-5
 `
 
-export { NavContainer, MoonStar, Sun }
+export { NavContainer, Moon, Sun }

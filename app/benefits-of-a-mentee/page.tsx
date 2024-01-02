@@ -17,7 +17,7 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	title: 'Benefits of a mentee',
+	title: 'Benefits of a Mentee',
 	subheader: 'Get ahead on your goals!',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,

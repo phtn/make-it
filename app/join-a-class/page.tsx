@@ -1,9 +1,9 @@
 'use client'
-import Hero from '../_components/hero'
 import { HeadlineData } from '../_components/hero/types'
 import { Container, Content } from './styled'
 import { toast } from 'sonner'
 import dynamic from 'next/dynamic'
+import Terran from '../_components/hero/Terran'
 
 const GodRays = dynamic(() => import('../_components/godrays'))
 const Banner = dynamic(() => import('../_components/banner'))
@@ -17,8 +17,8 @@ const headlines: HeadlineData[] = [
 ]
 
 const heroProps = {
-	title: 'Join A Class',
-	subheader: 'Browse all our classes.',
+	title: 'Join a Class',
+	subheader: 'Over +100 classes.',
 	description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 	headlines,
 }
@@ -56,7 +56,7 @@ const JoinAClass = () => {
 		<Container>
 			<GodRays />
 			<Content>
-				<Hero
+				<Terran
 					asset={<></>}
 					primaryProps={heroProps}
 				/>

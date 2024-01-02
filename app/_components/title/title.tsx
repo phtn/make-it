@@ -2,7 +2,7 @@ import tw from "tailwind-styled-components"
 
 const Wrap = tw.div`
   font-sans py-6 font-extrabold w-fit
-  text-[1.5rem] md:text-[4rem] md:w-[300px]
+  text-[1.5rem] md:text-[4rem] md:w-[350px]
   md:leading-[3.1rem] text-center tracking-tight
 `
 

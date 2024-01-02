@@ -45,7 +45,7 @@ const Action = () => (
 						size='lg'
 						className='w-[250px]'>
 						<div className='flex items-center'>
-							<span>Sign Up</span>
+							<span>Sign up</span>
 							<ArrowUpRight className='h-[24px] w-[24px] ml-3 mt-[2px]' />
 						</div>
 					</Button>

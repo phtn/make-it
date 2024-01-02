@@ -61,8 +61,7 @@ const links: TertiaryProps[] = [
 	},
 ]
 
-export function HomeMenu() {
-	return (
+export const Brand = () => (
 		<NavigationMenu>
 			<NavigationMenuList>
 				<NavigationMenuItem>
@@ -80,7 +79,6 @@ export function HomeMenu() {
 			</NavigationMenuList>
 		</NavigationMenu>
 	)
-}
 
 const RegistrationModule = () => (
 	<div className='col-span-2 row-span-5'>

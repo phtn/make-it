@@ -9,12 +9,11 @@ const Container = tw.div`
 const ItemContainer = tw.div<ContainerProps>`
   ${(p) =>
 		p.$index === 4
-			? `bg-accent text-background hover:text-primary-foreground font-bold`
-			: `text-background`}
-  mx-2 text-[10px] tracking-wider font-sans px-3 py-1 rounded
-	dark:text-foreground dark:hover:text-primary-foreground
-  hover:text-primary-foreground hover:bg-slate-800
-  transition-all duration-500 uppercase
+			? `bg-gradient-to-tr from-sky-600 via-sky-500 to-cyan-500 text-slate-800 hover:text-background font-bold`
+			: `text-background hover:text-primary-foreground`}
+  mx-2 px-3 py-1 text-[11px] tracking-widest font-sans font-bold 
+	dark:text-foreground dark:hover:text-primary-foreground hover:bg-slate-800
+  transition-all duration-500 uppercase rounded
 `
 
 const Item = ({ href, title, index }: ItemProps) => (

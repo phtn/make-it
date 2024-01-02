@@ -8,7 +8,9 @@ const Container = tw.div`
 const Content = tw.div`
   flex-col
   w-full
-  bg-gradient-to-br
+  bg-gradient-to-tl
+  from-[#54c8e8]/70
+  to-[##FEF7E4]/70
   transition-colors
   duration-1000
   overflow-hidden

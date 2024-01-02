@@ -316,18 +316,24 @@ const NotHome = `
 	sm:font-extrabold font-bold font-sans 
 	tracking-tighter leading-[1rem] 
 	text-transparent text-[1rem] md:text-[1.5rem] 
-	bg-clip-text bg-gradient-to-br from-primary-foreground to-background
+	bg-clip-text bg-gradient-to-br from-sky-800 via-sky-700 to-sky-600
 `
 
-const Sub = tw.h1`
+const SubHome = `
 	h-[20px] w-fit ml-2
 	text-xs text-transparent md:text-[18px]
 	font-thin font-sans mt-[8px]
-	bg-clip-text bg-gradient-to-br from-indigo-300 to-cyan-100
-	decoration-background/50
+	bg-clip-text bg-gradient-to-br from-sky-300 to-cyan-200
 `
+const SubNotHome = `
+	h-[20px] w-fit ml-2
+	text-xs text-transparent md:text-[18px]
+	font-thin font-sans mt-[8px]
+	bg-clip-text bg-gradient-to-br from-sky-700 to-cyan-600
+`
+
 const MenuTrigger = tw(NavigationMenuTrigger)`
-	bg-transparent
+	bg-transparent md:w-[280px]
 `
 const Trigger = () => {
 	const pathName = usePathname()
@@ -336,7 +342,7 @@ const Trigger = () => {
 			<h1 className={cn(pathName !== '/' ? NotHome : Home)}>
 				Make it in Australia
 			</h1>
-			<Sub>PH</Sub>
+			<h2 className={cn(pathName !== '/' ? SubNotHome : SubHome)}>PH</h2>
 		</MenuTrigger>
 	)
 }

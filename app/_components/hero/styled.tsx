@@ -32,8 +32,8 @@ const TerranPrimary = tw.div`
 `
 
 const TerranPrimaryContent = tw.div`
-  flex flex-col items-center  
-  px-8 z-40 h-[400px] md:h-[450px]
+  flex flex-col items-center px-8 z-40  
+  h-[400px] md:h-[450px] md:w-[350px]
 `
 
 const HeroPrimary = tw.div`
@@ -50,14 +50,7 @@ const Title = tw.div`
   text-transparent bg-clip-text bg-[url('/bg/meteor-v2.svg')] bg-cover leading-[1.5rem]
   rounded shadow-xl shadow-foreground/30
 `
-const TitleXL = tw.div`
-  font-sans py-6 font-extrabold w-fit
-  text-[1.5rem] md:text-[4rem] md:w-[300px]
-  md:leading-[3.1rem] text-center tracking-tight
-`
-const TitleClip = tw.div`
-  text-transparent bg-clip-text bg-[url('/bg/meteor-v2.svg')] bg-cover
-`
+
 const Subheader = tw.div`
   sm:text-[1rem] px-3 py-2
   justify-center text-slate-800 w-fit
@@ -65,11 +58,13 @@ const Subheader = tw.div`
   font-sans font-bold
 `
 const SubheaderXL = tw.div`
-  h-[125px] w-[300px] rounded-lg  
+  h-[125px] w-[350px] rounded-lg  
   text-[1rem] text-slate-800 md:text-[1.25rem]
   flex flex-col items-center justify-evenly
-  bg-gradient-to-br from-accent/50 to-white
-  font-sans font-bold drop-shadow-md
+  bg-gradient-to-tl from-accent/50 to-white
+  font-sans font-bold shadow-[30px_35px_18px_10px_#00000024]
+  hover:scale-[95%] hover:shadow-[25px_30px_12px_8px_#00000030]
+  transition-all duration-500
 `
 
 const HeadlineText = tw.h1`
@@ -139,6 +134,4 @@ export {
 	TerranPrimary,
 	TerranPrimaryContent,
 	Title,
-	TitleXL,
-	TitleClip,
 }

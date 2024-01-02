@@ -1,19 +1,19 @@
 @keyframes jumbo {
 	from {
 		background-position:
-			50% 50%,
-			50% 50%;
+			100% 100%,
+			100% 50%;
 	}
 	to {
 		background-position:
-			350% 50%,
-			350% 50%;
+			100% 50%,
+			70% 50%;
 	}
 }
 
 .jumbo {
 	--stripes: repeating-linear-gradient(
-		100deg,
+		20deg,
 		#fff 0%,
 		#fff 7%,
 		transparent 10%,
@@ -21,7 +21,7 @@
 		#fff 16%
 	);
 	--stripesDark: repeating-linear-gradient(
-		100deg,
+		20deg,
 		#000 0%,
 		#000 7%,
 		transparent 10%,
@@ -29,22 +29,20 @@
 		#000 16%
 	);
 	--rainbow: repeating-linear-gradient(
-		100deg,
-		hsl(43, 100%, 80%) 10%,
-		#aeb4ea,
-		#fcc598 20%,
-		#ffffff 25%,
-		#fef7e4 30%
+		20deg,
+		#444444 35%,
+		#ffffff 15%,
+		#555 50%
 	);
 	background-image: var(--stripes), var(--rainbow);
-	background-size: 300%, 200%;
+	background-size: 300%, 400%;
 	background-position:
-		50% 50%,
-		50% 50%;
+		50% 10%,
+		100% 0%;
 
-	filter: blur(10px) invert(100%);
+	filter: blur(20px) invert(100%);
 
-	mask-image: radial-gradient(ellipse at 100% 0%, black 40%, transparent 70%);
+	mask-image: radial-gradient(ellipse at 100% 60%, black 40%, transparent 60%);
 
 	pointer-events: none;
 }
@@ -55,7 +53,7 @@
 	inset: 0;
 	background-image: var(--stripes), var(--rainbow);
 	background-size: 200%, 100%;
-	animation: jumbo 120s linear infinite;
+	animation: jumbo 0s linear infinite;
 	background-attachment: fixed;
 	mix-blend-mode: difference;
 }
