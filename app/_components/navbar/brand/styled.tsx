@@ -153,10 +153,10 @@ const SecondaryTop = () => (
 )
 
 const SecondaryTitle = tw.span`
-	pl-2 text-foreground text-[1rem] 
+	pl-2 text-sky-100 dark:text-foreground text-[1rem] 
 	group-hover:text-white group-hover:text-[0.75rem]
 	group-hover:bg-slate-800/40
-	border-l-4  border-slate-200/50
+	border-l-4 border-slate-200/50
 	group-hover:border-primary-foreground
 	relative top-[48px] group-hover:top-[-32px]
 	transition-all duration-500

@@ -8,7 +8,7 @@ import {
 	SecondaryContent,
 	TertiaryContent,
 } from './styled'
-import { FacebookIcon, InstagramIcon, TwitterIcon, XIcon } from 'lucide-react'
+import { FacebookIcon, InstagramIcon, TwitterIcon } from 'lucide-react'
 
 const Footer = () => {
 	return (
@@ -25,21 +25,12 @@ const Primary = () => (
 		<PrimaryDetails>
 			<Title title="Make It In Australia" />
 		</PrimaryDetails>
-    <div className='h-[72px] w-[375px] flex flex-col justify-start items-center'>
-      <div className='text-cyan-50 font-thin text-[.95rem]'>Thanks for visiting.</div>
-      <div className='text-background/[30%] text-[.90rem] leading-[.85rem] font-sans font-light'>Stay awesome.</div>
-    </div>
-
-    <div className='h-[150px] w-[375px] flex items-center justify-evenly'>
-      <div className={`h-[80px] w-[80px] bg-[url('/images/kangaroo-sign-v1.svg')] bg-contain bg-no-repeat`}/>
-      <div className={`h-[80px] w-[80px] bg-[url('/images/australian-owned-v1.png')] bg-contain bg-no-repeat`}/>
-      <div className={`h-[80px] w-[80px] bg-[url('/images/australian-owned-v2.png')] bg-contain bg-no-repeat`}/>
-    </div>
+    
 
     
-    <div className='h-fit w-[375px] flex flex-col justify-center items-center font-sans font-light'>
-      <div className='text-background/30 text-[12px]'>&copy; {new Date().getFullYear()} Make It In Australia PH &middot; All Rights Reserved.</div>
-    </div>
+
+    
+    
 
 	</PrimaryContent>
 )
@@ -70,10 +61,25 @@ const Secondary = () => (
 )
 
 const Tertiary = () => (
+<div className='flex flex-col'>
 	<TertiaryContent>
 		<FacebookIcon className='h-8 w-8 text-white' />
 		<InstagramIcon className='h-8 w-8 text-white' />
 		<TwitterIcon className='h-8 w-8 text-white' />
 	</TertiaryContent>
+<div className='h-[96px] md:w-[375px] w-screen flex flex-col justify-center items-center'>
+      <div className='text-cyan-50 font-bold text-[.95rem]'>Thanks for visiting.</div>
+      <div className='text-background/[30%] text-[.90rem] leading-[.85rem] font-sans font-light'>Stay awesome.</div>
+    </div>
+<div className='h-[200px] w-screen md:w-[375px] flex items-center justify-between'>
+      <div className={`h-[80px] w-[80px] bg-[url('/images/kangaroo-sign-v1.svg')] bg-contain bg-no-repeat`}/>
+      <div className={`h-[80px] w-[80px] bg-[url('/images/australian-owned-v1.png')] bg-contain bg-no-repeat`}/>
+      <div className={`h-[80px] w-[80px] bg-[url('/images/australian-owned-v2.png')] bg-contain bg-no-repeat`}/>
+    </div>
+<div className='h-fit w-screen md:w-[375px] py-2 flex flex-col justify-center items-center font-sans font-light'>
+      <div className='text-background/30 text-[12px]'>&copy; {new Date().getFullYear()} Make It In Australia PH &middot; All Rights Reserved.</div>
+    </div>
+  </div>
+
 )
 export default Footer

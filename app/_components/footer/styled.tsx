@@ -2,7 +2,7 @@ import Link from 'next/link'
 import tw from 'tailwind-styled-components'
 
 const GridContainer = tw.div`
-  h-[700px] md:h-[450px] bg-slate-800 dark:bg-background md:grid md:grid-cols-3 
+  h-fit pb-1 md:h-[450px] bg-slate-800 dark:bg-background md:grid md:grid-cols-3 
 `
 
 const PrimaryContent = tw.div`
@@ -26,7 +26,7 @@ const LinkText = tw.span`
 `
 
 const TertiaryContent = tw.div`
-  grid grid-cols-3 items-center justify-center md:justify-center md:items-center h-[100px] p-3 border-0 
+  md:grid grid-cols-3 flex items-center justify-around md:justify-center h-[100px] p-3 md:border-0 border-b-[0.33px] border-sky-300/20 
 `
 
 export {
