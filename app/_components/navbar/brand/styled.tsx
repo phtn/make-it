@@ -315,7 +315,7 @@ const NotAtHome = `
 	sm:font-extrabold font-bold font-sans 
 	tracking-tighter leading-[1rem] 
 	text-transparent text-[1rem] md:text-[1.5rem] 
-	bg-clip-text bg-gradient-to-br from-sky-800 via-sky-700 to-sky-600
+	bg-clip-text bg-gradient-to-br from-indigo-900 via-sky-950 to-indigo-950
 `
 
 const AtSubHome = `
@@ -328,7 +328,8 @@ const NotAtSubHome = `
 	h-[20px] w-fit ml-2
 	text-xs text-transparent md:text-[18px]
 	font-thin font-sans mt-[8px]
-	bg-clip-text bg-gradient-to-br from-sky-700 to-cyan-600
+	bg-clip-text bg-gradient-to-br
+  from-indigo-900 to-indigo-950
 `
 
 const MenuTrigger = tw(NavigationMenuTrigger)`
