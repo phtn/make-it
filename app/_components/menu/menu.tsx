@@ -1,4 +1,3 @@
-import { HomeMenu } from '../navbar/home-nav/home-nav'
 import { Container, Item } from './styled'
 import { MenuItem } from './types'
 
