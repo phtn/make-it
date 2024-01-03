@@ -54,16 +54,15 @@ const PrimaryAction = (props: Action) => (
 		variant={'tertiary'}
 		onClick={props.onClick}>
 		{props.label}
-		<ArrowUpRight className='h-4 w-4 ml-3' />
+		<ArrowUpRight className='h-5 w-5 ml-3' />
 	</PrimaryButton>
 )
 const SecondaryAction = (props: Action) => (
 	<SecondaryButton
-		size={'lg'}
-		variant={'secondary'}
+		variant={'outline'}
 		onClick={props.onClick}>
 		{props.label}
-		<LogIn className='text-[#54c8e8] h-4 w-4 ml-4' />
+		<LogIn className='h-5 w-5 ml-4' />
 	</SecondaryButton>
 )
 

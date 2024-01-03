@@ -1,7 +1,5 @@
 import {
 	Cell,
-	Container,
-	NewCell,
 	NewContainer,
 	NewPrimary,
 	PrimaryAction,

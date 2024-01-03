@@ -61,7 +61,7 @@ const SubheaderXL = tw.div`
   h-[125px] w-[350px] rounded-lg  
   text-[1rem] text-slate-800 md:text-[1.25rem]
   flex flex-col items-center justify-evenly
-  bg-gradient-to-tl from-accent/50 to-white
+  bg-gradient-to-tl from-accent/80 to-white
   font-sans font-bold shadow-[30px_35px_18px_10px_#00000024]
   hover:scale-[95%] hover:shadow-[25px_30px_12px_8px_#00000030]
   transition-all duration-500

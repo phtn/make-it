@@ -1,3 +1,4 @@
+import { PointerEvent } from 'react'
 import {
 	NavigationMenuContent,
 	NavigationMenuLink,
@@ -5,9 +6,12 @@ import {
 } from '@/components/ui/navigation-menu'
 import {
   ArrowUpRight,
+  BookOpenCheckIcon,
   HelpCircle, HomeIcon,
   LibraryBig,
+  MessagesSquare,
   Newspaper,
+  QuoteIcon,
   Star,
   Users2,
 } from 'lucide-react'
@@ -16,12 +20,12 @@ import { TertiaryDetail, TertiaryProps } from './types'
 import { Children } from '@/app/types'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
 
 const IconContainer = tw.div`
-  rounded-full bg-slate-200/10 
+  rounded-full bg-slate-200/10 border-slate-100 
 	flex items-center justify-center h-[32px] w-[32px] 
 	group-hover:h-[24px] group-hover:w-[24px] 
-	group-hover:border-slate-100 group-hover:border 
 	group-hover:bg-slate-400/30
 	transition-all duration-500
 `
@@ -52,7 +56,7 @@ const PrimaryTop = () => (
 const PrimaryTitle = tw.span`
 	text-slate-50 text-[1rem] 
 	group-hover:text-background group-hover:text-[0.95rem]
-	pl-2 border-l-4 border-slate-500
+	pl-2 border-l-4 border-slate-200/50
 	group-hover:border-[#54c8e8]
 	relative top-[48px] group-hover:top-[-32px]
 	transition-all duration-500
@@ -86,7 +90,7 @@ const PrimaryContent = () => (
 
 const PrimaryInner = tw.div`
 	flex flex-col items-stretch justify-between rounded-lg
-	relative top-[-140px] backdrop-blur-[10px] bg-accent 
+	relative top-[-140px] backdrop-blur-[10px] bg-sky-500 
 	group-hover:backdrop-blur-[0px] group-hover:bg-transparent
 	h-[140px] transition-all duration-700
 `
@@ -107,10 +111,13 @@ const PrimaryBackdrop = tw.div`
 	transition-transform duration-700
 `
 
+const LinkWrap = tw(NavigationMenuLink)`
+  no-underline group rounded-lg shadow-md
+`
+
 const PrimarySet = () => (
-	<NavigationMenuLink
-		href='/about-the-company'
-		className='no-underline rounded-lg group shadow-md'>
+	<LinkWrap
+		href='/about-the-company'>
 		<PrimaryOuter>
 			<PrimaryBackdrop />
 			<PrimaryInner>
@@ -120,12 +127,12 @@ const PrimarySet = () => (
 				</Content>
 			</PrimaryInner>
 		</PrimaryOuter>
-	</NavigationMenuLink>
+	</LinkWrap>
 )
 
 const SecondaryIcon = () => (
 	<IconContainer>
-		<Users2 className='h-[16px] w-[16px] text-slate-500/50 group-hover:text-slate-100 group-hover:h-[14px] group-hover:w-[14px] delay-100 transition-all duration-500 ' />
+		<Users2 className='h-[16px] w-[16px] text-slate-100/50 group-hover:text-slate-100 group-hover:h-[14px] group-hover:w-[14px] delay-100 transition-all duration-500 ' />
 	</IconContainer>
 )
 
@@ -149,7 +156,7 @@ const SecondaryTitle = tw.span`
 	pl-2 text-foreground text-[1rem] 
 	group-hover:text-white group-hover:text-[0.75rem]
 	group-hover:bg-slate-800/40
-	border-l-4 border-slate-100
+	border-l-4  border-slate-200/50
 	group-hover:border-primary-foreground
 	relative top-[48px] group-hover:top-[-32px]
 	transition-all duration-500
@@ -190,7 +197,7 @@ const SecondaryOuter = tw.div`
 
 const SecondaryInner = tw.div`
 	flex flex-col items-stretch justify-between rounded-lg
-	relative top-[-140px] backdrop-blur-[16px] bg-primary-foreground
+	relative top-[-140px] backdrop-blur-[16px] bg-indigo-600
 	group-hover:backdrop-blur-[0px] group-hover:bg-transparent
 	h-[140px] transition-all duration-700
 `
@@ -203,10 +210,10 @@ const SecondaryBackdrop = tw.div`
 	transition-transform duration-700
 `
 
+
 const SecondarySet = () => (
-	<NavigationMenuLink
-		href='/meet-the-team'
-		className='no-underline group rounded-lg shadow-lg'>
+	<LinkWrap
+		href='/meet-the-team'>
 		<SecondaryOuter>
 			<SecondaryBackdrop />
 			<SecondaryInner>
@@ -216,28 +223,21 @@ const SecondarySet = () => (
 				</Content>
 			</SecondaryInner>
 		</SecondaryOuter>
-	</NavigationMenuLink>
+	</LinkWrap>
 )
 
-const TopWrapper = tw.div`
+const TopWrap = tw.div`
 	h-[180px] flex items-center justify-evenly
 `
 
-const TopSection = () => (
-	<TopWrapper>
-		<PrimarySet />
-		<SecondarySet />
-	</TopWrapper>
-)
-
 const TertiaryOuter = tw.div`
-	h-[50px] flex overflow-hidden
+	h-[60px] flex overflow-hidden
 	group-hover:rounded-lg
 	group-hover:bg-white transition-all duration-300
 `
 
 const TertiaryIconContainer = tw.div`
-	w-[50px] flex items-center justify-center
+	w-[60px] flex items-center justify-center
 `
 const TertiaryContent = tw.div`
 	flex flex-col w-[240px] justify-center items-stretch
@@ -256,28 +256,29 @@ const TertiaryDetails = ({ title, subtext }: TertiaryDetail) => (
 	</TertiaryContent>
 )
 
+const iconClass = `text-cyan-50 transition-colors duration-500 h-4 w-4 group-hover:scale-[115%]`
 
 const HomepageIcon = () => (
 	<TertiaryIconContainer>
-		<HomeIcon className='text-foreground/60 group-hover:text-green-500 transition-colors duration-500 h-4 w-4' />
+		<HomeIcon className={cn(`group-hover:text-green-500`, iconClass)} />
 	</TertiaryIconContainer>
 )
 
 const FAQsIcon = () => (
 	<TertiaryIconContainer>
-		<HelpCircle className='text-foreground/60 group-hover:text-green-500 transition-colors duration-500 h-4 w-4' />
+		<BookOpenCheckIcon className={cn(`group-hover:text-sky-500`, iconClass)} />
 	</TertiaryIconContainer>
 )
 
 const TestimonialsIcon = () => (
 	<TertiaryIconContainer>
-		<Star className='text-foreground/60 group-hover:text-orange-500 group-hover:stroke-2 transition-colors duration-500 h-4 w-4' />
+		<QuoteIcon className={cn(`group-hover:text-indigo-500`, iconClass)} />
 	</TertiaryIconContainer>
 )
 
-const NewletterIcon = () => (
+const NewsletIcon = () => (
 	<TertiaryIconContainer>
-		<Newspaper className='text-foreground/60 group-hover:text-sky-500 transition-colors duration-500 h-4 w-4' />
+		<Newspaper className={cn(`group-hover:text-orange-500`, iconClass)} />
 	</TertiaryIconContainer>
 )
 
@@ -293,39 +294,37 @@ const TertiaryLink = ({ href, icon, details }: TertiaryProps) => (
 )
 
 const TertiaryWrapper = tw.div`
-	h-[200px] grid grid-rows-4
+	h-[240px] grid grid-rows-4
 	bg-slate-200 mx-[16px]
 	rounded-lg
 `
 
-const GridContent = tw.div`
-	grid grid-rows-2 sm:col-span-3 col-span-2 sm:border-r-[0.5px] border-[#c0c1c7] dark:border-slate-800
-`
-const InnerContent = tw.div`
-	grid sm:grid-cols-5 grid-cols-2 sm:w-[616px] w-screen
+
+const VStack = tw.div`
+	flex flex-col
 `
 
-const Home = `
+const AtHome = `
 	sm:font-extrabold font-bold font-sans 
 	tracking-tighter leading-[1rem] 
 	text-transparent text-[1rem] md:text-[1.5rem] 
 	bg-clip-text bg-gradient-to-br from-primary-foreground via-accent to-background dark:to-indigo-50
 `
 
-const NotHome = `
+const NotAtHome = `
 	sm:font-extrabold font-bold font-sans 
 	tracking-tighter leading-[1rem] 
 	text-transparent text-[1rem] md:text-[1.5rem] 
 	bg-clip-text bg-gradient-to-br from-sky-800 via-sky-700 to-sky-600
 `
 
-const SubHome = `
+const AtSubHome = `
 	h-[20px] w-fit ml-2
 	text-xs text-transparent md:text-[18px]
 	font-thin font-sans mt-[8px]
 	bg-clip-text bg-gradient-to-br from-sky-300 to-cyan-200
 `
-const SubNotHome = `
+const NotAtSubHome = `
 	h-[20px] w-fit ml-2
 	text-xs text-transparent md:text-[18px]
 	font-thin font-sans mt-[8px]
@@ -335,40 +334,44 @@ const SubNotHome = `
 const MenuTrigger = tw(NavigationMenuTrigger)`
 	bg-transparent md:w-[280px]
 `
-const Trigger = () => {
-	const pathName = usePathname()
-	return (
-		<MenuTrigger>
-			<h1 className={cn(pathName !== '/' ? NotHome : Home)}>
-				Make it in Australia
-			</h1>
-			<h2 className={cn(pathName !== '/' ? SubNotHome : SubHome)}>PH</h2>
-		</MenuTrigger>
-	)
-}
 
 const MenuContent = tw(NavigationMenuContent)`
-	bg-[url('/bg/space-noise-v4.svg')] bg-cover dark:bg-slate-700
+	bg-[url('/bg/space-noise-v4.svg')] bg-cover
 `
-const HomeMenuContent = ({ children }: Children) => (
-	<MenuContent>
-		<InnerContent>{children}</InnerContent>
-	</MenuContent>
-)
+const ContentInner = tw.div`
+	sm:w-[400px] w-screen
+`
+
+const SubPanelWrap = tw.div`
+  bg-gradient-to-b from-stone-500/50 from-2% via-stone-500/40 via-10% to-stone-300/30 to-100% h-[80px] flex items-center justify-evenly
+`
+const PanelButton = tw(Link)`
+  group border-1 border-cyan-50 hover:bg-cyan-50 transition-all duration-300 h-[36px] w-[36px] rounded-full flex items-center justify-center
+`
+
+
+
 
 export {
+  ContentInner,
 	FAQsIcon,
-	GridContent,
-	HomeMenuContent,
-	HomepageIcon,
-	NewletterIcon,
+  HomepageIcon,
+  AtHome,
+  NotAtHome,
+  AtSubHome,
+  NotAtSubHome,
+	MenuContent,
+  MenuTrigger,
+	NewsletIcon,
+  PanelButton,
 	PrimarySet,
 	SecondarySet,
+  SubPanelWrap,
 	TertiaryIconContainer,
 	TertiaryLink,
 	TertiaryOuter,
 	TertiaryWrapper,
 	TestimonialsIcon,
-	TopSection,
-	Trigger,
+	TopWrap,
+  VStack
 }

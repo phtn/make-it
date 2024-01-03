@@ -1,4 +1,4 @@
-import { Title } from '../title/title'
+  import { Title } from '../title/title'
 import {
 	GridContainer,
 	LinkItem,
@@ -25,6 +25,22 @@ const Primary = () => (
 		<PrimaryDetails>
 			<Title title="Make It In Australia" />
 		</PrimaryDetails>
+    <div className='h-[72px] w-[375px] flex flex-col justify-start items-center'>
+      <div className='text-cyan-50 font-thin text-[.95rem]'>Thanks for visiting.</div>
+      <div className='text-background/[30%] text-[.90rem] leading-[.85rem] font-sans font-light'>Stay awesome.</div>
+    </div>
+
+    <div className='h-[150px] w-[375px] flex items-center justify-evenly'>
+      <div className={`h-[80px] w-[80px] bg-[url('/images/kangaroo-sign-v1.svg')] bg-contain bg-no-repeat`}/>
+      <div className={`h-[80px] w-[80px] bg-[url('/images/australian-owned-v1.png')] bg-contain bg-no-repeat`}/>
+      <div className={`h-[80px] w-[80px] bg-[url('/images/australian-owned-v2.png')] bg-contain bg-no-repeat`}/>
+    </div>
+
+    
+    <div className='h-fit w-[375px] flex flex-col justify-center items-center font-sans font-light'>
+      <div className='text-background/30 text-[12px]'>&copy; {new Date().getFullYear()} Make It In Australia PH &middot; All Rights Reserved.</div>
+    </div>
+
 	</PrimaryContent>
 )
 
@@ -32,7 +48,7 @@ const Secondary = () => (
 	<SecondaryContent>
 		<div className='h-[72] flex flex-col'>
 			<LinkItem href={'/benefits-of-a-mentee'}>
-				<LinkText>Benefits of a Mentor</LinkText>
+				<LinkText>Benefits of a Mentee</LinkText>
 			</LinkItem>
 			<LinkItem href={'/meet-a-mentor'}>
 				<LinkText>Meet a Mentor</LinkText>

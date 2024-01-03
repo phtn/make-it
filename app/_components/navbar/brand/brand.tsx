@@ -9,19 +9,18 @@ import {
 } from '@/components/ui/navigation-menu'
 import {
   FAQsIcon,
-  GridContent,
-  HomeMenuContent,
 	HomepageIcon,
+  VStack,
   NewletterIcon,
   TertiaryLink,
   TertiaryWrapper,
   TestimonialsIcon,
-  TopSection,
-  Trigger,
+  SubPanelWrap,
 } from './styled'
 import { TertiaryProps } from './types'
 import { RegistrationForm } from '../../registration/form'
 import {HomeIcon} from "lucide-react";
+import { BrandMenuContent, Trigger, TopSection, SubPanel, } from "./components";
 
 const links: TertiaryProps[] = [
 
@@ -67,14 +66,13 @@ export const Brand = () => (
 				<NavigationMenuItem>
 					<Trigger />
 
-					<HomeMenuContent>
-						<GridContent>
+					<BrandMenuContent>
+						<VStack>
 							<TopSection />
-							<TertiaryList />
-
-						</GridContent>
-						<RegistrationModule />
-					</HomeMenuContent>
+              <SubPanel/>
+              
+						</VStack>
+					</BrandMenuContent>
 				</NavigationMenuItem>
 			</NavigationMenuList>
 		</NavigationMenu>

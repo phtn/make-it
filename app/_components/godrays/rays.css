@@ -35,14 +35,14 @@
 		#555 50%
 	);
 	background-image: var(--stripes), var(--rainbow);
-	background-size: 300%, 400%;
+	background-size: 100%, 400%;
 	background-position:
-		50% 10%,
-		100% 0%;
+		50% 50%,
+		100% 50%;
 
 	filter: blur(20px) invert(100%);
 
-	mask-image: radial-gradient(ellipse at 100% 60%, black 40%, transparent 60%);
+	mask-image: radial-gradient(ellipse at 100% 30%, black 40%, transparent 60%);
 
 	pointer-events: none;
 }
