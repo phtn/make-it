@@ -1,4 +1,3 @@
-import { MoonIcon, SunIcon } from 'lucide-react'
 import tw from 'tailwind-styled-components'
 
 const NavContainer = tw.div`
@@ -16,12 +15,6 @@ const NavContainer = tw.div`
   md:px-6
 `
 
-const Moon = tw(MoonIcon)`
-  h-5 w-5
-`
 
-const Sun = tw(SunIcon)`
-  h-5 w-5
-`
 
-export { NavContainer, Moon, Sun }
+export { NavContainer }

@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import tw from 'tailwind-styled-components'
-import { Item, LinkProps } from './types'
-import Link from 'next/link'
+import Image from "next/image";
+import tw from "tailwind-styled-components";
+import { Item, LinkProps } from "./types";
+import Link from "next/link";
 
 const Container = tw.div`
   h-fit w-screen flex flex-col overflow-hidden
@@ -11,34 +11,32 @@ const Container = tw.div`
   dark:from-[#c5a47b]
   to-[#AEB4EA]
 	dark:to-[#4c517d]
-
-`
+`;
 
 const GridContainer = tw.div`
   flex flex-col sm:grid sm:grid-cols-2 md:h-fit 
 	md:grid md:grid-cols-2 lg:grid-cols-3 px-6 md:px-10 lg:px-24
-`
+`;
 
 // Feature Item
-
 const FeatureItemContainer = tw.div`
   flex flex-col items-center w-full h-fit
-`
+`;
 const WrapCenter = tw.div`
   flex items-center justify-center
-  py-6
-`
+  md:py-6 py-2
+`;
 
 const IconContainer = tw.div`
   flex items-center justify-center 
   bg-[#54c8e8] rounded-full
   shadow-xl shadow-[#54c8e8]/20
   h-fit w-fit p-6
-`
+`;
 
 const FeatureDetail = tw.div`
-  px-[1.25rem] py-[1rem]
-`
+  px-[1.25rem] py-[2rem] items-center
+`;
 
 const FeatureTitle = tw.h2`
   font-extrabold font-sans tracking-tight leading-[1.5rem]
@@ -46,51 +44,44 @@ const FeatureTitle = tw.h2`
   from-slate-800 via-slate-700 to-accent
   dark:from-accent dark:to-foreground
 	text-[1.5rem] md:text-[2rem]
-`
+`;
 
 const Description = tw.div`
-  px-6
-`
+  md:px-8 px-[1px]
+`;
 const DescriptionText = tw.h3`
-  text-[1rem] text-slate-600 dark:text-[#54d8e8] tracking-wide
-  text-center font-normal
-`
+  text-[1rem] text-slate-600 text-justify md:text-center 
+  dark:text-cyan-50 font-normal tracking-wide
+`;
 
 const Icon = tw(Image)`
   h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 
-`
+`;
 
 const ListItem = (props: Item) => (
-	<FeatureItemContainer>
-		<FeatureDetail>
-			<WrapCenter>
-				<IconContainer>
-					<Icon
-						alt={props.title}
-						src={props.src}
-						height={100}
-						width={100}
-					/>
-				</IconContainer>
-			</WrapCenter>
-			<WrapCenter>
-				<FeatureTitle>{props.title}</FeatureTitle>
-			</WrapCenter>
-			<WrapCenter>
-				<Description>
-					<DescriptionText>{props.description}</DescriptionText>
-				</Description>
-			</WrapCenter>
-		</FeatureDetail>
-	</FeatureItemContainer>
-)
+  <FeatureItemContainer>
+    <FeatureDetail>
+      <WrapCenter>
+        <IconContainer>
+          <Icon alt={props.title} src={props.src} height={100} width={100} />
+        </IconContainer>
+      </WrapCenter>
+      <WrapCenter>
+        <FeatureTitle>{props.title}</FeatureTitle>
+      </WrapCenter>
+      <WrapCenter>
+        <Description>
+          <DescriptionText>{props.description}</DescriptionText>
+        </Description>
+      </WrapCenter>
+    </FeatureDetail>
+  </FeatureItemContainer>
+);
 
 const List = ({ href, id, props }: LinkProps) => (
-	<Link
-		href={href}
-		key={id}>
-		<ListItem {...props} />
-	</Link>
-)
+  <Link href={href} key={id}>
+    <ListItem {...props} />
+  </Link>
+);
 
-export { Container, GridContainer, ListItem, List }
+export { Container, GridContainer, ListItem, List };

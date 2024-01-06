@@ -1,13 +1,18 @@
-import tw from 'tailwind-styled-components'
+import tw from "tailwind-styled-components";
 
 const Container = tw.div`
   grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 
-`
+`;
 
 const Collage = tw.div`
   flex items-center justify-center 
-  bg-gradient-to-l from-transparent to-accent/[8%] 
-  skew-x-[-32deg] col-span-3 py-24 xl:pb-0
-`
+  col-span-3 py-24 xl:pb-0
+`;
 
-export { Container, Collage }
+const MakeIt = tw.div`
+  flex items-center justify-center h-[100px] w-screen 
+  md:h-[100px] md:w-[calc(100vw/4)] md:relative md:top-[-120px] 
+  mb-[10px] z-50 bg-[url('/svg/makeit-v3.svg')] bg-cover
+`;
+
+export { Container, Collage, MakeIt };

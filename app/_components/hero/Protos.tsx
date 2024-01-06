@@ -1,50 +1,43 @@
 import {
-	Container,
-	Content,
-	HeroPrimary,
-	HeroSecondary,
-	PrimaryContent,
-	Subtext,
-} from './styled'
-import { motion } from 'framer-motion'
-import { ReactElement } from 'react'
-import { HeroProps, PrimaryProps } from './types'
+  Container,
+  Content,
+  PrimaryWrap,
+  PrimaryContent,
+  Subheader,
+  ProtosSecondary,
+} from "./styled";
+import { HeaderProps, HeroProps, PrimaryProps } from "./types";
+import { Title } from "../title/title";
+import { ReactElement } from "react";
 
-const Protos = ({ asset, primaryProps }: HeroProps) => (
-	<Container>
-		<Content>
-			<Primary {...primaryProps} />
-			<Secondary asset={asset} />
-		</Content>
-	</Container>
-)
+export const Protos = ({ asset, primaryProps }: HeroProps) => (
+  <Container>
+    <Content>
+      <Primary {...primaryProps} />
+      <Secondary asset={asset} />
+    </Content>
+  </Container>
+);
 
-const Primary = ({
-	description,
-}: PrimaryProps) => {
+const Primary = ({ title, subheader }: PrimaryProps) => {
+  return (
+    <PrimaryWrap>
+      <PrimaryContent>
+        <Header title={title} subheader={subheader} />
+      </PrimaryContent>
+    </PrimaryWrap>
+  );
+};
 
-	return (
-		<HeroPrimary>
-			<PrimaryContent>
-
-				<Description description={description} />
-			</PrimaryContent>
-		</HeroPrimary>
-	)
-}
-
-const Description = ({ description }: { description: string }) => (
-	<motion.div
-		className='z-20 flex'
-		initial={{ opacity: 0, x: -20 }}
-		animate={{ opacity: 1, x: 0 }}
-		transition={{ duration: 0.8, delay: 1.8, ease: 'easeInOut' }}>
-		<Subtext subtext={description} />
-	</motion.div>
-)
+const Header = ({ subheader, title }: HeaderProps) => (
+  <div>
+    <Title dark title={title} />
+    <div className="flex items-center justify-center">
+      <Subheader>{subheader}</Subheader>
+    </div>
+  </div>
+);
 
 const Secondary = ({ asset }: { asset: ReactElement }) => (
-	<HeroSecondary>{asset}</HeroSecondary>
-)
-
-export default Protos
+  <ProtosSecondary>{asset}</ProtosSecondary>
+);

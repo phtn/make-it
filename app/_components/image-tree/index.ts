@@ -1,1 +1,1 @@
-export { default } from './image-tree'
+export { ImageTree } from "./image-tree";

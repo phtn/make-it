@@ -1,4 +1,6 @@
-import tw from 'tailwind-styled-components'
+import Image from "next/image";
+import tw from "tailwind-styled-components";
+import styled from "styled-components";
 
 const LandingContainer = tw.div`
   flex-col
@@ -8,7 +10,7 @@ const LandingContainer = tw.div`
   absolute 
   top-0
   z-30
-`
+`;
 
 const LandingContent = tw.div`
   bg-gradient-to-br
@@ -17,99 +19,13 @@ const LandingContent = tw.div`
   overflow-y-scroll
   overflow-x-hidden
   h-screen
-`
+`;
 
-const HeroContainer = tw.div`
-`
+const StyledImage = styled(Image)``;
 
-const HeroContent = tw.div`
-  h-64
-  md:h-[450px]
-  flex
-  flex-col
-  items-center
-  justify-center
-  w-full
-`
+const WendelImage = tw(StyledImage)`
+  h-auto mb-3 md:mb-0 md:w-[450px] border-[8px] border-background/80 
+  dark:border-accent/50 rounded-3xl shadow-[10px_15px_20px_4px_#00000024]
+`;
 
-const HeroPrimary = tw.div`
-  h-12
-  flex
-  items-center
-  dark:bg-background/5
-  border-foreground
-  skew-x-[-16deg]
-  px-6
-  md:h-24
-  flex-nowrap
-  border-t-0
-  md:hover:px-8
-  transition-all
-  duration-1000
-`
-
-const HeroSecondary = tw.div`
-  animate-in
-  h-10
-  flex
-  items-center
-  justify-center
-  bg-secondary-foreground
-  dark:bg-primary-foreground
-  skew-x-[-16deg]
-  px-8
-  border-accent
-  md:h-14
-  md:px-24
-  rounded-lg
-  transition-all
-  duration-1000
-`
-const HeroLabelContainer = tw.div`
-  skew-x-[16deg]
-  flex
-`
-
-const PrimaryLabel = tw.h2`
-  dark:text-secondary-foreground
-  text-primary-foreground
-  text-2xl
-  font-extrabold
-  md:text-[3rem]
-`
-
-const SecondaryLabel = tw.h2`
-  text-sm
-  text-foreground
-  md:text-xl
-  font-bold
-  px-3
-  md:px-6
-`
-
-const ActionContainer = tw.section`
-  flex
-  h-[calc(100vh-88.05%)]
-  items-center
-  justify-center
-  w-full
-  backdrop-blur-sm
-`
-
-const PaddingFooter = tw.div`
-  h-[400px]
-`
-
-export {
-	ActionContainer,
-	HeroContainer,
-	HeroContent,
-	HeroPrimary,
-	HeroLabelContainer,
-	HeroSecondary,
-	LandingContent,
-	LandingContainer,
-	PaddingFooter,
-	PrimaryLabel,
-	SecondaryLabel,
-}
+export { LandingContent, LandingContainer, WendelImage };
