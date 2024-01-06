@@ -5,6 +5,7 @@ import { HeadlineData } from "../_components/hero/types";
 import { Container, Content } from "./styled";
 import { toast } from "sonner";
 import Footer from "../_components/footer";
+import Godrays from "../_components/godrays";
 
 const headlines: HeadlineData[] = [
   { id: 1, name: "", headline: "Collaborate" },
@@ -49,7 +50,7 @@ export default function NewsLetter() {
 
   return (
     <Container>
-      {/* <Godrays /> */}
+      <Godrays />
       <Content>
         <Hero asset={<></>} primaryProps={heroProps} />
         <Banner

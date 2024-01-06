@@ -36,7 +36,7 @@ const MeetAMentor = () => {
     <Container>
       <GodRays />
       <Content>
-        <Terran asset={null} primaryProps={heroProps} />
+        <Terran asset={<div />} primaryProps={heroProps} />
         <Banner
           title="Hire a mentor today!"
           description={`Your journey begins here.`}
