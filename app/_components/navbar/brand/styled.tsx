@@ -310,14 +310,12 @@ const BrandSub = tw.h2<{ $pathName: string }>`
     p.$pathName === "/"
       ? "from-sky-300 to-cyan-200"
       : "from-indigo-900 to-indigo-950"}
-	h-[20px] w-fit ml-2
-	text-transparent text-[18px]
-	font-thin font-sans mt-[8px]
-	bg-clip-text bg-gradient-to-br 
+	w-fit ml-2 text-transparent text-[20px]
+	font-thin font-sans bg-clip-text bg-gradient-to-br 
 `;
 
 const MenuTrigger = tw(NavigationMenuTrigger)`
-	bg-transparent w-fit md:w-[200px] lg:w-[240px]
+	bg-transparent border w-[275px]  md:w-[200px] lg:w-[240px]
 `;
 
 const MenuContent = tw(NavigationMenuContent)`

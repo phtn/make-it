@@ -22,7 +22,7 @@ export const Trigger = () => (
 );
 
 const Header = () => (
-  <SheetHeader className="h-[64px] items-start">
+  <SheetHeader className="h-[56px] items-start">
     <SheetTitle className="flex items-center">
       <MenuIcon className="text-cyan-500 dark:text-cyan-100 mr-1" />
       <span className="uppercase tracking-wider text-foreground/60">Menu</span>
@@ -45,7 +45,7 @@ const LinkItem = ({ index, href, title }: ItemProps) => (
 );
 
 const MainMenu = () => (
-  <div className="grid grid-cols-2 gap-4 mt-2">
+  <div className="grid grid-cols-2 gap-3 mt-2">
     {menuItems.map((item, index) => (
       <LinkItem
         key={item.href}

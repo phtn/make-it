@@ -25,7 +25,7 @@ const PrimaryCell = tw.div`
 `;
 
 const Title = tw.h1`
-  text-primary-foreground text-[1.5rem] sm:text-[2.25rem] font-bold font-sans
+  text-primary-foreground text-[1.25rem] sm:text-[2.25rem] font-bold font-sans
 `;
 
 const Description = tw.h3`
