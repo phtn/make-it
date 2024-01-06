@@ -4,14 +4,12 @@ import {
   Container,
   Content,
   HeroPrimary,
-  HeroSecondary,
   PrimaryContent,
   Subheader,
   Subtext,
   Title,
 } from "./styled";
 import { motion } from "framer-motion";
-import { ReactElement, useCallback } from "react";
 import { easeInOut } from "popmotion";
 import { HeaderProps, HeadlineProps, HeroProps, PrimaryProps } from "./types";
 
@@ -19,7 +17,7 @@ const Hero = ({ asset, primaryProps }: HeroProps) => (
   <Container>
     <Content>
       <Primary {...primaryProps} />
-      <Secondary asset={asset} />
+      {asset}
     </Content>
   </Container>
 );
@@ -44,22 +42,6 @@ const Header = ({ title, subheader }: HeaderProps) => (
   </div>
 );
 
-const Headlines = ({ index, headlines }: HeadlineProps) => (
-  <motion.div
-    key={index}
-    initial={{ x: 10, opacity: 0, scaleX: 0.97 }}
-    animate={{ x: 0, opacity: 1, scaleX: 1 }}
-    transition={{
-      duration: 0.55,
-      ease: "easeInOut",
-      easings: easeInOut,
-    }}
-    exit={{ y: -15, opacity: 0, scaleX: 0.95 }}
-  >
-    <HeadlineContent headline={headlines[index].headline} />
-  </motion.div>
-);
-
 const Description = ({ description }: { description: string }) => (
   <motion.div
     className="z-20 flex"
@@ -69,10 +51,6 @@ const Description = ({ description }: { description: string }) => (
   >
     <Subtext subtext={description} />
   </motion.div>
-);
-
-const Secondary = ({ asset }: { asset: ReactElement }) => (
-  <HeroSecondary>{asset}</HeroSecondary>
 );
 
 export default Hero;
