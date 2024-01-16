@@ -1,32 +1,32 @@
-import { HeaderProps } from '../header/header'
+import { HeaderProps } from "../header/header";
 
 type PricingProps = {
-	header: HeaderProps
-	items: ItemProps[]
-}
+  header: HeaderProps;
+  items: ItemProps[];
+};
 
 type F = {
-	id?: number
-	title: string
-	included: boolean
-}
+  id?: number;
+  title: string;
+  included: boolean;
+};
 
 type ItemProps = {
-	id: number
-	description: string
-	title: string
-	price: number
-	features: F[]
-	duration: string
-}
+  id: number;
+  description: string;
+  title: string;
+  price: number;
+  features: F[];
+  duration: string;
+};
 
 interface I {
-	$id: number
+  $id: number;
 }
 
 type SelectProps = {
-	item: ItemProps
-	onPress: (item: ItemProps) => void
-}
+  item: ItemProps;
+  onPress: (item: ItemProps) => void;
+};
 
-export type { ItemProps, PricingProps, I, F, SelectProps }
+export type { ItemProps, PricingProps, I, F, SelectProps };

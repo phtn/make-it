@@ -5,12 +5,12 @@ import {
   PrimaryContent,
   Subheader,
   ProtosSecondary,
-} from "./styled";
-import { HeaderProps, HeroProps, PrimaryProps } from "./types";
-import { Title } from "../title/title";
+} from "../common";
+import { HeaderProps, HeroProps, PrimaryProps } from "../types";
+import { Title } from "@@components/title";
 import { ReactElement } from "react";
 
-export const Protos = ({ asset, primaryProps }: HeroProps) => (
+export const Protoss = ({ asset, primaryProps }: HeroProps) => (
   <Container>
     <Content>
       <Primary {...primaryProps} />

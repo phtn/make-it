@@ -1,6 +1,5 @@
 import Link from "next/link";
 import {
-  HeadlineContent,
   Container,
   Content,
   HeroPrimary,
@@ -8,10 +7,9 @@ import {
   Subheader,
   Subtext,
   Title,
-} from "./styled";
+} from "./common";
 import { motion } from "framer-motion";
-import { easeInOut } from "popmotion";
-import { HeaderProps, HeadlineProps, HeroProps, PrimaryProps } from "./types";
+import { HeaderProps, HeroProps, PrimaryProps } from "./types";
 
 const Hero = ({ asset, primaryProps }: HeroProps) => (
   <Container>

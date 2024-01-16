@@ -24,7 +24,7 @@ export const Trigger = () => (
 const Header = () => (
   <SheetHeader className="h-[56px] items-start">
     <SheetTitle className="flex items-center">
-      <MenuIcon className="text-cyan-500 dark:text-cyan-100 mr-1" />
+      <MenuIcon className="mr-1" />
       <span className="uppercase tracking-wider text-foreground/60">Menu</span>
     </SheetTitle>
   </SheetHeader>

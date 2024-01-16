@@ -1,7 +1,7 @@
 "use client";
-import { Terran } from "../_components/hero/Terran";
-import { Header, HeaderGap } from "../_components/header";
-import { HeadlineData } from "../_components/hero/types";
+import { Terran } from "@@components/hero/Terran";
+import { Header, HeaderGap } from "@@components/header";
+import { HeadlineData } from "@@components/hero/types";
 import { Container, Content } from "./styled";
 import { toast } from "sonner";
 import dynamic from "next/dynamic";

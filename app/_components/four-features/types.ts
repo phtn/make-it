@@ -1,9 +1,8 @@
 import { ReactNode } from "react";
 import { HeaderProps } from "../header/header";
 
-interface Item {
+interface FourItem {
   id: number;
-  href: string;
   title: string;
   description: string;
   src: string;
@@ -11,18 +10,18 @@ interface Item {
 
 type FeatureProps = {
   header: HeaderProps;
-  data: Item[];
+  data: FourItem[];
 };
 
 type Props = {
-  data: Item[];
-  renderItem: (item: Item) => ReactNode;
+  data: FourItem[];
+  renderItem: (item: FourItem) => ReactNode;
 };
 
 type LinkProps = {
   id: number;
   href: string;
-  props: Item;
+  props: FourItem;
 };
 
-export type { Props, Item, FeatureProps, LinkProps };
+export type { Props, FourItem, FeatureProps, LinkProps };

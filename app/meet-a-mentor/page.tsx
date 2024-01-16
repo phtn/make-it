@@ -1,20 +1,21 @@
 "use client";
-import { Container, Content } from "./styled";
-import { Terran } from "../_components/hero/Terran";
-import { onInfo, onSuccess } from "../_utils/helpers";
-import dynamic from "next/dynamic";
 
-const GodRays = dynamic(() => import("../_components/godrays"));
-const Banner = dynamic(() => import("../_components/banner"));
-const Highlight = dynamic(() => import("../_components/highlight"));
-const Footer = dynamic(() => import("../_components/footer"));
+import { Container, Content, ImageAsset } from "./styled";
+import { Terran } from "@@components/hero/Terran";
+import { onInfo, onSuccess } from "@@utils/helpers";
+import dynamic from "next/dynamic";
+import NewFeatures from "../_components/new-features";
+import { featureData, featureHeader } from "./data";
+
+const GodRays = dynamic(() => import("@@components/godrays"));
+const Banner = dynamic(() => import("@@components/banner"));
+const Footer = dynamic(() => import("@@components/footer"));
 
 const heroProps = {
-  title: "Meet a Mentor",
+  title: "Meet Mentor Mesh",
   subheader: "Connect and learn.",
   description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 };
-const highlightHeader = { tag: "Hire", title: "Meet the Mentors" };
 
 const MeetAMentor = () => {
   const onClickPrimary = () => {
@@ -36,14 +37,15 @@ const MeetAMentor = () => {
     <Container>
       <GodRays />
       <Content>
-        <Terran asset={<div />} primaryProps={heroProps} />
+        <Terran asset={<ImageAsset />} primaryProps={heroProps} />
         <Banner
           title="Hire a mentor today!"
           description={`Your journey begins here.`}
           primaryAction={primaryAction}
           secondaryAction={secondaryAction}
         />
-        <Highlight header={highlightHeader} />
+        <NewFeatures header={featureHeader} data={featureData} />
+
         <Footer />
       </Content>
     </Container>

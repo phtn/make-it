@@ -1,13 +1,13 @@
 "use client";
 import { Container, Content } from "./styled";
-import { Terran } from "../_components/hero/Terran";
-import { onInfo } from "../_utils/helpers";
+import { Terran } from "@@components/hero/Terran";
+import { onInfo } from "@@utils/helpers";
 import dynamic from "next/dynamic";
 
-const GodRays = dynamic(() => import("../_components/godrays"));
-const Banner = dynamic(() => import("../_components/banner"));
-const Highlight = dynamic(() => import("../_components/highlight"));
-const Footer = dynamic(() => import("../_components/footer"));
+const GodRays = dynamic(() => import("@@components/godrays"));
+const Banner = dynamic(() => import("@@components/banner"));
+const Highlight = dynamic(() => import("@@components/highlight"));
+const Footer = dynamic(() => import("@@components/footer"));
 
 const heroProps = {
   title: "Join a Class",

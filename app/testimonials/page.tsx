@@ -1,11 +1,12 @@
 "use client";
-import Banner from "../_components/banner";
-import Hero from "../_components/hero";
-import { HeadlineData } from "../_components/hero/types";
+
+import Banner from "@@components/banner";
+import Hero from "@@components/hero";
+import { HeadlineData } from "@@components/hero/types";
+import Footer from "@@components/footer";
+import GodRays from "@@components/godrays";
 import { Container, Content } from "./styled";
 import { toast } from "sonner";
-import Footer from "../_components/footer";
-import GodRays from "../_components/godrays";
 
 const headlines: HeadlineData[] = [
   { id: 1, name: "", headline: "Collaborate" },

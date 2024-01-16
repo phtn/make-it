@@ -104,7 +104,7 @@ const Subtext = ({ subtext }: { subtext: string }) => (
 );
 
 const ProtosSecondary = tw.div`
-  flex flex-col md:h-screen h-fit items-start justify-center
+  flex flex-col md:h-screen h-fit items-center justify-center
   py-10 md:py-0
 `;
 

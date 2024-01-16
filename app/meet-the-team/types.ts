@@ -1,9 +1,9 @@
 interface Team {
-	id: number
-	firstName: string
-	lastName: string
-	title: string
-	description: string
+  id: number;
+  firstName: string;
+  lastName: string;
+  title: string;
+  description: string;
 }
 
-export type { Team }
+export type { Team };

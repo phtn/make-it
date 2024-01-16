@@ -1,11 +1,14 @@
 "use client";
-import Banner from "../_components/banner";
-import Hero from "../_components/hero";
-import { HeadlineData } from "../_components/hero/types";
+
+import Banner from "@@components/banner";
+import { HeadlineData } from "@@components/hero/types";
+import Footer from "@@components/footer";
+import Godrays from "@@components/godrays";
+import { Terran } from "@@components/hero/Terran";
+import { FourFeatures } from "@@components/four-features";
 import { Container, Content } from "./styled";
+import { featureData } from "./data";
 import { toast } from "sonner";
-import Footer from "../_components/footer";
-import Godrays from "../_components/godrays";
 
 const headlines: HeadlineData[] = [
   { id: 1, name: "", headline: "Collaborate" },
@@ -19,6 +22,8 @@ const heroProps = {
   description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
   headlines,
 };
+
+const featureHeader = { tag: "discover", title: "What can you expect?" };
 
 export default function NewsLetter() {
   const onClickPrimary = () => {
@@ -52,13 +57,14 @@ export default function NewsLetter() {
     <Container>
       <Godrays />
       <Content>
-        <Hero asset={<></>} primaryProps={heroProps} />
+        <Terran asset={<></>} primaryProps={heroProps} />
         <Banner
           title="Subscribe to our Newsletter!"
           description={`Get the latest updates.`}
           primaryAction={primaryAction}
           secondaryAction={secondaryAction}
         />
+        <FourFeatures header={featureHeader} data={featureData} />
         <Footer />
       </Content>
     </Container>

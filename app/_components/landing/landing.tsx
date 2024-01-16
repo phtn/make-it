@@ -2,7 +2,7 @@ import { LandingContainer, LandingContent } from "./styled";
 import { MetricItemProps } from "../metrics-banner/types";
 import { ImageTree } from "../image-tree";
 import { Terran } from "../hero/Terran";
-import { Protos } from "../hero/Protos";
+import { Protoss } from "../hero/Protoss";
 import { Wendel } from "./components";
 import { motion } from "framer-motion";
 import { onInfo } from "@/app/_utils/helpers";
@@ -18,8 +18,6 @@ const metrics: MetricItemProps[] = [
 
 const MetricsBanner = dynamic(() => import("../metrics-banner"));
 const Banner = dynamic(() => import("../banner"));
-const Pricing = dynamic(() => import("../pricing"));
-const Highlight = dynamic(() => import("../highlight"));
 const Reviews = dynamic(() => import("../reviews"));
 const NewFeatures = dynamic(() => import("../new-features"));
 const Footer = dynamic(() => import("../footer"));
@@ -76,7 +74,7 @@ const Landing = () => {
         <NewFeatures header={whyChooseUsHeader} data={whyChooseUsData} />
 
         <MetricsBanner metrics={metrics} />
-        <Protos asset={<Wendel />} primaryProps={movingProps} />
+        <Protoss asset={<Wendel />} primaryProps={movingProps} />
 
         <NewFeatures header={howItWorksHeader} data={howItWorks} />
 

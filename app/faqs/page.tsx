@@ -1,11 +1,11 @@
 "use client";
-import { HeadlineData } from "../_components/hero/types";
+import { HeadlineData } from "@@components/hero/types";
 import { Container, Content } from "./styled";
 import { toast } from "sonner";
-import Footer from "../_components/footer";
-import { Protos } from "../_components/hero/Protos";
-import NewBanner from "../_components/banner/new-banner";
-import Blocks from "../_components/blocks";
+import Footer from "@@components/footer";
+import { Protoss } from "@@components/hero/Protoss";
+import NewBanner from "@@components/banner/new-banner";
+import Blocks from "@@components/blocks";
 import { blocks } from "./blocks-data";
 
 const headlines: HeadlineData[] = [
@@ -52,7 +52,7 @@ const FAQs = () => {
   return (
     <Container>
       <Content>
-        <Protos asset={<></>} primaryProps={protosProps} />
+        <Protoss asset={<></>} primaryProps={protosProps} />
         <NewBanner
           title="Frequently Asked Questions."
           description={`Each month, we get 4000+ messages from readers and people who would like help. if you're new to MiiA - or even 

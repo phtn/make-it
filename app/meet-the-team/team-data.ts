@@ -1,33 +1,28 @@
-import { Team } from './types'
+import { FourItem } from "../_components/four-features/types";
 
-const theTeam: Team[] = [
-	{
-		id: 20,
-		firstName: 'Rea',
-		lastName: '',
-		title: 'Operations',
-		description: '',
-	},
-	{
-		id: 40,
-		firstName: 'Didoy',
-		lastName: '',
-		title: 'Strategy',
-		description: '',
-	},
-	{
-		id: 60,
-		firstName: 'Raquel',
-		lastName: '',
-		title: 'Sales & Marketing',
-		description: '',
-	},
-	{
-		id: 80,
-		firstName: 'Hazel',
-		lastName: '',
-		title: 'Legal & Compliance',
-		description: '',
-	},
-]
-export { theTeam }
+export const teamData: FourItem[] = [
+  {
+    id: 20,
+    title: "Rea",
+    description: "Operations",
+    src: "/team/rea-v1.jpg",
+  },
+  {
+    id: 40,
+    title: "Didoy",
+    description: "Strategy",
+    src: "/team/rea-v1.jpg",
+  },
+  {
+    id: 60,
+    title: "Raquel",
+    description: "Sales & Marketing",
+    src: "/team/rea-v1.jpg",
+  },
+  {
+    id: 80,
+    title: "Hazel",
+    description: "Legal & Compliance",
+    src: "/team/rea-v1.jpg",
+  },
+];

@@ -9,14 +9,14 @@ const HeaderContent = tw.div`
 `;
 
 const HeaderTagContainer = tw.div`
-  bg-primary-foreground h-8 w-[150px] px-3 pt-2
+  bg-primary-foreground h-8 w-[150px] px-3
   flex items-center justify-center rounded-[2px]
   shadow-xl shadow-primary-foreground/30
 `;
 
 const HeaderTag = tw.h2`
   text-slate-800 font-extrabold text-[0.64rem] 
-  uppercase tracking-[2.5px] py-1
+  uppercase tracking-[2.5px]
 `;
 
 const HeaderTitleContainer = tw.div`

@@ -315,7 +315,7 @@ const BrandSub = tw.h2<{ $pathName: string }>`
 `;
 
 const MenuTrigger = tw(NavigationMenuTrigger)`
-	bg-transparent border w-[275px]  md:w-[200px] lg:w-[240px]
+	bg-transparent w-[275px] md:w-[200px] lg:w-[240px]
 `;
 
 const MenuContent = tw(NavigationMenuContent)`
