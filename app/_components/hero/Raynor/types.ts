@@ -13,6 +13,6 @@ export type KerriganProps = {
 };
 
 export type KerriganListProps = {
-  data: KerriganData | undefined;
-  title: string;
+  data?: KerriganData[];
+  title?: string;
 };

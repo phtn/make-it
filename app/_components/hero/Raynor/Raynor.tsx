@@ -2,20 +2,21 @@ import { useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { KerriganData, KerriganListProps, KerriganProps } from "./types";
+import { KerriganListProps, KerriganProps } from "./types";
 import { map } from "@/app/_utils/helpers";
+import Image from "next/image";
 
 const KerriganList = ({ data, title }: KerriganListProps) => {
   return (
     <section className="px-16 pb-10">
       <h2 className="text-3xl font-extrabold  mb-4">{title}</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {data.map((item) => (
+        {data?.map((item) => (
           <div
             key={item.id}
             className="border rounded-lg overflow-hidden bg-background"
           >
-            <img
+            <Image
               alt="Cocktail 1"
               className="w-full h-48 object-cover"
               src="/company/student-v1.webp"
@@ -45,7 +46,7 @@ export const Kerrigan = ({
       <div />,
     );
     return <>{options.get(withData)}</>;
-  }, [data]);
+  }, [data, listTitle]);
   return (
     <main className="flex-1">
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
