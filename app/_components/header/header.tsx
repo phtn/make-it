@@ -24,7 +24,7 @@ const HeaderTitleContainer = tw.div`
 `;
 
 const HeaderTitle = tw.h2`
-  text-[2rem] sm:text-[2.5rem] font-light text-foreground
+  text-[2rem] sm:text-[2.5rem] font-light text-foreground dark:text-background
 `;
 
 const HeaderSeparator = tw.div`

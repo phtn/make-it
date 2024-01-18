@@ -9,6 +9,7 @@ import { FourFeatures } from "@@components/four-features";
 import { Container, Content } from "./styled";
 import { featureData } from "./data";
 import { toast } from "sonner";
+import { Kerrigan } from "../_components/hero/Kerrigan";
 
 const headlines: HeadlineData[] = [
   { id: 1, name: "", headline: "Collaborate" },
@@ -17,7 +18,7 @@ const headlines: HeadlineData[] = [
 ];
 
 const heroProps = {
-  title: "Newsletter",
+  title: "Newsletters",
   subheader: "Get weekly updates!",
   description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
   headlines,
@@ -57,7 +58,10 @@ export default function NewsLetter() {
     <Container>
       <Godrays />
       <Content>
-        <Terran asset={<></>} primaryProps={heroProps} />
+        <Kerrigan
+          title="News from the world of opportunities!"
+          description="Get latest trends, tips, and lifehacks every week!"
+        />
         <Banner
           title="Subscribe to our Newsletter!"
           description={`Get the latest updates.`}

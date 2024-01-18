@@ -1,28 +1,33 @@
 import { FourItem } from "../_components/four-features/types";
+import { KerriganData } from "../_components/hero/Kerrigan/types";
 
-export const teamData: FourItem[] = [
+export const teamData: KerriganData[] = [
   {
     id: 20,
     title: "Rea",
-    description: "Operations",
+    description: "Australia",
+    subtext: "Operations",
     src: "/team/rea-v1.jpg",
   },
   {
     id: 40,
     title: "Didoy",
-    description: "Strategy",
+    description: "Philippines",
+    subtext: "Strategy",
     src: "/team/rea-v1.jpg",
   },
   {
     id: 60,
     title: "Raquel",
-    description: "Sales & Marketing",
+    description: "Philippines",
+    subtext: "Sales & Marketing",
     src: "/team/rea-v1.jpg",
   },
   {
     id: 80,
     title: "Hazel",
-    description: "Legal & Compliance",
+    description: "Philippines",
+    subtext: "Legal & Compliance",
     src: "/team/rea-v1.jpg",
   },
 ];

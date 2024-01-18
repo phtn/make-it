@@ -5,6 +5,7 @@ import { HeadlineData } from "@@components/hero/types";
 import { Container, Content } from "./styled";
 import { toast } from "sonner";
 import dynamic from "next/dynamic";
+import { Minsk } from "../_components/hero/Minsk/Minsk";
 
 const Banner = dynamic(() => import("../_components/banner"));
 const PostScript = dynamic(() => import("../_components/postscript"));
@@ -57,7 +58,7 @@ const AboutTheCompany = () => {
   };
   const onClickSecondary = () => {
     toast(`You're hiring a mentor!`, {
-      description: `That's cool! Would you like to proceed?`,
+      description: `That's cool! Would you like to proceedk?`,
       action: {
         label: "Yes",
         onClick: () => toast("Sure you do."),
@@ -75,6 +76,10 @@ const AboutTheCompany = () => {
   return (
     <Container>
       <Content>
+        <Minsk
+          title="Make It In Australia."
+          description={`Join us on this exciting journey, where together, we'll discover beautiful possibilities and leave a lasting impact on the world. Today, you and our team, can make a big difference.`}
+        />
         <Terran asset={<></>} primaryProps={heroProps} />
         <Banner
           title="Join us today!"

@@ -5,6 +5,7 @@ import { onInfo } from "@@utils/helpers";
 import { Container, Content } from "./styled";
 
 import dynamic from "next/dynamic";
+import { Kerrigan } from "../_components/hero/Kerrigan";
 const GodRays = dynamic(() => import("@@components/godrays"));
 const Banner = dynamic(() => import("@@components/banner"));
 const Highlight = dynamic(() => import("@@components/highlight"));
@@ -36,8 +37,13 @@ const BeAMentee = () => {
   return (
     <Container>
       <GodRays />
+
       <Content>
-        <Terran asset={<></>} primaryProps={heroProps} />
+        <Kerrigan
+          title="Join us today for free!"
+          description="You can reach us from anywhere in closest to you."
+        />
+
         <Banner
           title="Hire a mentor today!"
           description={`Your journey begins here.`}

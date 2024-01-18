@@ -9,7 +9,7 @@ const Container = tw.div`
 const ItemContainer = tw.div<ContainerProps>`
   ${(p) =>
     p.$index === 4
-      ? `bg-gradient-to-tr from-sky-600 via-sky-500 to-cyan-500 text-slate-800 hover:text-background font-bold`
+      ? `bg-gradient-to-tr from-sky-600 via-sky-500/10 to-cyan-500 text-slate-800 hover:text-background font-bold`
       : `text-background hover:text-primary-foreground`}
   mx-2 px-3 py-1 text-[11px] tracking-widest font-sans font-bold 
 	dark:text-foreground dark:hover:text-primary-foreground hover:bg-slate-800

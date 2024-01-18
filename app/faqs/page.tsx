@@ -1,12 +1,13 @@
 "use client";
+
 import { HeadlineData } from "@@components/hero/types";
 import { Container, Content } from "./styled";
 import { toast } from "sonner";
 import Footer from "@@components/footer";
-import { Protoss } from "@@components/hero/Protoss";
 import NewBanner from "@@components/banner/new-banner";
-import Blocks from "@@components/blocks";
-import { blocks } from "./blocks-data";
+import { faqData } from "./blocks-data";
+import { Kerrigan } from "../_components/hero/Kerrigan";
+import { Faqs } from "./faqs";
 
 const headlines: HeadlineData[] = [
   { id: 1, name: "", headline: "Discover" },
@@ -52,7 +53,10 @@ const FAQs = () => {
   return (
     <Container>
       <Content>
-        <Protoss asset={<></>} primaryProps={protosProps} />
+        <Kerrigan
+          title="You're in the right place!"
+          description="We're happy to answer all your questions."
+        />
         <NewBanner
           title="Frequently Asked Questions."
           description={`Each month, we get 4000+ messages from readers and people who would like help. if you're new to MiiA - or even 
@@ -61,7 +65,10 @@ const FAQs = () => {
           primaryAction={primaryAction}
           secondaryAction={secondaryAction}
         />
-        <Blocks blocks={blocks} />
+        <div className="flex items-center justify-center my-24">
+          <Faqs data={faqData} />
+        </div>
+
         <Footer />
       </Content>
     </Container>

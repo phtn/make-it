@@ -226,7 +226,7 @@ const TopWrap = tw.div`
 const TertiaryOuter = tw.div`
 	h-[60px] flex overflow-hidden
 	group-hover:rounded-lg
-	group-hover:bg-white transition-all duration-300
+	bg-white transition-all duration-300
 `;
 
 const TertiaryIconContainer = tw.div`
@@ -249,7 +249,7 @@ const TertiaryDetails = ({ title, subtext }: TertiaryDetail) => (
   </TertiaryContent>
 );
 
-const iconClass = `text-cyan-50 transition-colors duration-500 h-4 w-4 group-hover:scale-[115%]`;
+const iconClass = `transition-all duration-500 h-4 w-4 group-hover:scale-[115%]`;
 
 const HomepageIcon = () => (
   <TertiaryIconContainer>
@@ -329,7 +329,7 @@ const SubPanelWrap = tw.div`
   bg-gradient-to-b from-stone-500/50 from-2% via-stone-500/40 via-10% to-stone-300/30 to-100% h-[80px] flex items-center justify-evenly
 `;
 const PanelButton = tw(Link)`
-  group border-1 border-cyan-50 hover:bg-cyan-50 transition-all duration-300 h-[36px] w-[36px] rounded-full flex items-center justify-center
+  group border-1 border-cyan-50 bg-cyan-50 transition-all duration-300 h-[36px] w-[36px] rounded-full flex items-center justify-center
 `;
 
 export {
