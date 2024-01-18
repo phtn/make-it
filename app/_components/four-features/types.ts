@@ -8,6 +8,14 @@ interface FourItem {
   src: string;
 }
 
+interface Item {
+  id: number;
+  title: string;
+  description: string;
+  src: string;
+  href: string;
+}
+
 type FeatureProps = {
   header: HeaderProps;
   data: FourItem[];
@@ -24,4 +32,4 @@ type LinkProps = {
   props: FourItem;
 };
 
-export type { Props, FourItem, FeatureProps, LinkProps };
+export type { Item, Props, FourItem, FeatureProps, LinkProps };
