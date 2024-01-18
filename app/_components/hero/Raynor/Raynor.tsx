@@ -33,7 +33,7 @@ const KerriganList = ({ data, title }: KerriganListProps) => {
   );
 };
 
-export const Kerrigan = ({
+export const Raynor = ({
   title,
   description,
   data,

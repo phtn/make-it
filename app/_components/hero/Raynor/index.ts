@@ -1,1 +1,1 @@
-export { Kerrigan } from "./Kerrigan";
+export { Raynor } from "./Raynor";
