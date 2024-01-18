@@ -58,10 +58,9 @@ const Icon = tw(Image)`
   h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 
 `;
 
-const ImageContainer = tw.div<{ $id: string }>`
+const ImageContainer = tw.div<{ $id: number }>`
   rounded-full bg-cover 
   h-32 w-32
-
   ${(p) =>
     p.$id === 20
       ? `bg-[url('/team/rea-v1.jpg')]`
@@ -96,7 +95,7 @@ const ListItemImage = (props: FourItem) => (
   <FeatureItemContainer>
     <FeatureDetail>
       <WrapCenter>
-        <ImageContainer $src={props.src} />
+        <ImageContainer $id={props.id} />
       </WrapCenter>
       <WrapCenter>
         <FeatureTitle>{props.title}</FeatureTitle>
