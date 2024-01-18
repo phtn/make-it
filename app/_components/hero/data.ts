@@ -1,4 +1,4 @@
-import { KerriganData } from "../_components/hero/Kerrigan/types";
+import { KerriganData } from "./Kerrigan/types";
 
 export const classData: KerriganData[] = [
   {
