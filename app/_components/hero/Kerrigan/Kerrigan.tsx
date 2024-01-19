@@ -16,7 +16,7 @@ const KerriganList = ({ data, title }: KerriganListProps) => {
             className="border rounded-lg overflow-hidden bg-background dark:bg-indigo-100"
           >
             <Image
-              alt={item.src}
+              alt={item.src ?? ""}
               className="w-full h-64 object-cover"
               src={item?.src ?? "/company/student-v1.webp"}
               width={300}
