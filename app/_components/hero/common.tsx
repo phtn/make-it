@@ -15,8 +15,8 @@ const TerranContent = tw.div`
 `;
 
 const TerranPrimary = tw.div`
-  flex items-center justify-center sm:pb-16 pt-24 sm:pt-14 
-  h-[500px] sm:h-[600px] md:h-[700px] lg:h-screen 
+  flex items-center justify-center sm:pb-16 pt-72 sm:pt-14 
+  h-[300px] sm:h-[600px] md:h-[700px] lg:h-screen 
 `;
 
 const PrimaryWrap = tw.div`

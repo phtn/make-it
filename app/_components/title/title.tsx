@@ -3,8 +3,8 @@ import tw from "tailwind-styled-components";
 const Wrap = tw.div`
   py-6 px-6 md:px-0 w-screen md:w-[350px] 
   font-sans font-extrabold
-  text-[2.5rem] leading-[2rem]
-  md:text-[3.8rem] md:leading-[3rem] 
+  text-[2.5rem] leading-[2.75rem]
+  md:text-[3.8rem] md:leading-[4.2rem] 
   text-center tracking-tight
 `;
 

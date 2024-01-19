@@ -4,15 +4,15 @@ import {
   PrimaryContent,
   TerranContent,
   SubheaderXL,
-  TerranPrimary,
 } from "../common";
 import { HeaderProps, HeroProps, PrimaryProps } from "../types";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { Title } from "@@components/title";
 import { ReactElement } from "react";
+import { TerraPrimary } from "./styled";
 
-export const Terran = ({ asset, primaryProps }: HeroProps) => (
+export const Terra = ({ asset, primaryProps }: HeroProps) => (
   <Container>
     <TerranContent>
       <Primary {...primaryProps} />
@@ -23,17 +23,17 @@ export const Terran = ({ asset, primaryProps }: HeroProps) => (
 
 const Primary = ({ title, subheader }: PrimaryProps) => {
   return (
-    <TerranPrimary>
+    <TerraPrimary>
       <PrimaryContent>
         <Header title={title} subheader={subheader} />
       </PrimaryContent>
-    </TerranPrimary>
+    </TerraPrimary>
   );
 };
 
 const Secondary = ({ asset }: { asset: ReactElement }) => {
   return (
-    <div className="md:h-screen h-[650px] flex items-center justify-center md:justify-start">
+    <div className="md:h-screen h-fit flex items-center justify-center md:justify-start">
       {asset}
     </div>
   );

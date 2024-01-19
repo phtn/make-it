@@ -39,10 +39,12 @@ const BeAMentee = () => {
       <GodRays />
 
       <Content>
-        <Kerrigan
-          title="Join us today for free!"
-          description="You can reach us from anywhere in closest to you."
-        />
+        <div className="pt-[100px]">
+          <Kerrigan
+            title="Join us today for free!"
+            description="You can reach us from anywhere in closest to you."
+          />
+        </div>
 
         <Banner
           title="Hire a mentor today!"

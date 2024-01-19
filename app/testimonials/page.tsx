@@ -7,6 +7,7 @@ import Footer from "@@components/footer";
 import GodRays from "@@components/godrays";
 import { Container, Content } from "./styled";
 import { toast } from "sonner";
+import { Kerrigan } from "../_components/hero/Kerrigan";
 
 const headlines: HeadlineData[] = [
   { id: 1, name: "", headline: "Collaborate" },
@@ -53,13 +54,13 @@ const Testimonials = () => {
     <Container>
       <GodRays />
       <Content>
-        <Hero asset={<></>} primaryProps={heroProps} />
-        <Banner
-          title="Hire a mentor today!"
-          description={`Your journey begins here.`}
-          primaryAction={primaryAction}
-          secondaryAction={secondaryAction}
-        />
+        <div className="pt-[100px]">
+          <Kerrigan
+            title="What people say about us."
+            description="Mentors and Mentees real experiences with MiiA."
+          />
+        </div>
+
         <Footer />
       </Content>
     </Container>

@@ -26,7 +26,7 @@ const ImageAssetWrap = tw.div`
 `;
 
 const ImageAssetCover = tw.div`
-  bg-[url('/team/rea-v1.jpg')] bg-cover
+  bg-[url('/company/mesh_portrait.webp')] bg-cover
   h-[400px] w-[400px] rounded-full
 `;
 

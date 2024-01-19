@@ -9,7 +9,6 @@ const Container = tw.div`
 const Content = tw.div`
   flex-col
   w-full
-  h-screen
   bg-gradient-to-tl
   from-[#54c8e8]/95
   to-[##FEF7E4]/70

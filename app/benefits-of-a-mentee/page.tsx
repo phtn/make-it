@@ -54,7 +54,9 @@ const BenefitsOfAMentee = () => {
 
         <Pricing />
 
-        <Kerrigan title="Join us today!" description="" />
+        <div className="border h-[300px] flex items-center justify-center">
+          <Kerrigan title="Join us today!" description="" />
+        </div>
         <Footer />
       </Content>
     </Container>

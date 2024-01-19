@@ -58,10 +58,12 @@ export default function NewsLetter() {
     <Container>
       <Godrays />
       <Content>
-        <Kerrigan
-          title="News from the world of opportunities!"
-          description="Get latest trends, tips, and lifehacks every week!"
-        />
+        <div className="pt-[100px]">
+          <Kerrigan
+            title="News from the world of opportunities!"
+            description="Get latest trends, tips, and lifehacks every week!"
+          />
+        </div>
         <Banner
           title="Subscribe to our Newsletter!"
           description={`Get the latest updates.`}

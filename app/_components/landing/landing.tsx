@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { onInfo } from "@/app/_utils/helpers";
 import { whyChooseUsData, howItWorks } from "./data";
 import dynamic from "next/dynamic";
+import { Terra } from "../hero/Terra";
 
 const metrics: MetricItemProps[] = [
   { value: "500+", label: "mentors" },
@@ -57,7 +58,7 @@ const Landing = () => {
   return (
     <LandingContainer>
       <LandingContent>
-        <Terran asset={<ImageTree />} primaryProps={heroProps} />
+        <Terra asset={<ImageTree />} primaryProps={heroProps} />
         <div className="mt-[250px] md:mt-0">
           <Banner
             title="Gain access to a better future."

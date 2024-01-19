@@ -11,7 +11,7 @@ const Banner = dynamic(() => import("@@components/banner"));
 const Footer = dynamic(() => import("@@components/footer"));
 
 const heroProps = {
-  title: "Join a Class",
+  title: "Join a class today!",
   subheader: "Over +100 classes.",
   description: `Where Lifelong Connections Are Forged. With a Team of Passionate Mentors, and Thought Leaders.`,
 };
@@ -36,14 +36,7 @@ const JoinAClass = () => {
     <Container>
       <GodRays />
       <Content>
-        <Terran
-          asset={
-            <div
-              className={`border h-[500px] w-[500px] rounded-full bg-[url('/company/student-v1.webp')] bg-cover bg-center bg-no-repeat `}
-            />
-          }
-          primaryProps={heroProps}
-        />
+        <Terran asset={<ImageAsset />} primaryProps={heroProps} />
         <Banner
           title="Join a class today!"
           description={`Your journey begins here.`}
@@ -61,5 +54,11 @@ const JoinAClass = () => {
     </Container>
   );
 };
+
+const ImageAsset = () => (
+  <div
+    className={`border bg-[url('/company/student-v1.webp')] h-[400px] md:h-[500px] w-[calc(100vw-42px)] md:w-[500px] flex items-center justify-center rounded-full  bg-cover bg-center bg-no-repeat `}
+  ></div>
+);
 
 export default JoinAClass;

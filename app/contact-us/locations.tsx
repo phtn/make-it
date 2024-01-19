@@ -16,7 +16,7 @@ export function ContactLocations() {
         <div className="grid w-full items-center justify-center gap-6">
           <div className="flex flex-col items-center justify-center space-y-8 text-center">
             <div className="mx-auto w-full max-w-full space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-4 md:gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                 {contactLocations.map((item) => (
                   <div
                     key={item.id}
@@ -27,11 +27,11 @@ export function ContactLocations() {
                   >
                     <div
                       className={cn(
-                        "md:h-[380px] h-fit w-[300px] bg-cover bg-top md:p-6 p-3",
+                        "md:h-[380px] h-fit w-[calc(100vw-32px)] bg-cover bg-top md:p-6 p-3",
                         item.image,
                       )}
                     >
-                      <div className="flex h-[36px] border-b border-cyan-50 items-start justify-between">
+                      <div className="flex h-[36px] border-b border-cyan-50/50 items-start justify-between">
                         <h2 className="text-3xl font-bold text-blue-100">
                           {item.title}
                         </h2>

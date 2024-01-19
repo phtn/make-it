@@ -10,7 +10,7 @@ const ContactUs = () => (
   <Container>
     <GodRays />
     <Content>
-      <div className="mt-[100px] md:mt-0 overflow-y-scroll">
+      <div className="pt-[100px]">
         <Kerrigan
           title="Our locations"
           description="You can reach us from anywhere in closest to you."

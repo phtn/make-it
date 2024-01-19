@@ -95,7 +95,7 @@ export const contactLocations: LocationData[] = [
     description: "Angela Peralta",
     phone: `(+63) 9175865128`,
     address: `Tongspit Building Tavera St. City of San Fernando, La Union`,
-    bg: "bg-gradient-to-br from-amber-600 to-amber-200",
+    bg: "bg-gradient-to-br from-lime-600 to-lime-200",
     image: "agcperalta@yahoo.com",
   },
   {

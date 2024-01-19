@@ -53,10 +53,12 @@ const FAQs = () => {
   return (
     <Container>
       <Content>
-        <Kerrigan
-          title="You're in the right place!"
-          description="We're happy to answer all your questions."
-        />
+        <div className="pt-[100px]">
+          <Kerrigan
+            title="You're in the right place!"
+            description="We're happy to answer all your questions."
+          />
+        </div>
         <NewBanner
           title="Frequently Asked Questions."
           description={`Each month, we get 4000+ messages from readers and people who would like help. if you're new to MiiA - or even 
