@@ -31,7 +31,7 @@ const Landing = () => {
     description: "",
   };
   const heroProps = {
-    title: "Make It In Australia",
+    title: "You Can Make It In Australia!",
     subheader: "Hire a Mentor Today!",
     // description: `United by a Common Goal to Build a Better World. With a Team of Passionate Hope Builders, Visionaries, and Talents Willing To Architect Their Future. Your Journey Begins here.`,
     // description: `This is the opportunity you've been waiting for! Be one of the successful students who found their place in Australia. Together, you can make it too!`,
@@ -57,28 +57,21 @@ const Landing = () => {
   return (
     <LandingContainer>
       <LandingContent>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 1.6, ease: "easeInOut" }}
-        >
-          <Terran asset={<ImageTree />} primaryProps={heroProps} />
-        </motion.div>
-
-        <Banner
-          title="Gain access to a better future."
-          description={`Together, we'll make it happen.`}
-          primaryAction={primaryAction}
-          secondaryAction={secondaryAction}
-        />
+        <Terran asset={<ImageTree />} primaryProps={heroProps} />
+        <div className="mt-[250px] md:mt-0">
+          <Banner
+            title="Gain access to a better future."
+            description={`Together, we'll make it happen.`}
+            primaryAction={primaryAction}
+            secondaryAction={secondaryAction}
+          />
+        </div>
         <NewFeatures header={whyChooseUsHeader} data={whyChooseUsData} />
 
         <MetricsBanner metrics={metrics} />
         <Protoss asset={<Wendel />} primaryProps={movingProps} />
-
         <NewFeatures header={howItWorksHeader} data={howItWorks} />
 
-        {/* <Pricing /> */}
         <Reviews />
         <Footer />
       </LandingContent>

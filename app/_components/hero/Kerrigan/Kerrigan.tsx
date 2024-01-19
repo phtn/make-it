@@ -50,7 +50,7 @@ export const Kerrigan = ({
     return <>{options.get(withData)}</>;
   }, [data, listTitle]);
   return (
-    <main className="flex-1">
+    <main>
       <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
@@ -58,7 +58,7 @@ export const Kerrigan = ({
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                 {title}
               </h1>
-              <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
+              <p className="mx-auto max-w-[700px] text-gray-600 text-[12px] md:text-xl">
                 {description}
               </p>
             </div>

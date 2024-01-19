@@ -5,7 +5,6 @@ export const ImageTree = () => (
   <Container>
     <Collage>
       <div className="h-fit w-screen px-3 md:px-0 sm:h-[400px] sm:w-[400px]">
-        <MakeIt />
         <Image
           src={"/home/home-v1.webp"}
           alt="home-v1"

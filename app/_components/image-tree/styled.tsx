@@ -2,6 +2,7 @@ import tw from "tailwind-styled-components";
 
 const Container = tw.div`
   grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 
+  mt-[100px] md:mt-0
 `;
 
 const Collage = tw.div`

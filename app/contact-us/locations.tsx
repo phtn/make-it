@@ -16,18 +16,18 @@ export function ContactLocations() {
         <div className="grid w-full items-center justify-center gap-6">
           <div className="flex flex-col items-center justify-center space-y-8 text-center">
             <div className="mx-auto w-full max-w-full space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-4 md:gap-10">
                 {contactLocations.map((item) => (
                   <div
                     key={item.id}
                     className={cn(
-                      "overflow-clip rounded-[18px] transition-all drop-shadow-md duration-500 hover:scale-[105%]",
+                      "overflow-clip rounded-[18px] transition-all drop-shadow-md duration-500 md:hover:scale-[105%]",
                       item.bg,
                     )}
                   >
                     <div
                       className={cn(
-                        "h-[380px] w-[300px] bg-cover bg-top p-6",
+                        "md:h-[380px] h-fit w-[300px] bg-cover bg-top md:p-6 p-3",
                         item.image,
                       )}
                     >

@@ -47,7 +47,7 @@ const Action = () => (
 );
 
 const Header = ({ subheader, title }: HeaderProps) => (
-  <div>
+  <div className="mt-[-175px] md:mt-0">
     <Link href={"/"} className="no-underline">
       <Title dark title={title} />
     </Link>

@@ -10,7 +10,7 @@ const Content = tw.div`
 `;
 
 const TerranContent = tw.div`
-  justify-center z-20 h-fit xl:h-screen
+  justify-center z-20 h-full xl:h-screen
   grid grid-cols-1 xl:grid-cols-2
 `;
 
